@@ -33,6 +33,9 @@ if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true });
 if (!fs.existsSync(CHUNKS_DIR)) fs.mkdirSync(CHUNKS_DIR, { recursive: true });
 
+// Serve uploaded assets statically
+app.use('/uploads', express.static(UPLOADS_DIR));
+
 const DB_FILE = path.join(DATA_DIR, 'database.json');
 
 interface AppDatabase {
@@ -716,10 +719,69 @@ app.get('/api/user', (_req: Request, res: Response) => {
 
 app.patch('/api/user', (req: Request, res: Response) => {
   Object.assign(db.user, req.body);
+  if (db.accounts) {
+    const acc = db.accounts.find(a => 
+      a.id === db.user.id || 
+      (db.user.username && a.username.toLowerCase() === db.user.username.toLowerCase())
+    );
+    if (acc) {
+      Object.assign(acc, req.body);
+    }
+  }
   saveDatabase(db);
   // Async sync to Supabase
   syncUserProfileToSupabase(db.user).catch(() => {});
   res.json({ success: true, user: db.user });
+});
+
+// 15b. Avatar Upload & Update
+app.post('/api/user/avatar', upload.single('avatar'), (req: Request, res: Response) => {
+  let newAvatarUrl = '';
+
+  if (req.file) {
+    newAvatarUrl = `/uploads/${req.file.filename}`;
+  } else if (req.body && req.body.avatarUrl) {
+    newAvatarUrl = String(req.body.avatarUrl).trim();
+  }
+
+  if (!newAvatarUrl) {
+    return res.status(400).json({
+      success: false,
+      message: 'Vui lòng chọn tệp hình ảnh hoặc nhập liên kết ảnh đại diện hợp lệ!',
+    });
+  }
+
+  db.user.avatarUrl = newAvatarUrl;
+
+  // Sync avatar to accounts list
+  if (!db.accounts) db.accounts = [...initialAccounts];
+  const acc = db.accounts.find(a => 
+    a.id === db.user.id || 
+    (db.user.username && a.username.toLowerCase() === db.user.username.toLowerCase())
+  );
+  if (acc) {
+    acc.avatarUrl = newAvatarUrl;
+  }
+
+  const nowStr = new Date().toISOString();
+  db.activityLogs.unshift({
+    id: 'log-' + Date.now(),
+    action: 'Cập nhật ảnh đại diện',
+    detail: `Thầy/Cô ${db.user.fullName} đã thay đổi ảnh đại diện trang web`,
+    timestamp: nowStr,
+    ipAddress: '113.185.42.10 (Cà Mau, VN)',
+    iconType: 'upload',
+  });
+
+  saveDatabase(db);
+  syncUserProfileToSupabase(db.user).catch(() => {});
+
+  res.json({
+    success: true,
+    message: 'Cập nhật ảnh đại diện trang web thành công!',
+    avatarUrl: newAvatarUrl,
+    user: db.user,
+  });
 });
 
 // ==========================================

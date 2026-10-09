@@ -334,6 +334,34 @@ export const api = {
     return data.user;
   },
 
+  // Upload or update website profile avatar
+  async updateAvatar(fileOrUrl: File | string): Promise<{ success: boolean; avatarUrl: string; user: UserProfile; message?: string }> {
+    if (typeof fileOrUrl === 'string') {
+      const res = await fetch('/api/user/avatar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ avatarUrl: fileOrUrl }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || 'Không thể cập nhật ảnh đại diện');
+      }
+      return data;
+    } else {
+      const formData = new FormData();
+      formData.append('avatar', fileOrUrl);
+      const res = await fetch('/api/user/avatar', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || 'Không thể tải ảnh đại diện lên');
+      }
+      return data;
+    }
+  },
+
   // Auth: Register new account
   async register(payload: RegisterPayload): Promise<{ success: boolean; message: string; user: UserProfile }> {
     const res = await fetch('/api/auth/register', {

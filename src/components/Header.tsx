@@ -14,7 +14,8 @@ import {
   Database,
   UserPlus,
   LogIn,
-  Users
+  Users,
+  Camera
 } from 'lucide-react';
 import { UserProfile } from '../types';
 
@@ -29,6 +30,7 @@ interface HeaderProps {
   isSidebarOpen: boolean;
   onOpenAuth: (mode: 'register' | 'login') => void;
   onLogout?: () => void;
+  onOpenAvatarModal?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -42,6 +44,7 @@ export const Header: React.FC<HeaderProps> = ({
   isSidebarOpen,
   onOpenAuth,
   onLogout,
+  onOpenAvatarModal,
 }) => {
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
