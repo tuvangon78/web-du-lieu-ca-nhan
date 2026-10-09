@@ -11,7 +11,8 @@ import {
   Settings,
   HardDrive,
   Upload,
-  Sparkles
+  Sparkles,
+  UserPlus
 } from 'lucide-react';
 import { StorageStats } from '../types';
 import { formatBytes } from '../services/api';
@@ -24,6 +25,7 @@ interface SidebarProps {
   isOpen: boolean;
   onCloseMobile: () => void;
   trashCount?: number;
+  onOpenAuth?: (mode: 'register' | 'login') => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -34,6 +36,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   isOpen,
   onCloseMobile,
   trashCount = 0,
+  onOpenAuth,
 }) => {
   const menuItems = [
     { id: 'dashboard', label: 'Trang chủ', icon: Home },
@@ -150,6 +153,22 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <span>/ {formatBytes(totalBytes)}</span>
           </div>
         </div>
+
+        {/* Register Account Button */}
+        {onOpenAuth && (
+          <div className="px-3 pb-3">
+            <button
+              onClick={() => {
+                onOpenAuth('register');
+                onCloseMobile();
+              }}
+              className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-semibold shadow-md hover:shadow-lg border border-emerald-400/40 transition active:scale-98"
+            >
+              <UserPlus className="w-3.5 h-3.5 text-white" />
+              <span>Đăng ký tài khoản mới</span>
+            </button>
+          </div>
+        )}
       </aside>
     </>
   );

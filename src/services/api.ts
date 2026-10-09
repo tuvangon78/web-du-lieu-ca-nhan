@@ -1,4 +1,4 @@
-import { FileItem, FolderItem, StorageStats, UserProfile, ActivityLog, FileType } from '../types';
+import { FileItem, FolderItem, StorageStats, UserProfile, ActivityLog, FileType, UserAccount, RegisterPayload, LoginPayload } from '../types';
 
 export const api = {
   // Fetch stats and user
@@ -332,6 +332,61 @@ export const api = {
     if (!res.ok) throw new Error('Không thể cập nhật thông tin cá nhân');
     const data = await res.json();
     return data.user;
+  },
+
+  // Auth: Register new account
+  async register(payload: RegisterPayload): Promise<{ success: boolean; message: string; user: UserProfile }> {
+    const res = await fetch('/api/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (!res.ok || !data.success) {
+      throw new Error(data.message || 'Đăng ký tài khoản không thành công');
+    }
+    return data;
+  },
+
+  // Auth: Login with username & password
+  async login(payload: LoginPayload): Promise<{ success: boolean; message: string; user: UserProfile }> {
+    const res = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    const data = await res.json();
+    if (!res.ok || !data.success) {
+      throw new Error(data.message || 'Đăng nhập không thành công');
+    }
+    return data;
+  },
+
+  // Auth: Get registered accounts
+  async getAccounts(): Promise<UserAccount[]> {
+    const res = await fetch('/api/auth/accounts');
+    if (!res.ok) throw new Error('Không thể lấy danh sách tài khoản');
+    const data = await res.json();
+    return data.accounts || [];
+  },
+
+  // Auth: Switch account
+  async switchAccount(params: { username?: string; accountId?: string }): Promise<{ success: boolean; message: string; user: UserProfile }> {
+    const res = await fetch('/api/auth/switch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(params),
+    });
+    const data = await res.json();
+    if (!res.ok || !data.success) {
+      throw new Error(data.message || 'Không thể chuyển đổi tài khoản');
+    }
+    return data;
+  },
+
+  // Auth: Logout
+  async logout(): Promise<void> {
+    await fetch('/api/auth/logout', { method: 'POST' });
   },
 
   // Get Supabase Status

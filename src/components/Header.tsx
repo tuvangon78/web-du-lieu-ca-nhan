@@ -11,7 +11,10 @@ import {
   Menu,
   X,
   Sparkles,
-  Database
+  Database,
+  UserPlus,
+  LogIn,
+  Users
 } from 'lucide-react';
 import { UserProfile } from '../types';
 
@@ -24,6 +27,8 @@ interface HeaderProps {
   onOpenMobilePreview: () => void;
   onToggleSidebar: () => void;
   isSidebarOpen: boolean;
+  onOpenAuth: (mode: 'register' | 'login') => void;
+  onLogout?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -35,6 +40,8 @@ export const Header: React.FC<HeaderProps> = ({
   onOpenMobilePreview,
   onToggleSidebar,
   isSidebarOpen,
+  onOpenAuth,
+  onLogout,
 }) => {
   const [showUserDropdown, setShowUserDropdown] = useState(false);
   const [showNotifications, setShowNotifications] = useState(false);
@@ -62,14 +69,22 @@ export const Header: React.FC<HeaderProps> = ({
             ⚡ Supabase Cloud
           </span>
         </div>
-        <div className="hidden md:flex items-center gap-4 text-amber-200 font-medium">
-          <span className="flex items-center gap-1.5">
+        <div className="flex items-center gap-2 sm:gap-4 font-medium">
+          <button 
+            onClick={() => onOpenAuth('register')}
+            className="flex items-center gap-1 px-2.5 py-0.5 rounded bg-emerald-600 hover:bg-emerald-500 text-white transition text-xs font-semibold shadow-xs"
+            title="Đăng ký tài khoản giáo viên mới"
+          >
+            <UserPlus className="w-3 h-3 text-white" />
+            <span>Đăng ký tài khoản</span>
+          </button>
+          <div className="hidden md:flex items-center gap-1.5 text-amber-200">
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
-            Dữ liệu hôm nay – Giá trị ngày mai
-          </span>
+            <span>Dữ liệu hôm nay – Giá trị ngày mai</span>
+          </div>
           <button 
             onClick={onOpenMobilePreview}
-            className="flex items-center gap-1 px-2 py-0.5 rounded bg-blue-700/60 hover:bg-blue-600 text-white transition text-xs"
+            className="hidden sm:flex items-center gap-1 px-2 py-0.5 rounded bg-blue-700/60 hover:bg-blue-600 text-white transition text-xs"
             title="Mở giả lập giao diện điện thoại"
           >
             <Smartphone className="w-3 h-3 text-cyan-300" />
@@ -194,6 +209,16 @@ export const Header: React.FC<HeaderProps> = ({
             <SettingsIcon className="w-5 h-5 text-white" />
           </button>
 
+          {/* Quick Register Button */}
+          <button
+            onClick={() => onOpenAuth('register')}
+            className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold text-xs shadow-sm hover:shadow transition border border-emerald-400/40"
+            title="Đăng ký tài khoản giáo viên mới"
+          >
+            <UserPlus className="w-3.5 h-3.5" />
+            <span>Đăng ký</span>
+          </button>
+
           {/* User Account Menu */}
           <div className="relative">
             <button
@@ -213,13 +238,31 @@ export const Header: React.FC<HeaderProps> = ({
               <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-slate-200 text-slate-800 py-2 z-50">
                 <div className="px-4 py-3 border-b border-slate-100 bg-blue-50/40">
                   <div className="font-bold text-slate-900 text-sm">{user.fullName}</div>
-                  <div className="text-xs text-slate-500">{user.email}</div>
+                  <div className="text-xs text-slate-500 flex items-center gap-1.5 mt-0.5">
+                    {user.username && <span className="font-mono text-blue-700 font-semibold">@{user.username}</span>}
+                    {user.username && <span>•</span>}
+                    <span>{user.email}</span>
+                  </div>
                   <div className="mt-1 flex items-center gap-1 text-[11px] text-emerald-600 font-medium">
                     <ShieldCheck className="w-3.5 h-3.5" />
-                    Đã xác thực 2 bước (2FA)
+                    Đã xác thực bảo mật
                   </div>
                 </div>
                 <div className="py-1 text-xs">
+                  <button
+                    onClick={() => { onOpenAuth('register'); setShowUserDropdown(false); }}
+                    className="w-full px-4 py-2 text-left hover:bg-emerald-50 flex items-center gap-2 text-emerald-700 font-semibold"
+                  >
+                    <UserPlus className="w-4 h-4 text-emerald-600" />
+                    Đăng ký tài khoản mới
+                  </button>
+                  <button
+                    onClick={() => { onOpenAuth('login'); setShowUserDropdown(false); }}
+                    className="w-full px-4 py-2 text-left hover:bg-blue-50 flex items-center gap-2 text-slate-700 font-medium"
+                  >
+                    <LogIn className="w-4 h-4 text-[#0866E8]" />
+                    Đổi tài khoản / Đăng nhập
+                  </button>
                   <button
                     onClick={() => { onNavigate('settings'); setShowUserDropdown(false); }}
                     className="w-full px-4 py-2 text-left hover:bg-blue-50 flex items-center gap-2 text-slate-700"
@@ -244,7 +287,11 @@ export const Header: React.FC<HeaderProps> = ({
                 </div>
                 <div className="border-t border-slate-100 pt-1">
                   <button
-                    onClick={() => { setShowUserDropdown(false); }}
+                    onClick={() => {
+                      setShowUserDropdown(false);
+                      if (onLogout) onLogout();
+                      else onOpenAuth('login');
+                    }}
                     className="w-full px-4 py-2 text-left hover:bg-red-50 text-red-600 flex items-center gap-2 text-xs font-medium"
                   >
                     <LogOut className="w-4 h-4" />

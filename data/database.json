@@ -1026,7 +1026,7 @@
         "DOC"
       ],
       "isFavorite": false,
-      "isDeleted": false,
+      "isDeleted": true,
       "storagePath": "/app/applet/uploads/1791536464987-597715478-____i_khi_b___n_c___m_th___y_kh___ch___u_khi_chi___c_m__y_t__nh_c___a_m__nh_ch___y_m___t_c__ch_ch___m_ch___p.doc",
       "contentSnippet": "Tài liệu tải lên: ÄÃ´i khi báº¡n cáº£m tháº¥y khÃ³ chá»u khi chiáº¿c mÃ¡y tÃ­nh cá»§a mÃ¬nh cháº¡y má»t cÃ¡ch cháº­m cháº¡p.doc. Kích thước: 0.35 MB.",
       "rawContent": "Tài liệu: ÄÃ´i khi báº¡n cáº£m tháº¥y khÃ³ chá»u khi chiáº¿c mÃ¡y tÃ­nh cá»§a mÃ¬nh cháº¡y má»t cÃ¡ch cháº­m cháº¡p.doc\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:04.989Z",
@@ -1048,7 +1048,8 @@
         "shareType": "private",
         "permission": "view",
         "sharedWithEmails": []
-      }
+      },
+      "deletedAt": "2026-10-09T09:42:52.473Z"
     },
     {
       "id": "file-1791536464689-652",
@@ -1595,483 +1596,6 @@
         "permission": "view",
         "sharedWithEmails": []
       }
-    },
-    {
-      "id": "file-1791535636934-596",
-      "name": "KHBD Thang 10 (Tuan  5 - 8).pdf",
-      "folderId": "f-11",
-      "folderName": "11. GIÁO ÁN",
-      "type": "pdf",
-      "extension": "pdf",
-      "mimeType": "application/pdf",
-      "sizeBytes": 5501911,
-      "createdAt": "2026-10-09T08:47:16.934Z",
-      "updatedAt": "2026-10-09T08:47:16.934Z",
-      "owner": "Từ Văn Gọn",
-      "description": "Tải lên bởi Từ Văn Gọn vào 11. GIÁO ÁN",
-      "tags": [
-        "GIÁO ÁN",
-        "PDF"
-      ],
-      "isFavorite": false,
-      "isDeleted": true,
-      "storagePath": "/app/applet/uploads/1791535636911-675615438-KHBD_Thang_10__Tuan__5_-_8_.pdf",
-      "contentSnippet": "Tài liệu tải lên: KHBD Thang 10 (Tuan  5 - 8).pdf. Kích thước: 5.25 MB.",
-      "rawContent": "Tài liệu: KHBD Thang 10 (Tuan  5 - 8).pdf\nThư mục: 11. GIÁO ÁN\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T08:47:16.934Z",
-      "versions": [
-        {
-          "id": "ver-1-file-1791535636934-596",
-          "versionNumber": 1,
-          "versionLabel": "v1",
-          "fileName": "KHBD Thang 10 (Tuan  5 - 8).pdf",
-          "sizeBytes": 5501911,
-          "uploadedAt": "2026-10-09T08:47:16.934Z",
-          "uploadedBy": "Từ Văn Gọn",
-          "notes": "Phiên bản ban đầu khi tải lên",
-          "storagePath": "/app/applet/uploads/1791535636911-675615438-KHBD_Thang_10__Tuan__5_-_8_.pdf"
-        }
-      ],
-      "share": {
-        "isShared": false,
-        "shareType": "private",
-        "permission": "view",
-        "sharedWithEmails": []
-      },
-      "deletedAt": "2026-10-09T08:57:21.876Z"
-    },
-    {
-      "id": "file-02",
-      "name": "Bài giảng điện tử Tiếng Việt.pptx",
-      "folderId": "f-10",
-      "folderName": "10. POWERPOINT",
-      "type": "powerpoint",
-      "extension": "pptx",
-      "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-      "sizeBytes": 13107200,
-      "createdAt": "2026-09-27T10:00:00Z",
-      "updatedAt": "2026-09-27T15:20:00Z",
-      "owner": "Từ Văn Gọn",
-      "description": "Slide trình chiếu bài học vần: am, ap, an, at cho học sinh lớp 1. Có âm thanh phát âm mẫu, tranh ảnh minh họa sống động.",
-      "tags": [
-        "Tiếng Việt 1",
-        "Slide",
-        "Bài giảng điện tử",
-        "Học vần"
-      ],
-      "isFavorite": true,
-      "isDeleted": false,
-      "storagePath": "/uploads/bai_giang_tieng_viet.pptx",
-      "contentSnippet": "Slide 1: Trường Tiểu học Phường An Xuyên - Tiếng Việt Lớp 1C - Bài 24: Vần an - at\nSlide 2: Khởi động cùng bài hát \"Bé ngoan\"\nSlide 3: Khám phá vần mới: con ngan, bãi cát, bàn tay, bát sen\nSlide 4: Hướng dẫn viết bảng con: an, at, lan can, hạt cát\nSlide 5: Đọc câu ứng dụng: \"Bé Nga ngoan ngoãn chăm chỉ\"\nSlide 6: Trò chơi hái hoa dân chủ - Thầy Từ Văn Gọn",
-      "rawContent": "SLIDE 1: TRƯỜNG TIỂU HỌC PHƯỜNG AN XUYÊN\nMÔN: TIẾNG VIỆT 1 - BỘ SÁCH KẾT NỐI TRI THỨC\nGiáo viên: Thầy Từ Văn Gọn\nChủ đề: Bé và gia đình - Bài: an, at\n\nSLIDE 2: KHÁM PHÁ VẦN MỚI\n- Vần 'an': gồm âm 'a' đứng trước, âm 'n' đứng sau. (a - n - an)\n- Từ khóa: BÀN HỌC, ĐÀN BƯỚM, HOA LAN\n- Vần 'at': gồm âm 'a' đứng trước, âm 't' đứng sau. (a - t - at)\n- Từ khóa: BÃI CÁT, HẠT THÓC, BÁT ĐĨA\n\nSLIDE 3: LUYỆN ĐỌC TỪ NGỮ ỨNG DỤNG\n- Con ngan, khăn rằn, cây bàng\n- Rửa bát, quạt mát, múa hát\n\nSLIDE 4: TẬP ĐỌC ĐOẠN VĂN\n\"Mẹ đưa bé Lan ra biển. Bãi cát vàng mịn màng. Đàn chim hải âu chao lượn...\"\n\nSLIDE 5: TRÒ CHƠI Ô CHỮ KỲ DIỆU\nThưởng sao chăm ngoan cho học sinh lớp 1C!",
-      "versions": [
-        {
-          "id": "ver-02-1",
-          "versionNumber": 1,
-          "versionLabel": "v1",
-          "fileName": "Bài giảng điện tử Tiếng Việt.pptx",
-          "sizeBytes": 13107200,
-          "uploadedAt": "2026-09-27T10:00:00Z",
-          "uploadedBy": "Từ Văn Gọn",
-          "notes": "Bản trình chiếu chính thức có chèn âm thanh đọc mẫu chuẩn",
-          "storagePath": "/uploads/bai_giang_tieng_viet.pptx"
-        }
-      ],
-      "share": {
-        "isShared": false,
-        "shareType": "private",
-        "permission": "view",
-        "sharedWithEmails": []
-      }
-    },
-    {
-      "id": "file-03",
-      "name": "Thông tư 27.pdf",
-      "folderId": "f-08",
-      "folderName": "08. PDF",
-      "type": "pdf",
-      "extension": "pdf",
-      "mimeType": "application/pdf",
-      "sizeBytes": 3984588,
-      "createdAt": "2026-09-26T09:00:00Z",
-      "updatedAt": "2026-09-26T09:00:00Z",
-      "owner": "Từ Văn Gọn",
-      "description": "Thông tư số 27/2020/TT-BGDĐT ban hành Quy định đánh giá học sinh tiểu học. Áp dụng cho chương trình giáo dục phổ thông 2018.",
-      "tags": [
-        "Thông tư 27",
-        "Quy định",
-        "Đánh giá học sinh tiểu học",
-        "Bộ GD&ĐT"
-      ],
-      "isFavorite": true,
-      "isDeleted": false,
-      "storagePath": "/uploads/thong_tu_27.pdf",
-      "contentSnippet": "BỘ GIÁO DỤC VÀ ĐÀO TẠO\nSố: 27/2020/TT-BGDĐT\nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\nĐộc lập - Tự do - Hạnh phúc\nHà Nội, ngày 04 tháng 9 năm 2020\n\nTHÔNG TƯ BAN HÀNH QUY ĐỊNH ĐÁNH GIÁ HỌC SINH TIỂU HỌC\nChương I: NHỮNG QUY ĐỊNH CHUNG\nĐiều 1: Phạm vi điều chỉnh và đối tượng áp dụng\n1. Thông tư này ban hành Quy định đánh giá học sinh tiểu học, bao gồm: đánh giá quá trình học tập, sự tiến bộ và kết quả học tập của học sinh; đánh giá sự hình thành và phát triển phẩm chất, năng lực của học sinh; hồ sơ đánh giá và sử dụng kết quả đánh giá.\n2. Quy định này áp dụng đối với trường tiểu học, trường phổ thông có nhiều cấp học có cấp tiểu học...\n\nĐiều 5: Mục đích đánh giá\nCung cấp thông tin chính xác, kịp thời, xác định được thành tích học tập, rèn luyện theo mức độ đáp ứng yêu cầu cần đạt của chương trình giáo dục phổ thông cấp tiểu học và sự tiến bộ của học sinh để hướng dẫn hoạt động học tập, điều chỉnh các hoạt động dạy học nhằm nâng cao chất lượng giáo dục.",
-      "rawContent": "BỘ GIÁO DỤC VÀ ĐÀO TẠO\nSố: 27/2020/TT-BGDĐT\n\nQUY ĐỊNH ĐÁNH GIÁ HỌC SINH TIỂU HỌC\n\nCHƯƠNG I: NHỮNG QUY ĐỊNH CHUNG\n- Đánh giá học sinh tiểu học là quá trình thu thập, xử lý thông tin thông qua các hoạt động quan sát, theo dõi, trao đổi, kiểm tra, nhận xét quá trình học tập, rèn luyện của học sinh.\n- Đánh giá thường xuyên bằng nhận xét, đánh giá định kỳ bằng điểm số kết hợp với nhận xét.\n- Đánh giá vì sự tiến bộ của học sinh; coi trọng việc động viên, khuyến khích sự cố gắng trong học tập, rèn luyện.\n\nCHƯƠNG II: ĐÁNH GIÁ ĐỊNH KỲ VÀ THƯỜNG XUYÊN\n- Đánh giá nội dung học tập các môn học: Hoàn thành tốt (T), Hoàn thành (H), Chưa hoàn thành (C).\n- Đánh giá sự hình thành và phát triển từng phẩm chất chủ yếu: Yêu nước, nhân ái, chăm chỉ, trung thực, trách nhiệm.\n- Đánh giá sự hình thành và phát triển từng năng lực cốt lõi: Tự chủ và tự học, giao tiếp và hợp tác, giải quyết vấn đề và sáng tạo.",
-      "versions": [
-        {
-          "id": "ver-03-1",
-          "versionNumber": 1,
-          "versionLabel": "v1",
-          "fileName": "Thông tư 27.pdf",
-          "sizeBytes": 3984588,
-          "uploadedAt": "2026-09-26T09:00:00Z",
-          "uploadedBy": "Từ Văn Gọn",
-          "notes": "Văn bản gốc từ Cổng thông tin điện tử Bộ Giáo dục và Đào tạo",
-          "storagePath": "/uploads/thong_tu_27.pdf"
-        }
-      ],
-      "share": {
-        "isShared": true,
-        "shareType": "public_link",
-        "permission": "view",
-        "sharedWithEmails": [],
-        "shareLink": "https://ais-dev.cloud/share/thongtu27-bgd",
-        "expiresAt": "2027-01-01T00:00:00Z"
-      }
-    },
-    {
-      "id": "file-04",
-      "name": "Hình ảnh hoạt động lớp 1C.zip",
-      "folderId": "f-04",
-      "folderName": "04. HÌNH ẢNH",
-      "type": "zip",
-      "extension": "zip",
-      "mimeType": "application/zip",
-      "sizeBytes": 26843545,
-      "createdAt": "2026-09-25T11:20:00Z",
-      "updatedAt": "2026-09-25T11:20:00Z",
-      "owner": "Từ Văn Gọn",
-      "description": "Kho hình ảnh ngày tựu trường, lễ khai giảng và các hoạt động vẽ tranh, trải nghiệm làm lồng đèn Trung thu năm 2026 của học sinh lớp 1C.",
-      "tags": [
-        "Lớp 1C",
-        "Hình ảnh",
-        "Khai giảng",
-        "Ngoại khóa"
-      ],
-      "isFavorite": false,
-      "isDeleted": false,
-      "storagePath": "/uploads/hoat_dong_lop_1c.zip",
-      "contentSnippet": "Nén 45 bức ảnh chất lượng cao (JPG, PNG) của lớp 1C Trường Tiểu học Phường An Xuyên:\n- KhaiGiang_1C_01.jpg đến KhaiGiang_1C_15.jpg\n- TrungThu_LamLongDen_01.jpg đến TrungThu_LamLongDen_20.jpg\n- SinhHoatLop_DocSach_01.jpg đến 10.jpg",
-      "rawContent": "DANH SÁCH TỆP TRONG FILE NÉN HÌNH ẢNH LỚP 1C:\n1. KhaiGiang_1C_ChupTapThe.jpg (4.2 MB)\n2. ThietBiDayHoc_CoTro.jpg (3.8 MB)\n3. HoatDong_VuiTrungThu_2026.jpg (5.1 MB)\n4. BuoiDocSach_ThuVienXanh.jpg (3.9 MB)\n5. TraoThuong_HoaDiemMuoi.jpg (4.4 MB)",
-      "versions": [
-        {
-          "id": "ver-04-1",
-          "versionNumber": 1,
-          "versionLabel": "v1",
-          "fileName": "Hình ảnh hoạt động lớp 1C.zip",
-          "sizeBytes": 26843545,
-          "uploadedAt": "2026-09-25T11:20:00Z",
-          "uploadedBy": "Từ Văn Gọn",
-          "storagePath": "/uploads/hoat_dong_lop_1c.zip"
-        }
-      ],
-      "share": {
-        "isShared": false,
-        "shareType": "private",
-        "permission": "view",
-        "sharedWithEmails": []
-      }
-    },
-    {
-      "id": "file-05",
-      "name": "Danh sách học sinh lớp 1C.xlsx",
-      "folderId": "f-02",
-      "folderName": "02. LỚP 1C",
-      "type": "excel",
-      "extension": "xlsx",
-      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "sizeBytes": 1258291,
-      "createdAt": "2026-09-24T14:45:00Z",
-      "updatedAt": "2026-09-24T14:45:00Z",
-      "owner": "Từ Văn Gọn",
-      "description": "Bảng theo dõi thông tin nhân khẩu, học bạ, số điện thoại phụ huynh và tình trạng tiêm chủng của 32 học sinh lớp 1C niên khóa 2026-2027.",
-      "tags": [
-        "Danh sách học sinh",
-        "Lớp 1C",
-        "Chủ nhiệm",
-        "Hồ sơ lớp"
-      ],
-      "isFavorite": true,
-      "isDeleted": false,
-      "storagePath": "/uploads/danh_sach_hoc_sinh_1c.xlsx",
-      "contentSnippet": "DANH SÁCH HỌC SINH LỚP 1C - TRƯỜNG TIỂU HỌC PHƯỜNG AN XUYÊN - TP CÀ MAU\nGiáo viên chủ nhiệm: Từ Văn Gọn\nTổng số học sinh: 32 em (Nam: 17, Nữ: 15)\n1. Nguyễn Hoàng An - 12/03/2020 - Nam - Khóm 3, Phường An Xuyên\n2. Trần Bảo Anh - 05/06/2020 - Nữ - Ấp Tân Hiệp, Xã An Xuyên\n3. Lê Minh Cường - 22/01/2020 - Nam - Khóm 1, Phường An Xuyên\n4. Phạm Quỳnh Chi - 14/09/2020 - Nữ - Phường An Xuyên, TP Cà Mau\n5. Đỗ Gia Huy - 30/11/2020 - Nam - Phường Tân Thành, Cà Mau",
-      "rawContent": "BẢNG TÍNH EXCEL: DANH SÁCH VÀ THÔNG TIN PHỤ HUYNH LỚP 1C (32 HỌC SINH)\nSTT | Mã HS | Họ và tên | Ngày sinh | Giới tính | Họ tên cha/mẹ | Số điện thoại | Địa chỉ cư trú\n1 | HS01 | Nguyễn Hoàng An | 12/03/2020 | Nam | Nguyễn Văn Hùng | 0913.882.123 | Khóm 3, P. An Xuyên\n2 | HS02 | Trần Bảo Anh | 05/06/2020 | Nữ | Trần Văn Tuấn | 0944.221.789 | Ấp Tân Hiệp, P. An Xuyên\n3 | HS03 | Lê Minh Cường | 22/01/2020 | Nam | Lê Thành Đạt | 0907.551.442 | Khóm 1, P. An Xuyên\n4 | HS04 | Phạm Quỳnh Chi | 14/09/2020 | Nữ | Phạm Văn Long | 0989.112.334 | Khóm 2, P. An Xuyên\n5 | HS05 | Đỗ Gia Huy | 30/11/2020 | Nam | Đỗ Minh Trí | 0918.447.889 | P. Tân Thành, TP Cà Mau\n6 | HS06 | Huỳnh Ngọc Mai | 18/07/2020 | Nữ | Huỳnh Văn Phát | 0939.667.120 | Khóm 4, P. An Xuyên\n7 | HS07 | Võ Minh Khôi | 09/04/2020 | Nam | Võ Văn Bình | 0948.334.556 | Ấp Cây Trâm, P. An Xuyên\n8 | HS08 | Nguyễn Thảo Vy | 25/10/2020 | Nữ | Nguyễn Văn Nam | 0919.223.887 | Khóm 3, P. An Xuyên",
-      "versions": [
-        {
-          "id": "ver-05-1",
-          "versionNumber": 1,
-          "versionLabel": "v1",
-          "fileName": "Danh sách học sinh lớp 1C.xlsx",
-          "sizeBytes": 1258291,
-          "uploadedAt": "2026-09-24T14:45:00Z",
-          "uploadedBy": "Từ Văn Gọn",
-          "storagePath": "/uploads/danh_sach_hoc_sinh_1c.xlsx"
-        }
-      ],
-      "share": {
-        "isShared": false,
-        "shareType": "private",
-        "permission": "view",
-        "sharedWithEmails": []
-      }
-    },
-    {
-      "id": "file-06",
-      "name": "Ma trận đề kiểm tra Toán 1.xlsx",
-      "folderId": "f-07",
-      "folderName": "07. EXCEL",
-      "type": "excel",
-      "extension": "xlsx",
-      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "sizeBytes": 1258291,
-      "createdAt": "2026-09-10T09:20:00Z",
-      "updatedAt": "2026-09-10T09:20:00Z",
-      "owner": "Từ Văn Gọn",
-      "description": "Bảng ma trận và bản đặc tả đề kiểm tra định kỳ môn Toán lớp 1 theo 3 mức độ nhận thức (Mức 1, Mức 2, Mức 3) theo Thông tư 27.",
-      "tags": [
-        "Ma trận đề",
-        "Toán 1",
-        "Kiểm tra",
-        "Đề thi"
-      ],
-      "isFavorite": false,
-      "isDeleted": false,
-      "storagePath": "/uploads/ma_tran_de_toan_1.xlsx",
-      "contentSnippet": "MA TRẬN ĐỀ KIỂM TRA ĐỊNH KỲ MÔN TOÁN LỚP 1\nTheo Thông tư số 27/2020/TT-BGDĐT\nMạch kiến thức: Số và phép tính (chiếm 70%), Hình học và đo lường (20%), Một số yếu tố thống kê và xác suất (10%)\nMức 1 (Nhận biết): 50% (5 điểm)\nMức 2 (Thông hiểu): 30% (3 điểm)\nMức 3 (Vận dụng): 20% (2 điểm)",
-      "rawContent": "MA TRẬN ĐỀ THI MÔN TOÁN 1:\n- Mức 1: Đếm số, so sánh hai số bé hơn 10 (TN: 4 câu, TL: 1 câu)\n- Mức 2: Thực hiện phép cộng không nhớ trong phạm vi 10, đo độ dài bằng gang tay (TN: 2 câu, TL: 2 câu)\n- Mức 3: Giải bài toán có lời văn một bước tính dạng gộp thêm đồ vật (TL: 1 câu)",
-      "versions": [
-        {
-          "id": "ver-06-1",
-          "versionNumber": 1,
-          "versionLabel": "v1",
-          "fileName": "Ma trận đề kiểm tra Toán 1.xlsx",
-          "sizeBytes": 1258291,
-          "uploadedAt": "2026-09-10T09:20:00Z",
-          "uploadedBy": "Từ Văn Gọn",
-          "storagePath": "/uploads/ma_tran_de_toan_1.xlsx"
-        }
-      ],
-      "share": {
-        "isShared": false,
-        "shareType": "private",
-        "permission": "view",
-        "sharedWithEmails": []
-      }
-    },
-    {
-      "id": "file-08",
-      "name": "Mẫu nhận xét học sinh lớp 1.docx",
-      "folderId": "f-02",
-      "folderName": "02. LỚP 1C",
-      "type": "word",
-      "extension": "docx",
-      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      "sizeBytes": 1572864,
-      "createdAt": "2026-09-18T15:30:00Z",
-      "updatedAt": "2026-09-18T15:30:00Z",
-      "owner": "Từ Văn Gọn",
-      "description": "Bộ sưu tập 100+ câu nhận xét đánh giá thường xuyên và định kỳ cho học sinh lớp 1 theo từng mức độ Hoàn thành tốt, Hoàn thành và Chưa hoàn thành.",
-      "tags": [
-        "Mẫu nhận xét",
-        "Lớp 1",
-        "Học bạ",
-        "Nhận xét môn học"
-      ],
-      "isFavorite": true,
-      "isDeleted": false,
-      "storagePath": "/uploads/mau_nhan_xet_lop1.docx",
-      "contentSnippet": "TỔNG HỢP MẪU NHẬN XÉT HỌC BẠ VÀ SỔ THEO DÕI ĐÁNH GIÁ LỚP 1\nThầy giáo: Từ Văn Gọn biên soạn\n\n1. Môn Tiếng Việt:\n- Mức T (Hoàn thành tốt): Đọc to, rõ ràng, lưu loát; phát âm chuẩn các âm vần khó; viết chữ đúng độ cao và đều nét; có vốn từ phong phú.\n- Mức H (Hoàn thành): Đọc được các âm vần và câu văn ngắn; viết đúng mẫu chữ; cần rèn thêm tốc độ đọc.\n- Mức C: Còn nhầm lẫn âm dấu thanh, cần thầy cô và phụ huynh kiên nhẫn hướng dẫn thêm.\n\n2. Môn Toán:\n- Mức T: Nắm chắc các số đến 10; tính nhẩm nhanh và chính xác; thích thú giải bài toán vui.\n- Mức H: Đếm số và so sánh thành thạo; thực hiện được phép tính cộng trừ đơn giản.",
-      "rawContent": "MẪU NHẬN XÉT PHẨM CHẤT VÀ NĂNG LỰC:\n- Chăm chỉ: Đi học chuyên cần, tích cực giơ tay phát biểu, giữ gìn sách vở cẩn thận.\n- Nhân ái: Hòa đồng, biết yêu thương giúp đỡ bạn bè, vâng lời thầy cô.\n- Trung thực: Thật thà, dũng cảm nhận lỗi khi làm rơi đồ dùng của bạn.\n- Trách nhiệm: Thực hiện tốt nội quy lớp học, hoàn thành việc trực nhật bàn ghế sạch sẽ.",
-      "versions": [
-        {
-          "id": "ver-08-1",
-          "versionNumber": 1,
-          "versionLabel": "v1",
-          "fileName": "Mẫu nhận xét học sinh lớp 1.docx",
-          "sizeBytes": 1572864,
-          "uploadedAt": "2026-09-18T15:30:00Z",
-          "uploadedBy": "Từ Văn Gọn",
-          "storagePath": "/uploads/mau_nhan_xet_lop1.docx"
-        }
-      ],
-      "share": {
-        "isShared": false,
-        "shareType": "private",
-        "permission": "view",
-        "sharedWithEmails": []
-      }
-    },
-    {
-      "id": "file-09",
-      "name": "Kế hoạch đánh giá học sinh lớp 1.pdf",
-      "folderId": "f-08",
-      "folderName": "08. PDF",
-      "type": "pdf",
-      "extension": "pdf",
-      "mimeType": "application/pdf",
-      "sizeBytes": 2411724,
-      "createdAt": "2026-09-14T08:30:00Z",
-      "updatedAt": "2026-09-14T08:30:00Z",
-      "owner": "Từ Văn Gọn",
-      "description": "Kế hoạch tổ chức đánh giá học sinh lớp 1 học kỳ I năm học 2026-2027 của Trường Tiểu học Phường An Xuyên.",
-      "tags": [
-        "Kế hoạch",
-        "Kiểm tra định kỳ",
-        "Tiểu học An Xuyên"
-      ],
-      "isFavorite": false,
-      "isDeleted": false,
-      "storagePath": "/uploads/ke_hoach_danh_gia_lop1.pdf",
-      "contentSnippet": "ỦY BAN NHÂN DÂN THÀNH PHỐ CÀ MAU\nTRƯỜNG TIỂU HỌC PHƯỜNG AN XUYÊN\nKẾ HOẠCH ĐÁNH GIÁ ĐỊNH KỲ HỌC SINH LỚP 1 NĂM HỌC 2026 - 2027\n\n1. Thời gian kiểm tra cuối học kỳ I: Từ ngày 28/12/2026 đến 31/12/2026.\n2. Môn thi: Toán (thời gian làm bài 40 phút), Tiếng Việt (Đọc thành tiếng, Đọc hiểu và Viết - 50 phút).\n3. Phân công ra đề và coi thi chéo giữa các lớp 1A, 1B, 1C.",
-      "rawContent": "KẾ HOẠCH CHI TIẾT TỔNG KẾT ĐÁNH GIÁ:\n- Báo cáo kết quả về Ban giám hiệu trước ngày 05/01/2027.\n- Họp phụ huynh thông báo kết quả và tư vấn hỗ trợ học sinh tại gia đình.",
-      "versions": [
-        {
-          "id": "ver-09-1",
-          "versionNumber": 1,
-          "versionLabel": "v1",
-          "fileName": "Kế hoạch đánh giá học sinh lớp 1.pdf",
-          "sizeBytes": 2411724,
-          "uploadedAt": "2026-09-14T08:30:00Z",
-          "uploadedBy": "Từ Văn Gọn",
-          "storagePath": "/uploads/ke_hoach_danh_gia_lop1.pdf"
-        }
-      ],
-      "share": {
-        "isShared": false,
-        "shareType": "private",
-        "permission": "view",
-        "sharedWithEmails": []
-      }
-    },
-    {
-      "id": "file-10",
-      "name": "Ứng dụng AI trong soạn giáo án tiểu học.pdf",
-      "folderId": "f-03",
-      "folderName": "03. AI",
-      "type": "pdf",
-      "extension": "pdf",
-      "mimeType": "application/pdf",
-      "sizeBytes": 4299161,
-      "createdAt": "2026-09-26T11:00:00Z",
-      "updatedAt": "2026-09-26T11:00:00Z",
-      "owner": "Từ Văn Gọn",
-      "description": "Chuyên đề nghiên cứu sư phạm: Khai thác Trí tuệ nhân tạo (Gemini AI) trong việc tạo trò chơi học tập và hình ảnh trực quan cho học sinh lớp 1.",
-      "tags": [
-        "AI",
-        "Sư phạm số",
-        "Gemini AI",
-        "Giáo án điện tử",
-        "Thầy Gọn"
-      ],
-      "isFavorite": true,
-      "isDeleted": false,
-      "storagePath": "/uploads/ai_trong_day_hoc.pdf",
-      "contentSnippet": "BÁO CÁO KINH NGHIỆM SƯ PHẠM\nỨNG DỤNG TRÍ TUỆ NHÂN TẠO TRONG XÂY DỰNG HỌC LIỆU SỐ BẬC TIỂU HỌC\nTác giả: Thầy giáo Từ Văn Gọn - Trường Tiểu học Phường An Xuyên, TP Cà Mau\n\n1. Đặt vấn đề: Học sinh tiểu học cần trực quan sinh động. Việc tạo tranh ảnh, câu đố và bài tập phân hóa tốn nhiều thời gian của giáo viên.\n2. Giải pháp: Sử dụng mô hình ngôn ngữ lớn (Gemini) để:\n- Thiết kế kịch bản trò chơi khởi động tiết học.\n- Tạo đề toán có cốt truyện gần gũi với vùng sông nước miền Tây Cà Mau (rừng đước, con tôm, chiếc xuồng).\n- Soạn lời nhận xét học sinh cá nhân hóa, ân cần và giàu cảm xúc.",
-      "rawContent": "NỘI DUNG CHUYÊN ĐỀ:\n- Cách viết câu lệnh (prompt) hiệu quả cho giáo viên tiểu học.\n- Kết hợp công cụ AI với sách giáo khoa hiện hành.\n- Đảm bảo tính sư phạm và an toàn thông tin của học sinh.",
-      "versions": [
-        {
-          "id": "ver-10-1",
-          "versionNumber": 1,
-          "versionLabel": "v1",
-          "fileName": "Ứng dụng AI trong soạn giáo án tiểu học.pdf",
-          "sizeBytes": 4299161,
-          "uploadedAt": "2026-09-26T11:00:00Z",
-          "uploadedBy": "Từ Văn Gọn",
-          "storagePath": "/uploads/ai_trong_day_hoc.pdf"
-        }
-      ],
-      "share": {
-        "isShared": true,
-        "shareType": "public_link",
-        "permission": "view",
-        "sharedWithEmails": [],
-        "shareLink": "https://ais-dev.cloud/share/ai-tieu-hoc-thay-gon"
-      }
-    },
-    {
-      "id": "file-11",
-      "name": "Video tiết dạy mẫu môn Tiếng Việt 1.mp4",
-      "folderId": "f-05",
-      "folderName": "05. VIDEO",
-      "type": "video",
-      "extension": "mp4",
-      "mimeType": "video/mp4",
-      "sizeBytes": 471859200,
-      "createdAt": "2026-09-24T15:00:00Z",
-      "updatedAt": "2026-09-24T15:00:00Z",
-      "owner": "Từ Văn Gọn",
-      "description": "Video ghi lại toàn bộ tiết dạy thao giảng môn Tiếng Việt lớp 1C - Bài học vần. Đạt giải Nhất giáo viên dạy giỏi cấp trường.",
-      "tags": [
-        "Video",
-        "Tiết dạy mẫu",
-        "Thao giảng",
-        "Giáo viên dạy giỏi"
-      ],
-      "isFavorite": true,
-      "isDeleted": false,
-      "storagePath": "/uploads/video_tiet_day_lop1.mp4",
-      "contentSnippet": "Ghi hình độ phân giải 1080p, thời lượng 35 phút. Tiết dạy minh họa phương pháp dạy học lấy học sinh làm trung tâm, kết hợp màn hình tương tác và đồ dùng dạy học tự làm.",
-      "rawContent": "THÔNG TIN VIDEO THAO GIẢNG:\n- Thời lượng: 35 phút 20 giây\n- Giáo viên thực hiện: Từ Văn Gọn\n- Lớp thực hiện: 1C, Trường Tiểu học Phường An Xuyên\n- Đánh giá của Ban giám khảo: Tiết dạy sáng tạo, học sinh hoạt động sôi nổi, nắm chắc bài học.",
-      "versions": [
-        {
-          "id": "ver-11-1",
-          "versionNumber": 1,
-          "versionLabel": "v1",
-          "fileName": "Video tiết dạy mẫu môn Tiếng Việt 1.mp4",
-          "sizeBytes": 471859200,
-          "uploadedAt": "2026-09-24T15:00:00Z",
-          "uploadedBy": "Từ Văn Gọn",
-          "storagePath": "/uploads/video_tiet_day_lop1.mp4"
-        }
-      ],
-      "share": {
-        "isShared": false,
-        "shareType": "private",
-        "permission": "view",
-        "sharedWithEmails": []
-      }
-    },
-    {
-      "id": "file-12",
-      "name": "Báo cáo công tác tháng 8.pdf",
-      "folderId": "f-08",
-      "folderName": "08. PDF",
-      "type": "pdf",
-      "extension": "pdf",
-      "mimeType": "application/pdf",
-      "sizeBytes": 1887436,
-      "createdAt": "2026-08-30T10:00:00Z",
-      "updatedAt": "2026-08-30T10:00:00Z",
-      "owner": "Từ Văn Gọn",
-      "description": "Báo cáo tổng kết công tác chuẩn bị năm học mới và tập huấn sách giáo khoa lớp 1 tháng 8 năm 2026.",
-      "tags": [
-        "Báo cáo",
-        "Tháng 8",
-        "Tập huấn"
-      ],
-      "isFavorite": false,
-      "isDeleted": false,
-      "storagePath": "/uploads/bao_cao_thang_8.pdf",
-      "contentSnippet": "BÁO CÁO CÔNG TÁC THÁNG 8 NĂM 2026\nTổ chuyên môn Khối 1 - Trường Tiểu học Phường An Xuyên\n1. Tham gia đầy đủ các lớp tập huấn SGK mới do Sở GD&ĐT Cà Mau tổ chức.\n2. Vệ sinh trường lớp, trang trí phòng học thân thiện cho học sinh lớp 1C.\n3. Hoàn tất việc rà soát danh sách học sinh vào lớp 1 trên địa bàn Phường An Xuyên.",
-      "rawContent": "KẾT QUẢ THÁNG 8:\n- 100% giáo viên khối 1 hoàn thành bài thu hoạch tập huấn.\n- Phòng học lớp 1C khang trang, đầy đủ bảng từ, bàn ghế đúng quy cách.",
-      "versions": [
-        {
-          "id": "ver-12-1",
-          "versionNumber": 1,
-          "versionLabel": "v1",
-          "fileName": "Báo cáo công tác tháng 8.pdf",
-          "sizeBytes": 1887436,
-          "uploadedAt": "2026-08-30T10:00:00Z",
-          "uploadedBy": "Từ Văn Gọn",
-          "storagePath": "/uploads/bao_cao_thang_8.pdf"
-        }
-      ],
-      "share": {
-        "isShared": false,
-        "shareType": "private",
-        "permission": "view",
-        "sharedWithEmails": []
-      }
     }
   ],
   "folders": [
@@ -2195,6 +1719,7 @@
   ],
   "user": {
     "id": "user-tuvangon",
+    "username": "tuvangon",
     "fullName": "Từ Văn Gọn",
     "title": "Giáo viên tiểu học",
     "school": "Trường Tiểu học Phường An Xuyên",
@@ -2202,7 +1727,7 @@
     "province": "Tỉnh Cà Mau",
     "email": "tuvangon@gmail.com",
     "avatarUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=256",
-    "phone": "0919271854",
+    "phone": "0918 234 567",
     "storagePlan": "Gói Giáo Viên Đám Mây VIP",
     "storageLimitGB": 100,
     "twoFactorEnabled": true,
@@ -2210,6 +1735,118 @@
     "theme": "light"
   },
   "activityLogs": [
+    {
+      "id": "log-1791540217258",
+      "action": "Đăng nhập hệ thống",
+      "detail": "Thầy/Cô Từ Văn Gọn (@tuvangon) đã đăng nhập vào hệ thống",
+      "timestamp": "2026-10-09T10:03:37.258Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "login"
+    },
+    {
+      "id": "log-1791540213021",
+      "action": "Đăng nhập hệ thống",
+      "detail": "Thầy/Cô Cô Nguyễn Thị Mai (@cogaomai) đã đăng nhập vào hệ thống",
+      "timestamp": "2026-10-09T10:03:33.021Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "login"
+    },
+    {
+      "id": "log-1791540205468",
+      "action": "Đăng ký tài khoản",
+      "detail": "Thầy/Cô Cô Nguyễn Thị Mai đã đăng ký tài khoản mới thành công (@cogaomai)",
+      "timestamp": "2026-10-09T10:03:25.468Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "login"
+    },
+    {
+      "id": "log-1791538972473",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"ÄÃ´i khi báº¡n cáº£m tháº¥y khÃ³ chá»u khi chiáº¿c mÃ¡y tÃ­nh cá»§a mÃ¬nh cháº¡y má»t cÃ¡ch cháº­m cháº¡p.doc\" vào thùng rác",
+      "timestamp": "2026-10-09T09:42:52.473Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791538727153",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"Bài giảng điện tử Tiếng Việt.pptx\" vào thùng rác",
+      "timestamp": "2026-10-09T09:38:47.153Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791538716125",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"Báo cáo công tác tháng 8.pdf\" vào thùng rác",
+      "timestamp": "2026-10-09T09:38:36.125Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791538714455",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"Kế hoạch đánh giá học sinh lớp 1.pdf\" vào thùng rác",
+      "timestamp": "2026-10-09T09:38:34.455Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791538712749",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"Thông tư 27.pdf\" vào thùng rác",
+      "timestamp": "2026-10-09T09:38:32.749Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791538702749",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"Ma trận đề kiểm tra Toán 1.xlsx\" vào thùng rác",
+      "timestamp": "2026-10-09T09:38:22.749Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791538694739",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"Video tiết dạy mẫu môn Tiếng Việt 1.mp4\" vào thùng rác",
+      "timestamp": "2026-10-09T09:38:14.739Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791538686151",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"Hình ảnh hoạt động lớp 1C.zip\" vào thùng rác",
+      "timestamp": "2026-10-09T09:38:06.151Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791538673852",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"Ứng dụng AI trong soạn giáo án tiểu học.pdf\" vào thùng rác",
+      "timestamp": "2026-10-09T09:37:53.852Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791538614425",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"Danh sách học sinh lớp 1C.xlsx\" vào thùng rác",
+      "timestamp": "2026-10-09T09:36:54.425Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791538610228",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"Mẫu nhận xét học sinh lớp 1.docx\" vào thùng rác",
+      "timestamp": "2026-10-09T09:36:50.228Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
     {
       "id": "log-1791537355232",
       "action": "Tải lên tài liệu lớn",
@@ -2641,6 +2278,44 @@
       "timestamp": "2026-09-28T07:45:00Z",
       "ipAddress": "113.185.42.10 (Cà Mau, VN)",
       "iconType": "login"
+    }
+  ],
+  "accounts": [
+    {
+      "id": "user-tuvangon",
+      "username": "tuvangon",
+      "password": "thaygon2026",
+      "fullName": "Từ Văn Gọn",
+      "title": "Giáo viên tiểu học",
+      "school": "Trường Tiểu học Phường An Xuyên",
+      "district": "Thành phố Cà Mau",
+      "province": "Tỉnh Cà Mau",
+      "email": "tuvangon@gmail.com",
+      "avatarUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=256",
+      "phone": "0918 234 567",
+      "storagePlan": "Gói Giáo Viên Đám Mây VIP",
+      "storageLimitGB": 100,
+      "twoFactorEnabled": true,
+      "createdAt": "2026-09-01T08:00:00Z",
+      "lastLoginAt": "2026-10-09T10:03:37.258Z"
+    },
+    {
+      "id": "user-1791540205468-235",
+      "username": "cogaomai",
+      "password": "password123",
+      "fullName": "Cô Nguyễn Thị Mai",
+      "title": "Giáo viên chủ nhiệm lớp 1A",
+      "school": "Trường Tiểu học Phường An Xuyên",
+      "district": "Thành phố Cà Mau",
+      "province": "Tỉnh Cà Mau",
+      "email": "cogaomai@anxuyen.edu.vn",
+      "avatarUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=256",
+      "phone": "",
+      "storagePlan": "Gói Giáo Viên Đám Mây VIP",
+      "storageLimitGB": 100,
+      "twoFactorEnabled": false,
+      "createdAt": "2026-10-09T10:03:25.468Z",
+      "lastLoginAt": "2026-10-09T10:03:33.021Z"
     }
   ]
 }

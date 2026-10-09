@@ -21,9 +21,13 @@ import {
   ExternalLink,
   Table,
   Layers,
-  AlertCircle
+  AlertCircle,
+  UserPlus,
+  Users,
+  LogIn,
+  ArrowRight
 } from 'lucide-react';
-import { UserProfile, ActivityLog } from '../types';
+import { UserProfile, ActivityLog, UserAccount } from '../types';
 import { formatDateTime, api } from '../services/api';
 import { SUPABASE_SQL_SCHEMA } from '../lib/supabase';
 
@@ -31,12 +35,16 @@ interface SettingsViewProps {
   user: UserProfile;
   activityLogs: ActivityLog[];
   onUpdateUser: (updates: Partial<UserProfile>) => void;
+  onOpenAuth?: (mode: 'register' | 'login') => void;
+  onShowToast?: (message: string, type?: 'success' | 'error' | 'info') => void;
 }
 
 export const SettingsView: React.FC<SettingsViewProps> = ({
   user,
   activityLogs,
   onUpdateUser,
+  onOpenAuth,
+  onShowToast,
 }) => {
   const [fullName, setFullName] = useState(user.fullName);
   const [title, setTitle] = useState(user.title);
@@ -46,6 +54,8 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
   const [language, setLanguage] = useState(user.language);
   const [theme, setTheme] = useState<'light' | 'dark'>(user.theme || 'light');
   const [savedSuccess, setSavedSuccess] = useState(false);
+  const [accounts, setAccounts] = useState<UserAccount[]>([]);
+  const [loadingAccounts, setLoadingAccounts] = useState(false);
 
   // Supabase states
   const [supabaseLoading, setSupabaseLoading] = useState(false);
@@ -87,9 +97,33 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
     }
   };
 
+  const loadAccounts = async () => {
+    setLoadingAccounts(true);
+    try {
+      const list = await api.getAccounts();
+      setAccounts(list);
+    } catch (err) {
+      console.warn('Accounts load error:', err);
+    } finally {
+      setLoadingAccounts(false);
+    }
+  };
+
   useEffect(() => {
     checkStatus();
-  }, []);
+    loadAccounts();
+  }, [user]);
+
+  const handleSwitchAccountFromSettings = async (targetUsername: string) => {
+    try {
+      const res = await api.switchAccount({ username: targetUsername });
+      onUpdateUser(res.user);
+      if (onShowToast) onShowToast(`Đã chuyển sang tài khoản ${res.user.fullName}`, 'success');
+      loadAccounts();
+    } catch (err: any) {
+      if (onShowToast) onShowToast(err?.message || 'Chuyển tài khoản thất bại', 'error');
+    }
+  };
 
   const handleCopySql = () => {
     navigator.clipboard.writeText(SUPABASE_SQL_SCHEMA);
@@ -139,20 +173,141 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
               11
             </span>
             <h2 className="text-xl sm:text-2xl font-bold text-slate-800 tracking-tight">
-              Cài đặt & Bảo mật
+              Cài đặt & Quản lý Tài khoản
             </h2>
           </div>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            Quản lý tài khoản cá nhân, cơ chế bảo mật hai lớp và nhật ký bảo an của Thầy Từ Văn Gọn
+            Quản lý tài khoản cá nhân, đăng ký người dùng mới, bảo mật hai lớp và nhật ký bảo an
           </p>
         </div>
 
-        {savedSuccess && (
-          <div className="flex items-center gap-1.5 px-3.5 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-xl border border-emerald-200 animate-in fade-in">
-            <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-            <span>Đã lưu cài đặt thành công!</span>
+        <div className="flex items-center gap-2">
+          {onOpenAuth && (
+            <button
+              onClick={() => onOpenAuth('register')}
+              className="px-3.5 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-xs shadow-md transition flex items-center gap-1.5"
+            >
+              <UserPlus className="w-4 h-4 text-white" />
+              <span>Đăng ký tài khoản mới</span>
+            </button>
+          )}
+
+          {savedSuccess && (
+            <div className="flex items-center gap-1.5 px-3.5 py-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold rounded-xl border border-emerald-200 animate-in fade-in">
+              <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+              <span>Đã lưu cài đặt!</span>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Account Registration & Management Highlight Card */}
+      <div className="bg-gradient-to-br from-blue-50/70 via-indigo-50/40 to-white p-5 sm:p-6 rounded-2xl border border-blue-200/80 shadow-xs space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-blue-100">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-[#0866E8] flex items-center justify-center text-white shadow-md shadow-blue-500/20">
+              <Users className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <h3 className="text-base font-bold text-slate-900">
+                Quản Lý Tài Khoản & Đăng Ký Người Dùng
+              </h3>
+              <p className="text-xs text-slate-500">
+                Hệ thống hỗ trợ đăng ký tài khoản mới bằng tên đăng nhập và mật khẩu, dễ dàng chuyển đổi giữa các tài khoản
+              </p>
+            </div>
           </div>
-        )}
+
+          <div className="flex items-center gap-2">
+            {onOpenAuth && (
+              <>
+                <button
+                  type="button"
+                  onClick={() => onOpenAuth('register')}
+                  className="px-3.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm transition flex items-center gap-1.5"
+                >
+                  <UserPlus className="w-3.5 h-3.5" />
+                  <span>Đăng ký tài khoản</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => onOpenAuth('login')}
+                  className="px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 text-[#0866E8] border border-blue-200 text-xs font-bold shadow-xs transition flex items-center gap-1.5"
+                >
+                  <LogIn className="w-3.5 h-3.5" />
+                  <span>Đổi tài khoản</span>
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* Registered Accounts Grid */}
+        <div>
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-xs font-bold text-slate-700 uppercase tracking-wide">
+              Danh sách tài khoản trên hệ thống ({accounts.length})
+            </span>
+            <span className="text-[11px] text-blue-600 font-medium">
+              Tài khoản đang đăng nhập: <strong className="font-bold text-blue-800">{user.fullName} (@{user.username || 'tuvangon'})</strong>
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            {accounts.map((acc) => {
+              const isActive = (user.username || 'tuvangon') === acc.username;
+              return (
+                <div
+                  key={acc.id}
+                  className={`p-3.5 rounded-xl border transition flex flex-col justify-between ${
+                    isActive
+                      ? 'border-blue-400 bg-white ring-2 ring-blue-500/20 shadow-xs'
+                      : 'border-slate-200 bg-white hover:border-blue-300'
+                  }`}
+                >
+                  <div className="flex items-start gap-3">
+                    <img
+                      src={acc.avatarUrl || 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=256'}
+                      alt={acc.fullName}
+                      className="w-10 h-10 rounded-full object-cover border border-slate-200"
+                    />
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-1">
+                        <span className="font-bold text-slate-900 text-xs sm:text-sm truncate">
+                          {acc.fullName}
+                        </span>
+                        {isActive && (
+                          <span className="text-[10px] bg-blue-100 text-[#0866E8] px-2 py-0.5 rounded-full font-bold shrink-0">
+                            Hiện tại
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-[11px] text-blue-600 font-mono mt-0.5 truncate">
+                        @{acc.username}
+                      </div>
+                      <div className="text-[10px] text-slate-500 mt-1 truncate">
+                        {acc.title || 'Giáo viên'} • {acc.school}
+                      </div>
+                    </div>
+                  </div>
+
+                  {!isActive && (
+                    <div className="mt-3 pt-2.5 border-t border-slate-100 flex justify-end">
+                      <button
+                        type="button"
+                        onClick={() => handleSwitchAccountFromSettings(acc.username)}
+                        className="text-xs font-semibold text-[#0866E8] hover:text-blue-800 flex items-center gap-1 hover:underline"
+                      >
+                        <span>Chuyển sang tài khoản này</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </button>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -333,7 +488,11 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
 
             {/* Change password button */}
             <button
-              onClick={() => alert('Chức năng đổi mật khẩu đã gửi liên kết xác nhận về email của Thầy Gọn.')}
+              onClick={() => {
+                if (onShowToast) {
+                  onShowToast('Hệ thống đã gửi hướng dẫn cập nhật mật khẩu về địa chỉ email của Thầy/Cô.', 'info');
+                }
+              }}
               className="w-full py-2.5 px-3 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-semibold flex items-center justify-center gap-2 transition"
             >
               <KeyRound className="w-3.5 h-3.5 text-blue-600" />

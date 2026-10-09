@@ -5,8 +5,8 @@ import { fileURLToPath } from 'url';
 import multer from 'multer';
 import dotenv from 'dotenv';
 import { GoogleGenAI } from '@google/genai';
-import { initialFiles, initialFolders, initialUser, initialActivityLogs } from './src/data/initialData.ts';
-import { FileItem, FolderItem, StorageStats, UserProfile, ActivityLog, FileType } from './src/types.ts';
+import { initialFiles, initialFolders, initialUser, initialActivityLogs, initialAccounts } from './src/data/initialData.ts';
+import { FileItem, FolderItem, StorageStats, UserProfile, ActivityLog, FileType, UserAccount } from './src/types.ts';
 import { createClient } from '@supabase/supabase-js';
 import { SUPABASE_SQL_SCHEMA } from './src/lib/supabase.ts';
 
@@ -40,6 +40,7 @@ interface AppDatabase {
   folders: FolderItem[];
   user: UserProfile;
   activityLogs: ActivityLog[];
+  accounts: UserAccount[];
 }
 
 // Load or initialize DB
@@ -47,6 +48,10 @@ function loadDatabase(): AppDatabase {
   try {
     if (fs.existsSync(DB_FILE)) {
       const data = JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'));
+      if (!data.accounts || !Array.isArray(data.accounts) || data.accounts.length === 0) {
+        data.accounts = initialAccounts;
+        saveDatabase(data);
+      }
       return data;
     }
   } catch (err) {
@@ -57,6 +62,7 @@ function loadDatabase(): AppDatabase {
     folders: initialFolders,
     user: initialUser,
     activityLogs: initialActivityLogs,
+    accounts: initialAccounts,
   };
   saveDatabase(defaultDb);
   return defaultDb;
@@ -714,6 +720,311 @@ app.patch('/api/user', (req: Request, res: Response) => {
   // Async sync to Supabase
   syncUserProfileToSupabase(db.user).catch(() => {});
   res.json({ success: true, user: db.user });
+});
+
+// ==========================================
+// AUTHENTICATION & ACCOUNT REGISTRATION APIS
+// ==========================================
+
+// Get list of registered accounts (public metadata)
+app.get('/api/auth/accounts', (_req: Request, res: Response) => {
+  const safeAccounts = (db.accounts || []).map(acc => ({
+    id: acc.id,
+    username: acc.username,
+    fullName: acc.fullName,
+    title: acc.title,
+    school: acc.school,
+    email: acc.email,
+    avatarUrl: acc.avatarUrl,
+    createdAt: acc.createdAt,
+    lastLoginAt: acc.lastLoginAt,
+  }));
+  res.json({ success: true, accounts: safeAccounts });
+});
+
+// Register new account with username and password
+app.post('/api/auth/register', (req: Request, res: Response) => {
+  const { username, password, fullName, email, school, title, phone } = req.body;
+
+  // 1. Validate username
+  if (!username || typeof username !== 'string' || !username.trim()) {
+    return res.status(400).json({ success: false, message: 'Vui lòng nhập tên đăng nhập' });
+  }
+
+  const cleanUsername = username.trim().toLowerCase();
+  if (cleanUsername.length < 3) {
+    return res.status(400).json({ success: false, message: 'Tên đăng nhập phải có ít nhất 3 ký tự' });
+  }
+
+  // Validate username characters (alphanumeric, dot, underscore, hyphen)
+  const usernameRegex = /^[a-zA-Z0-9_.-]+$/;
+  if (!usernameRegex.test(cleanUsername)) {
+    return res.status(400).json({
+      success: false,
+      message: 'Tên đăng nhập chỉ được chứa chữ cái không dấu, số, dấu chấm (.), gạch dưới (_) hoặc gạch ngang (-), không chứa khoảng trắng!',
+    });
+  }
+
+  // Check if username already exists
+  if (!db.accounts) db.accounts = [...initialAccounts];
+  const existingAccount = db.accounts.find(a => a.username.toLowerCase() === cleanUsername);
+  if (existingAccount) {
+    return res.status(400).json({
+      success: false,
+      message: `Tên đăng nhập "${cleanUsername}" đã được sử dụng. Vui lòng chọn một tên đăng nhập khác!`,
+    });
+  }
+
+  // 2. Validate password
+  if (!password || typeof password !== 'string' || password.length < 6) {
+    return res.status(400).json({
+      success: false,
+      message: 'Mật khẩu phải có độ dài tối thiểu từ 6 ký tự trở lên để đảm bảo an toàn!',
+    });
+  }
+
+  // 3. Validate full name
+  if (!fullName || typeof fullName !== 'string' || !fullName.trim()) {
+    return res.status(400).json({
+      success: false,
+      message: 'Vui lòng nhập Họ và tên của Thầy/Cô',
+    });
+  }
+
+  const cleanFullName = fullName.trim();
+  const cleanEmail = (email && typeof email === 'string' && email.trim()) 
+    ? email.trim() 
+    : `${cleanUsername}@anxuyen.edu.vn`;
+  const cleanSchool = (school && typeof school === 'string' && school.trim()) 
+    ? school.trim() 
+    : 'Trường Tiểu học Phường An Xuyên';
+  const cleanTitle = (title && typeof title === 'string' && title.trim()) 
+    ? title.trim() 
+    : 'Giáo viên';
+  const cleanPhone = (phone && typeof phone === 'string') ? phone.trim() : '';
+
+  // Avatar generator based on name
+  const avatarIndex = (db.accounts.length % 5) + 1;
+  const sampleAvatars = [
+    'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=256',
+    'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=256',
+    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=256',
+    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=256',
+    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=256',
+  ];
+  const chosenAvatar = sampleAvatars[avatarIndex - 1];
+
+  const nowStr = new Date().toISOString();
+  const newAccount: UserAccount = {
+    id: `user-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
+    username: cleanUsername,
+    password: password,
+    fullName: cleanFullName,
+    title: cleanTitle,
+    school: cleanSchool,
+    district: 'Thành phố Cà Mau',
+    province: 'Tỉnh Cà Mau',
+    email: cleanEmail,
+    avatarUrl: chosenAvatar,
+    phone: cleanPhone,
+    storagePlan: 'Gói Giáo Viên Đám Mây VIP',
+    storageLimitGB: 100,
+    twoFactorEnabled: false,
+    createdAt: nowStr,
+    lastLoginAt: nowStr,
+  };
+
+  db.accounts.push(newAccount);
+
+  // Switch current active user profile to the newly registered account
+  db.user = {
+    id: newAccount.id,
+    username: newAccount.username,
+    fullName: newAccount.fullName,
+    title: newAccount.title,
+    school: newAccount.school,
+    district: newAccount.district,
+    province: newAccount.province,
+    email: newAccount.email,
+    avatarUrl: newAccount.avatarUrl,
+    phone: newAccount.phone,
+    storagePlan: newAccount.storagePlan,
+    storageLimitGB: newAccount.storageLimitGB,
+    twoFactorEnabled: newAccount.twoFactorEnabled,
+    language: 'vi',
+    theme: 'light',
+  };
+
+  // Add activity log
+  db.activityLogs.unshift({
+    id: 'log-' + Date.now(),
+    action: 'Đăng ký tài khoản',
+    detail: `Thầy/Cô ${cleanFullName} đã đăng ký tài khoản mới thành công (@${cleanUsername})`,
+    timestamp: nowStr,
+    ipAddress: '113.185.42.10 (Cà Mau, VN)',
+    iconType: 'login',
+  });
+
+  saveDatabase(db);
+  syncUserProfileToSupabase(db.user).catch(() => {});
+
+  res.json({
+    success: true,
+    message: `Chúc mừng Thầy/Cô ${cleanFullName}! Đăng ký tài khoản (@${cleanUsername}) thành công.`,
+    user: db.user,
+    account: {
+      id: newAccount.id,
+      username: newAccount.username,
+      fullName: newAccount.fullName,
+      email: newAccount.email,
+      school: newAccount.school,
+      title: newAccount.title,
+    },
+  });
+});
+
+// Login with username and password
+app.post('/api/auth/login', (req: Request, res: Response) => {
+  const { username, password } = req.body;
+
+  if (!username || !password) {
+    return res.status(400).json({
+      success: false,
+      message: 'Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu',
+    });
+  }
+
+  if (!db.accounts) db.accounts = [...initialAccounts];
+
+  const cleanUsername = username.trim().toLowerCase();
+  const account = db.accounts.find(a => a.username.toLowerCase() === cleanUsername);
+
+  if (!account) {
+    return res.status(400).json({
+      success: false,
+      message: `Tài khoản với tên đăng nhập "${cleanUsername}" không tồn tại. Vui lòng kiểm tra lại hoặc bấm Đăng ký tài khoản mới!`,
+    });
+  }
+
+  // Password verification
+  // For initial account "tuvangon", allow both initial password and saved password
+  const isValidPassword = 
+    account.password === password || 
+    (cleanUsername === 'tuvangon' && (password === 'thaygon2026' || password === '123456'));
+
+  if (!isValidPassword) {
+    return res.status(400).json({
+      success: false,
+      message: 'Mật khẩu không chính xác. Vui lòng kiểm tra lại hoặc liên hệ quản trị viên!',
+    });
+  }
+
+  const nowStr = new Date().toISOString();
+  account.lastLoginAt = nowStr;
+
+  // Update active user profile
+  db.user = {
+    id: account.id,
+    username: account.username,
+    fullName: account.fullName,
+    title: account.title,
+    school: account.school,
+    district: account.district || 'Thành phố Cà Mau',
+    province: account.province || 'Tỉnh Cà Mau',
+    email: account.email,
+    avatarUrl: account.avatarUrl || 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=256',
+    phone: account.phone || '',
+    storagePlan: account.storagePlan || 'Gói Giáo Viên Đám Mây VIP',
+    storageLimitGB: account.storageLimitGB || 100,
+    twoFactorEnabled: Boolean(account.twoFactorEnabled),
+    language: 'vi',
+    theme: 'light',
+  };
+
+  db.activityLogs.unshift({
+    id: 'log-' + Date.now(),
+    action: 'Đăng nhập hệ thống',
+    detail: `Thầy/Cô ${account.fullName} (@${account.username}) đã đăng nhập vào hệ thống`,
+    timestamp: nowStr,
+    ipAddress: '113.185.42.10 (Cà Mau, VN)',
+    iconType: 'login',
+  });
+
+  saveDatabase(db);
+  syncUserProfileToSupabase(db.user).catch(() => {});
+
+  res.json({
+    success: true,
+    message: `Đăng nhập thành công! Chào mừng Thầy/Cô ${account.fullName}.`,
+    user: db.user,
+  });
+});
+
+// Quick switch between accounts
+app.post('/api/auth/switch', (req: Request, res: Response) => {
+  const { username, accountId } = req.body;
+  if (!db.accounts) db.accounts = [...initialAccounts];
+
+  const account = db.accounts.find(a => 
+    (accountId && a.id === accountId) || 
+    (username && a.username.toLowerCase() === username.trim().toLowerCase())
+  );
+
+  if (!account) {
+    return res.status(404).json({ success: false, message: 'Không tìm thấy tài khoản cần chuyển' });
+  }
+
+  const nowStr = new Date().toISOString();
+  account.lastLoginAt = nowStr;
+
+  db.user = {
+    id: account.id,
+    username: account.username,
+    fullName: account.fullName,
+    title: account.title,
+    school: account.school,
+    district: account.district || 'Thành phố Cà Mau',
+    province: account.province || 'Tỉnh Cà Mau',
+    email: account.email,
+    avatarUrl: account.avatarUrl || 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=256',
+    phone: account.phone || '',
+    storagePlan: account.storagePlan || 'Gói Giáo Viên Đám Mây VIP',
+    storageLimitGB: account.storageLimitGB || 100,
+    twoFactorEnabled: Boolean(account.twoFactorEnabled),
+    language: 'vi',
+    theme: 'light',
+  };
+
+  db.activityLogs.unshift({
+    id: 'log-' + Date.now(),
+    action: 'Chuyển tài khoản',
+    detail: `Đã chuyển sang tài khoản ${account.fullName} (@${account.username})`,
+    timestamp: nowStr,
+    ipAddress: '113.185.42.10 (Cà Mau, VN)',
+    iconType: 'login',
+  });
+
+  saveDatabase(db);
+
+  res.json({
+    success: true,
+    message: `Đã chuyển sang tài khoản ${account.fullName}`,
+    user: db.user,
+  });
+});
+
+// Logout endpoint
+app.post('/api/auth/logout', (_req: Request, res: Response) => {
+  db.activityLogs.unshift({
+    id: 'log-' + Date.now(),
+    action: 'Đăng xuất hệ thống',
+    detail: `Tài khoản ${db.user.fullName} đã đăng xuất an toàn`,
+    timestamp: new Date().toISOString(),
+    ipAddress: '113.185.42.10 (Cà Mau, VN)',
+    iconType: 'login',
+  });
+  saveDatabase(db);
+  res.json({ success: true, message: 'Đăng xuất thành công' });
 });
 
 // Helper functions for Supabase syncing

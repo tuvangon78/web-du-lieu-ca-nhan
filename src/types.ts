@@ -90,6 +90,7 @@ export interface StorageStats {
 export interface UserProfile {
   id: string;
   fullName: string;
+  username?: string;
   title: string;
   school: string;
   district: string;
@@ -102,6 +103,40 @@ export interface UserProfile {
   twoFactorEnabled: boolean;
   language: string;
   theme: 'light' | 'dark';
+}
+
+export interface UserAccount {
+  id: string;
+  username: string;
+  password?: string;
+  fullName: string;
+  title: string;
+  school: string;
+  district: string;
+  province: string;
+  email: string;
+  avatarUrl: string;
+  phone: string;
+  storagePlan: string;
+  storageLimitGB: number;
+  twoFactorEnabled: boolean;
+  createdAt: string;
+  lastLoginAt?: string;
+}
+
+export interface RegisterPayload {
+  username: string;
+  password: string;
+  fullName: string;
+  email?: string;
+  school?: string;
+  title?: string;
+  phone?: string;
+}
+
+export interface LoginPayload {
+  username: string;
+  password: string;
 }
 
 export interface ActivityLog {

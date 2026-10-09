@@ -15,6 +15,8 @@ import { ShareModal } from './components/ShareModal';
 import { UploadModal } from './components/UploadModal';
 import { MobileDevicePreviewModal } from './components/MobileDevicePreviewModal';
 import { ConfirmModal } from './components/ConfirmModal';
+import { AuthModal } from './components/AuthModal';
+import { AuthScreen } from './components/AuthScreen';
 import { CheckCircle2, AlertCircle, Info, X } from 'lucide-react';
 import { api } from './services/api';
 import { FileItem, FolderItem, StorageStats, UserProfile, ActivityLog } from './types';
@@ -48,6 +50,45 @@ export default function App() {
   const [isMobilePreviewOpen, setIsMobilePreviewOpen] = useState<boolean>(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const [uploadTargetFolderId, setUploadTargetFolderId] = useState<string | undefined>(undefined);
+
+  // Authentication Gate & Modal State
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem('thaygon_authenticated') === 'true';
+    } catch {
+      return false;
+    }
+  });
+  const [isAuthOpen, setIsAuthOpen] = useState<boolean>(false);
+  const [authMode, setAuthMode] = useState<'register' | 'login'>('register');
+
+  const handleOpenAuth = (mode: 'register' | 'login' = 'register') => {
+    setAuthMode(mode);
+    setIsAuthOpen(true);
+  };
+
+  const handleAuthSuccess = (newUser: UserProfile, message: string) => {
+    setUser(newUser);
+    setIsAuthenticated(true);
+    try {
+      localStorage.setItem('thaygon_authenticated', 'true');
+    } catch (e) {}
+    showToast(message, 'success');
+    loadData();
+  };
+
+  const handleLogout = async () => {
+    try {
+      await api.logout();
+    } catch (e) {
+      console.warn(e);
+    }
+    try {
+      localStorage.removeItem('thaygon_authenticated');
+    } catch (e) {}
+    setIsAuthenticated(false);
+    showToast('Đã đăng xuất tài khoản an toàn', 'info');
+  };
 
   // Toast notification state (replaces window.alert)
   const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' | 'info' } | null>(null);
@@ -482,6 +523,8 @@ export default function App() {
               const updated = await api.updateUser(updates);
               setUser(updated);
             }}
+            onOpenAuth={handleOpenAuth}
+            onShowToast={showToast}
           />
         );
 
@@ -489,6 +532,50 @@ export default function App() {
         return null;
     }
   };
+
+  // If not authenticated, display full AuthScreen (Login & Register) before entering web workspace
+  if (!isAuthenticated) {
+    return (
+      <>
+        <AuthScreen
+          onLoginSuccess={handleAuthSuccess}
+          defaultUsername={user.username || 'tuvangon'}
+        />
+
+        {/* Floating Toast Notification */}
+        {toast && (
+          <div className="fixed bottom-5 right-5 z-50 max-w-sm animate-in slide-in-from-bottom-5 fade-in duration-200">
+            <div className={`p-4 rounded-2xl shadow-2xl border flex items-start gap-3 ${
+              toast.type === 'success'
+                ? 'bg-slate-900 text-white border-slate-800'
+                : toast.type === 'error'
+                ? 'bg-red-600 text-white border-red-500'
+                : 'bg-blue-600 text-white border-blue-500'
+            }`}>
+              <div className="shrink-0 mt-0.5">
+                {toast.type === 'success' ? (
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+                ) : toast.type === 'error' ? (
+                  <AlertCircle className="w-5 h-5 text-red-200" />
+                ) : (
+                  <Info className="w-5 h-5 text-blue-200" />
+                )}
+              </div>
+              <div className="flex-1 text-xs font-semibold leading-relaxed">
+                {toast.message}
+              </div>
+              <button
+                onClick={() => setToast(null)}
+                className="text-white/60 hover:text-white transition p-0.5"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        )}
+      </>
+    );
+  }
 
   return (
     <div className="min-h-screen flex flex-col bg-[#F4F8FC] text-slate-800">
@@ -502,6 +589,8 @@ export default function App() {
         onOpenMobilePreview={() => setIsMobilePreviewOpen(true)}
         onToggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)}
         isSidebarOpen={isSidebarOpen}
+        onOpenAuth={handleOpenAuth}
+        onLogout={handleLogout}
       />
 
       {/* 2. Main Workspace Layout: Sidebar + Main Content */}
@@ -521,6 +610,7 @@ export default function App() {
           isOpen={isSidebarOpen}
           onCloseMobile={() => setIsSidebarOpen(false)}
           trashCount={trashFiles.length}
+          onOpenAuth={handleOpenAuth}
         />
 
         {/* Main Content Viewport */}
@@ -590,6 +680,15 @@ export default function App() {
           setIsMobilePreviewOpen(false);
           setIsUploadOpen(true);
         }}
+      />
+
+      {/* Account Registration & Login Modal */}
+      <AuthModal
+        isOpen={isAuthOpen}
+        onClose={() => setIsAuthOpen(false)}
+        initialMode={authMode}
+        onAuthSuccess={handleAuthSuccess}
+        currentUser={user}
       />
 
       {/* Confirmation Modal (Iframe-safe custom dialog) */}

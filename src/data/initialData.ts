@@ -1,7 +1,8 @@
-import { FolderItem, FileItem, UserProfile, ActivityLog } from '../types';
+import { FolderItem, FileItem, UserProfile, ActivityLog, UserAccount } from '../types';
 
 export const initialUser: UserProfile = {
   id: 'user-tuvangon',
+  username: 'tuvangon',
   fullName: 'Từ Văn Gọn',
   title: 'Giáo viên tiểu học',
   school: 'Trường Tiểu học Phường An Xuyên',
@@ -16,6 +17,27 @@ export const initialUser: UserProfile = {
   language: 'vi',
   theme: 'light',
 };
+
+export const initialAccounts: UserAccount[] = [
+  {
+    id: 'user-tuvangon',
+    username: 'tuvangon',
+    password: 'thaygon2026',
+    fullName: 'Từ Văn Gọn',
+    title: 'Giáo viên tiểu học',
+    school: 'Trường Tiểu học Phường An Xuyên',
+    district: 'Thành phố Cà Mau',
+    province: 'Tỉnh Cà Mau',
+    email: 'tuvangon@gmail.com',
+    avatarUrl: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=256',
+    phone: '0918 234 567',
+    storagePlan: 'Gói Giáo Viên Đám Mây VIP',
+    storageLimitGB: 100,
+    twoFactorEnabled: true,
+    createdAt: '2026-09-01T08:00:00Z',
+    lastLoginAt: '2026-10-09T08:00:00Z',
+  },
+];
 
 export const initialFolders: FolderItem[] = [
   {
