@@ -21,7 +21,8 @@ import {
   HardDrive,
   User,
   Star,
-  Info
+  Info,
+  Trash2
 } from 'lucide-react';
 import { FileItem } from '../types';
 import { formatBytes, formatDate } from '../services/api';
@@ -33,6 +34,7 @@ interface FilePreviewModalProps {
   onShare: (file: FileItem) => void;
   onOpenVersions: (file: FileItem) => void;
   onToggleFavorite: (file: FileItem) => void;
+  onDelete?: (file: FileItem) => void;
 }
 
 export const FilePreviewModal: React.FC<FilePreviewModalProps> = ({
@@ -42,6 +44,7 @@ export const FilePreviewModal: React.FC<FilePreviewModalProps> = ({
   onShare,
   onOpenVersions,
   onToggleFavorite,
+  onDelete,
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [zoomLevel, setZoomLevel] = useState(100);
@@ -133,6 +136,19 @@ export const FilePreviewModal: React.FC<FilePreviewModalProps> = ({
             >
               <Star className={`w-4 h-4 ${file.isFavorite ? 'fill-amber-400' : ''}`} />
             </button>
+
+            {onDelete && (
+              <button
+                onClick={() => {
+                  onClose();
+                  onDelete(file);
+                }}
+                className="p-2 rounded-xl text-red-500 hover:bg-red-50 hover:text-red-600 transition"
+                title="Chuyển vào thùng rác"
+              >
+                <Trash2 className="w-4 h-4" />
+              </button>
+            )}
 
             <button
               onClick={() => setShowMetadata(!showMetadata)}

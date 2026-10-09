@@ -84,12 +84,12 @@ export const UploadModal: React.FC<UploadModalProps> = ({
   const processQueue = async (itemsToUpload: UploadQueueItem[]) => {
     for (const item of itemsToUpload) {
       setQueue((prev) =>
-        prev.map((q) => (q.id === item.id ? { ...q, status: 'uploading', progress: 10 } : q))
+        prev.map((q) => (q.id === item.id ? { ...q, status: 'uploading', progress: 5, errorMessage: undefined } : q))
       );
 
       try {
-        // Upload via real server API with progress
-        const uploaded = await api.uploadFiles([item.file], selectedFolderId, (percent) => {
+        // Upload via real server API with automatic chunking for large files (> 6MB)
+        const uploadedFile = await api.uploadSingleFile(item.file, selectedFolderId, (percent) => {
           setQueue((prev) =>
             prev.map((q) => (q.id === item.id ? { ...q, progress: percent } : q))
           );
@@ -98,7 +98,7 @@ export const UploadModal: React.FC<UploadModalProps> = ({
         setQueue((prev) =>
           prev.map((q) => (q.id === item.id ? { ...q, progress: 100, status: 'completed' } : q))
         );
-        onUploadSuccess(uploaded);
+        onUploadSuccess([uploadedFile]);
       } catch (err: any) {
         setQueue((prev) =>
           prev.map((q) =>
@@ -108,6 +108,19 @@ export const UploadModal: React.FC<UploadModalProps> = ({
           )
         );
       }
+    }
+  };
+
+  const retryItem = (id: string) => {
+    const item = queue.find((q) => q.id === id);
+    if (!item) return;
+    processQueue([item]);
+  };
+
+  const retryAllFailed = () => {
+    const failedItems = queue.filter((q) => q.status === 'error');
+    if (failedItems.length > 0) {
+      processQueue(failedItems);
     }
   };
 
@@ -264,12 +277,23 @@ export const UploadModal: React.FC<UploadModalProps> = ({
                 <span className="text-xs font-bold text-slate-700">
                   Danh sách tệp đang tải lên ({queue.length})
                 </span>
-                <button
-                  onClick={clearQueue}
-                  className="text-xs font-bold text-red-500 hover:text-red-700 transition"
-                >
-                  Hủy tất cả
-                </button>
+                <div className="flex items-center gap-3">
+                  {queue.some((q) => q.status === 'error') && (
+                    <button
+                      onClick={retryAllFailed}
+                      className="text-xs font-bold text-blue-600 hover:text-blue-800 transition flex items-center gap-1"
+                    >
+                      <RotateCcw className="w-3.5 h-3.5" />
+                      <span>Thử lại tệp lỗi</span>
+                    </button>
+                  )}
+                  <button
+                    onClick={clearQueue}
+                    className="text-xs font-bold text-red-500 hover:text-red-700 transition"
+                  >
+                    Hủy tất cả
+                  </button>
+                </div>
               </div>
 
               <div className="space-y-2.5 max-h-52 overflow-y-auto pr-1">
@@ -303,6 +327,13 @@ export const UploadModal: React.FC<UploadModalProps> = ({
                           style={{ width: `${item.progress}%` }}
                         />
                       </div>
+
+                      {/* Error details if any */}
+                      {item.status === 'error' && item.errorMessage && (
+                        <p className="text-[10px] text-red-500 font-medium mt-1 truncate" title={item.errorMessage}>
+                          ⚠️ {item.errorMessage}
+                        </p>
+                      )}
                     </div>
 
                     <div className="flex items-center gap-2 flex-shrink-0">
@@ -312,9 +343,18 @@ export const UploadModal: React.FC<UploadModalProps> = ({
                       {item.status === 'completed' ? (
                         <CheckCircle className="w-4 h-4 text-emerald-500" />
                       ) : item.status === 'error' ? (
-                        <span title={item.errorMessage}>
-                          <AlertCircle className="w-4 h-4 text-red-500" />
-                        </span>
+                        <div className="flex items-center gap-1">
+                          <button
+                            onClick={() => retryItem(item.id)}
+                            className="p-1 rounded-md text-blue-600 hover:bg-blue-50 transition"
+                            title="Thử lại tải lên tệp này"
+                          >
+                            <RotateCcw className="w-3.5 h-3.5" />
+                          </button>
+                          <span title={item.errorMessage}>
+                            <AlertCircle className="w-4 h-4 text-red-500" />
+                          </span>
+                        </div>
                       ) : (
                         <button
                           onClick={() => cancelItem(item.id)}

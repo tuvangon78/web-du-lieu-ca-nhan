@@ -22,14 +22,16 @@ const __dirname = path.dirname(__filename);
 const PORT = 3000;
 const app = express();
 
-app.use(express.json({ limit: '50mb' }));
-app.use(express.urlencoded({ extended: true, limit: '50mb' }));
+app.use(express.json({ limit: '100mb' }));
+app.use(express.urlencoded({ extended: true, limit: '100mb' }));
 
 // Directories for real storage
 const DATA_DIR = path.join(__dirname, 'data');
 const UPLOADS_DIR = path.join(__dirname, 'uploads');
+const CHUNKS_DIR = path.join(DATA_DIR, 'chunks');
 if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
 if (!fs.existsSync(UPLOADS_DIR)) fs.mkdirSync(UPLOADS_DIR, { recursive: true });
+if (!fs.existsSync(CHUNKS_DIR)) fs.mkdirSync(CHUNKS_DIR, { recursive: true });
 
 const DB_FILE = path.join(DATA_DIR, 'database.json');
 
@@ -86,6 +88,20 @@ const upload = multer({
   limits: { fileSize: 2 * 1024 * 1024 * 1024 }, // 2GB limit
 });
 
+// Configure Multer for individual chunk uploads (up to 50MB per chunk)
+const chunkStorage = multer.diskStorage({
+  destination: (_req, _file, cb) => {
+    cb(null, CHUNKS_DIR);
+  },
+  filename: (_req, file, cb) => {
+    cb(null, `chunk-raw-${Date.now()}-${file.originalname.replace(/[^a-zA-Z0-9._-]/g, '_')}`);
+  },
+});
+const uploadChunk = multer({
+  storage: chunkStorage,
+  limits: { fileSize: 50 * 1024 * 1024 },
+});
+
 function detectFileType(filename: string, mime: string): { type: FileType; ext: string } {
   const ext = filename.split('.').pop()?.toLowerCase() || '';
   if (ext === 'pdf' || mime.includes('pdf')) return { type: 'pdf', ext };
@@ -93,9 +109,10 @@ function detectFileType(filename: string, mime: string): { type: FileType; ext: 
   if (['xls', 'xlsx', 'csv'].includes(ext) || mime.includes('spreadsheet') || mime.includes('excel')) return { type: 'excel', ext };
   if (['ppt', 'pptx'].includes(ext) || mime.includes('presentation') || mime.includes('powerpoint')) return { type: 'powerpoint', ext };
   if (['jpg', 'jpeg', 'png', 'webp', 'gif', 'svg', 'bmp'].includes(ext) || mime.startsWith('image/')) return { type: 'image', ext };
-  if (['mp4', 'mov', 'avi', 'mkv', 'webm'].includes(ext) || mime.startsWith('video/')) return { type: 'video', ext };
-  if (['zip', 'rar', '7z', 'tar', 'gz'].includes(ext) || mime.includes('zip') || mime.includes('compressed')) return { type: 'zip', ext };
-  if (['txt', 'md', 'json', 'log'].includes(ext) || mime.startsWith('text/')) return { type: 'text', ext };
+  if (['mp4', 'mov', 'avi', 'mkv', 'webm', 'mp3', 'wav', 'ogg'].includes(ext) || mime.startsWith('video/') || mime.startsWith('audio/')) return { type: 'video', ext };
+  if (['zip', 'rar', '7z', 'tar', 'gz', 'bz2'].includes(ext) || mime.includes('zip') || mime.includes('compressed')) return { type: 'zip', ext };
+  if (['txt', 'md', 'json', 'log', 'xml'].includes(ext) || mime.startsWith('text/')) return { type: 'text', ext };
+  if (['exe', 'msi', 'apk', 'dmg', 'iso', 'bin'].includes(ext)) return { type: 'other', ext };
   return { type: 'other', ext };
 }
 
@@ -194,8 +211,8 @@ app.get('/api/files/:id/download', (req: Request, res: Response) => {
   res.send(content);
 });
 
-// 5. Upload files
-app.post('/api/files/upload', upload.array('files', 10), (req: Request, res: Response) => {
+// 5. Upload files (Standard & batch up to 100 files)
+app.post('/api/files/upload', upload.array('files', 100), (req: Request, res: Response) => {
   const uploadedFiles = req.files as Express.Multer.File[];
   const folderId = req.body.folderId || 'f-12';
   const folder = db.folders.find(f => f.id === folderId) || db.folders[0];
@@ -266,6 +283,126 @@ app.post('/api/files/upload', upload.array('files', 10), (req: Request, res: Res
 
   saveDatabase(db);
   res.json({ success: true, files: createdFiles });
+});
+
+// 5b. Chunked file upload endpoint for large files (exceeding Cloud Run 32MB limit)
+app.post('/api/files/upload/chunk', uploadChunk.single('chunk'), async (req: Request, res: Response) => {
+  try {
+    const chunkFile = req.file;
+    const { uploadId, chunkIndex, totalChunks, fileName, folderId, totalSizeBytes } = req.body;
+
+    if (!chunkFile || !uploadId || chunkIndex === undefined || !totalChunks) {
+      return res.status(400).json({ success: false, message: 'Thiếu thông tin phân đoạn tệp' });
+    }
+
+    const idx = parseInt(chunkIndex, 10);
+    const total = parseInt(totalChunks, 10);
+    const targetChunkPath = path.join(CHUNKS_DIR, `${uploadId}_part_${idx}`);
+
+    // Move/rename uploaded chunk to ordered part file
+    if (fs.existsSync(targetChunkPath)) {
+      try { fs.unlinkSync(targetChunkPath); } catch (e) {}
+    }
+    fs.renameSync(chunkFile.path, targetChunkPath);
+
+    // Check if all chunks from 0 to total - 1 exist
+    let allChunksExist = true;
+    for (let i = 0; i < total; i++) {
+      if (!fs.existsSync(path.join(CHUNKS_DIR, `${uploadId}_part_${i}`))) {
+        allChunksExist = false;
+        break;
+      }
+    }
+
+    if (!allChunksExist) {
+      // Chunk accepted, awaiting remaining chunks
+      return res.json({ success: true, completed: false, chunkIndex: idx, totalChunks: total });
+    }
+
+    // ALL CHUNKS HAVE ARRIVED! Concatenate into final file
+    const sanitized = (fileName || 'unnamed_file').replace(/[^a-zA-Z0-9._-]/g, '_');
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+    const finalFilename = `${uniqueSuffix}-${sanitized}`;
+    const finalPath = path.join(UPLOADS_DIR, finalFilename);
+
+    const writeStream = fs.createWriteStream(finalPath);
+    for (let i = 0; i < total; i++) {
+      const partPath = path.join(CHUNKS_DIR, `${uploadId}_part_${i}`);
+      const partBuf = fs.readFileSync(partPath);
+      writeStream.write(partBuf);
+      try { fs.unlinkSync(partPath); } catch (e) {}
+    }
+    writeStream.end();
+
+    await new Promise<void>((resolve, reject) => {
+      writeStream.on('finish', () => resolve());
+      writeStream.on('error', reject);
+    });
+
+    const fileStat = fs.statSync(finalPath);
+    const actualSize = parseInt(totalSizeBytes, 10) || fileStat.size;
+
+    const folder = db.folders.find(f => f.id === folderId) || db.folders[0];
+    const { type, ext } = detectFileType(fileName, 'application/octet-stream');
+    const newId = 'file-' + Date.now() + '-' + Math.floor(Math.random() * 1000);
+    const nowStr = new Date().toISOString();
+
+    const fileItem: FileItem = {
+      id: newId,
+      name: fileName,
+      folderId: folder.id,
+      folderName: folder.name,
+      type,
+      extension: ext,
+      mimeType: 'application/octet-stream',
+      sizeBytes: actualSize,
+      createdAt: nowStr,
+      updatedAt: nowStr,
+      owner: db.user.fullName,
+      description: `Tải lên bởi ${db.user.fullName} vào ${folder.name}`,
+      tags: [folder.name.replace(/^\d+\.\s*/, ''), ext.toUpperCase()],
+      isFavorite: false,
+      isDeleted: false,
+      storagePath: finalPath,
+      contentSnippet: `Tài liệu tải lên: ${fileName}. Kích thước: ${(actualSize / (1024 * 1024)).toFixed(2)} MB.`,
+      rawContent: `Tài liệu: ${fileName}\nThư mục: ${folder.name}\nChủ sở hữu: ${db.user.fullName}\nNgày tải lên: ${nowStr}`,
+      versions: [
+        {
+          id: 'ver-1-' + newId,
+          versionNumber: 1,
+          versionLabel: 'v1',
+          fileName,
+          sizeBytes: actualSize,
+          uploadedAt: nowStr,
+          uploadedBy: db.user.fullName,
+          notes: 'Phiên bản ban đầu khi tải lên',
+          storagePath: finalPath,
+        },
+      ],
+      share: {
+        isShared: false,
+        shareType: 'private',
+        permission: 'view',
+        sharedWithEmails: [],
+      },
+    };
+
+    db.files.unshift(fileItem);
+    db.activityLogs.unshift({
+      id: 'log-' + Date.now(),
+      action: 'Tải lên tài liệu lớn',
+      detail: `Đã tải lên "${fileItem.name}" (${(fileItem.sizeBytes / 1024 / 1024).toFixed(1)} MB) vào thư mục ${folder.name}`,
+      timestamp: nowStr,
+      ipAddress: '113.185.42.10 (Cà Mau, VN)',
+      iconType: 'upload',
+    });
+
+    saveDatabase(db);
+    return res.json({ success: true, completed: true, file: fileItem });
+  } catch (err: any) {
+    console.error('Error in chunk upload:', err);
+    return res.status(500).json({ success: false, message: err?.message || 'Lỗi ghép nối phân đoạn tệp' });
+  }
 });
 
 // 6. Upload new version for existing file
@@ -394,6 +531,68 @@ app.post('/api/files/trash/empty', (_req: Request, res: Response) => {
   db.files = db.files.filter(f => !f.isDeleted);
   saveDatabase(db);
   res.json({ success: true, count: toDelete.length });
+});
+
+// 11b. Batch delete selected files permanently from trash
+app.post('/api/files/trash/batch-delete', (req: Request, res: Response) => {
+  const { ids } = req.body;
+  if (!Array.isArray(ids) || ids.length === 0) {
+    return res.status(400).json({ success: false, message: 'Danh sách tệp xóa không hợp lệ' });
+  }
+
+  let deletedCount = 0;
+  for (const id of ids) {
+    const index = db.files.findIndex(f => f.id === id);
+    if (index !== -1) {
+      const [removed] = db.files.splice(index, 1);
+      if (removed.storagePath && fs.existsSync(removed.storagePath)) {
+        try { fs.unlinkSync(removed.storagePath); } catch (e) {}
+      }
+      deletedCount++;
+    }
+  }
+
+  db.activityLogs.unshift({
+    id: 'log-' + Date.now(),
+    action: 'Xóa vĩnh viễn hàng loạt',
+    detail: `Đã xóa vĩnh viễn ${deletedCount} tài liệu khỏi thùng rác`,
+    timestamp: new Date().toISOString(),
+    ipAddress: '113.185.42.10 (Cà Mau, VN)',
+    iconType: 'delete',
+  });
+
+  saveDatabase(db);
+  res.json({ success: true, count: deletedCount });
+});
+
+// 11c. Batch restore selected files from trash
+app.post('/api/files/trash/batch-restore', (req: Request, res: Response) => {
+  const { ids } = req.body;
+  if (!Array.isArray(ids) || ids.length === 0) {
+    return res.status(400).json({ success: false, message: 'Danh sách tệp khôi phục không hợp lệ' });
+  }
+
+  let restoredCount = 0;
+  for (const id of ids) {
+    const file = db.files.find(f => f.id === id);
+    if (file) {
+      file.isDeleted = false;
+      file.deletedAt = undefined;
+      restoredCount++;
+    }
+  }
+
+  db.activityLogs.unshift({
+    id: 'log-' + Date.now(),
+    action: 'Khôi phục tài liệu hàng loạt',
+    detail: `Đã khôi phục ${restoredCount} tài liệu từ thùng rác`,
+    timestamp: new Date().toISOString(),
+    ipAddress: '113.185.42.10 (Cà Mau, VN)',
+    iconType: 'upload',
+  });
+
+  saveDatabase(db);
+  res.json({ success: true, count: restoredCount });
 });
 
 // 12. Share settings

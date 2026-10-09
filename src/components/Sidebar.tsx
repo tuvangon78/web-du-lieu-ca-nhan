@@ -23,6 +23,7 @@ interface SidebarProps {
   onOpenUpload: () => void;
   isOpen: boolean;
   onCloseMobile: () => void;
+  trashCount?: number;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -32,6 +33,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onOpenUpload,
   isOpen,
   onCloseMobile,
+  trashCount = 0,
 }) => {
   const menuItems = [
     { id: 'dashboard', label: 'Trang chủ', icon: Home },
@@ -112,6 +114,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
                     <span className="flex items-center gap-1 text-[10px] bg-amber-400/20 text-amber-300 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider border border-amber-300/30">
                       <Sparkles className="w-2.5 h-2.5" />
                       AI
+                    </span>
+                  )}
+
+                  {item.id === 'trash' && trashCount > 0 && (
+                    <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500 text-white shadow-xs">
+                      {trashCount}
                     </span>
                   )}
                 </button>

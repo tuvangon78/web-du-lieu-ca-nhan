@@ -1,0 +1,2646 @@
+{
+  "files": [
+    {
+      "id": "file-1791536993197-252",
+      "name": "test58.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/octet-stream",
+      "sizeBytes": 60817408,
+      "createdAt": "2026-10-09T09:09:53.197Z",
+      "updatedAt": "2026-10-09T09:09:53.197Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536992803-695314536-test58.exe",
+      "contentSnippet": "Tài liệu tải lên: test58.exe. Kích thước: 58.00 MB.",
+      "rawContent": "Tài liệu: test58.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:09:53.197Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536993197-252",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "test58.exe",
+          "sizeBytes": 60817408,
+          "uploadedAt": "2026-10-09T09:09:53.197Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536992803-695314536-test58.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536984869-593",
+      "name": "test.txt",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "text",
+      "extension": "txt",
+      "mimeType": "text/plain",
+      "sizeBytes": 24,
+      "createdAt": "2026-10-09T09:09:44.869Z",
+      "updatedAt": "2026-10-09T09:09:44.869Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "TXT"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536984864-192384668-test.txt",
+      "contentSnippet": "Tài liệu tải lên: test.txt. Kích thước: 0.00 MB.",
+      "rawContent": "Tài liệu: test.txt\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:09:44.869Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536984869-593",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "test.txt",
+          "sizeBytes": 24,
+          "uploadedAt": "2026-10-09T09:09:44.869Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536984864-192384668-test.txt"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536969870-975",
+      "name": "Any_Video_Converter.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 60817408,
+      "createdAt": "2026-10-09T09:09:29.870Z",
+      "updatedAt": "2026-10-09T09:09:29.870Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536969510-345595148-Any_Video_Converter.exe",
+      "contentSnippet": "Tài liệu tải lên: Any_Video_Converter.exe. Kích thước: 58.00 MB.",
+      "rawContent": "Tài liệu: Any_Video_Converter.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:09:29.870Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536969870-975",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Any_Video_Converter.exe",
+          "sizeBytes": 60817408,
+          "uploadedAt": "2026-10-09T09:09:29.870Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536969510-345595148-Any_Video_Converter.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536508027-308",
+      "name": "unikey_42rc4-140823-64bit.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 521216,
+      "createdAt": "2026-10-09T09:01:48.027Z",
+      "updatedAt": "2026-10-09T09:01:48.027Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536508025-184730496-unikey_42rc4-140823-64bit.exe",
+      "contentSnippet": "Tài liệu tải lên: unikey_42rc4-140823-64bit.exe. Kích thước: 0.50 MB.",
+      "rawContent": "Tài liệu: unikey_42rc4-140823-64bit.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:48.027Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536508027-308",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "unikey_42rc4-140823-64bit.exe",
+          "sizeBytes": 521216,
+          "uploadedAt": "2026-10-09T09:01:48.027Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536508025-184730496-unikey_42rc4-140823-64bit.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536507704-524",
+      "name": "UltraViewer_setup_6.2_vi_Äiá»u khiá»n tá»« xa.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 2741848,
+      "createdAt": "2026-10-09T09:01:47.704Z",
+      "updatedAt": "2026-10-09T09:01:47.704Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536507694-123515629-UltraViewer_setup_6.2_vi___i___u_khi___n_t____xa.exe",
+      "contentSnippet": "Tài liệu tải lên: UltraViewer_setup_6.2_vi_Äiá»u khiá»n tá»« xa.exe. Kích thước: 2.61 MB.",
+      "rawContent": "Tài liệu: UltraViewer_setup_6.2_vi_Äiá»u khiá»n tá»« xa.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:47.704Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536507704-524",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "UltraViewer_setup_6.2_vi_Äiá»u khiá»n tá»« xa.exe",
+          "sizeBytes": 2741848,
+          "uploadedAt": "2026-10-09T09:01:47.704Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536507694-123515629-UltraViewer_setup_6.2_vi___i___u_khi___n_t____xa.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536506991-444",
+      "name": "TikTok Installer.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 1294880,
+      "createdAt": "2026-10-09T09:01:46.991Z",
+      "updatedAt": "2026-10-09T09:01:46.991Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536506984-374034163-TikTok_Installer.exe",
+      "contentSnippet": "Tài liệu tải lên: TikTok Installer.exe. Kích thước: 1.23 MB.",
+      "rawContent": "Tài liệu: TikTok Installer.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:46.991Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536506991-444",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "TikTok Installer.exe",
+          "sizeBytes": 1294880,
+          "uploadedAt": "2026-10-09T09:01:46.991Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536506984-374034163-TikTok_Installer.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536506507-479",
+      "name": "TeamViewer_Setup.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 26367048,
+      "createdAt": "2026-10-09T09:01:46.507Z",
+      "updatedAt": "2026-10-09T09:01:46.507Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536506354-861973530-TeamViewer_Setup.exe",
+      "contentSnippet": "Tài liệu tải lên: TeamViewer_Setup.exe. Kích thước: 25.15 MB.",
+      "rawContent": "Tài liệu: TeamViewer_Setup.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:46.507Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536506507-479",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "TeamViewer_Setup.exe",
+          "sizeBytes": 26367048,
+          "uploadedAt": "2026-10-09T09:01:46.507Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536506354-861973530-TeamViewer_Setup.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536499352-807",
+      "name": "SF-Helper_Tiá»n Ã­ch táº£i Video.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 4276176,
+      "createdAt": "2026-10-09T09:01:39.352Z",
+      "updatedAt": "2026-10-09T09:01:39.352Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536499340-118535273-SF-Helper_Ti___n___ch_t___i_Video.exe",
+      "contentSnippet": "Tài liệu tải lên: SF-Helper_Tiá»n Ã­ch táº£i Video.exe. Kích thước: 4.08 MB.",
+      "rawContent": "Tài liệu: SF-Helper_Tiá»n Ã­ch táº£i Video.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:39.352Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536499352-807",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "SF-Helper_Tiá»n Ã­ch táº£i Video.exe",
+          "sizeBytes": 4276176,
+          "uploadedAt": "2026-10-09T09:01:39.352Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536499340-118535273-SF-Helper_Ti___n___ch_t___i_Video.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536498663-292",
+      "name": "setup.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 207448,
+      "createdAt": "2026-10-09T09:01:38.663Z",
+      "updatedAt": "2026-10-09T09:01:38.663Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536498661-641060151-setup.exe",
+      "contentSnippet": "Tài liệu tải lên: setup.exe. Kích thước: 0.20 MB.",
+      "rawContent": "Tài liệu: setup.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:38.663Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536498663-292",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "setup.exe",
+          "sizeBytes": 207448,
+          "uploadedAt": "2026-10-09T09:01:38.663Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536498661-641060151-setup.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536498447-844",
+      "name": "RevoUninProSetup_Gá»¡ bá» pháº§n má»m.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 15890296,
+      "createdAt": "2026-10-09T09:01:38.447Z",
+      "updatedAt": "2026-10-09T09:01:38.447Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536498369-202320278-RevoUninProSetup_G____b____ph___n_m___m.exe",
+      "contentSnippet": "Tài liệu tải lên: RevoUninProSetup_Gá»¡ bá» pháº§n má»m.exe. Kích thước: 15.15 MB.",
+      "rawContent": "Tài liệu: RevoUninProSetup_Gá»¡ bá» pháº§n má»m.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:38.447Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536498447-844",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "RevoUninProSetup_Gá»¡ bá» pháº§n má»m.exe",
+          "sizeBytes": 15890296,
+          "uploadedAt": "2026-10-09T09:01:38.447Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536498369-202320278-RevoUninProSetup_G____b____ph___n_m___m.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536497207-832",
+      "name": "Quay mÃ n hÃ¬nh mÃ¡y tÃ­nh.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 18783400,
+      "createdAt": "2026-10-09T09:01:37.207Z",
+      "updatedAt": "2026-10-09T09:01:37.207Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536497105-167705153-Quay_m__n_h__nh_m__y_t__nh.exe",
+      "contentSnippet": "Tài liệu tải lên: Quay mÃ n hÃ¬nh mÃ¡y tÃ­nh.exe. Kích thước: 17.91 MB.",
+      "rawContent": "Tài liệu: Quay mÃ n hÃ¬nh mÃ¡y tÃ­nh.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:37.207Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536497207-832",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Quay mÃ n hÃ¬nh mÃ¡y tÃ­nh.exe",
+          "sizeBytes": 18783400,
+          "uploadedAt": "2026-10-09T09:01:37.207Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536497105-167705153-Quay_m__n_h__nh_m__y_t__nh.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536493229-639",
+      "name": "Phá»¥c há»i dá»¯ liá»u.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 5473600,
+      "createdAt": "2026-10-09T09:01:33.229Z",
+      "updatedAt": "2026-10-09T09:01:33.229Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536493204-261765503-Ph___c_h___i_d____li___u.exe",
+      "contentSnippet": "Tài liệu tải lên: Phá»¥c há»i dá»¯ liá»u.exe. Kích thước: 5.22 MB.",
+      "rawContent": "Tài liệu: Phá»¥c há»i dá»¯ liá»u.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:33.229Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536493229-639",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Phá»¥c há»i dá»¯ liá»u.exe",
+          "sizeBytes": 5473600,
+          "uploadedAt": "2026-10-09T09:01:33.229Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536493204-261765503-Ph___c_h___i_d____li___u.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536492447-491",
+      "name": "PDF-to-WORD-converter.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 4512336,
+      "createdAt": "2026-10-09T09:01:32.447Z",
+      "updatedAt": "2026-10-09T09:01:32.447Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536492430-60611152-PDF-to-WORD-converter.exe",
+      "contentSnippet": "Tài liệu tải lên: PDF-to-WORD-converter.exe. Kích thước: 4.30 MB.",
+      "rawContent": "Tài liệu: PDF-to-WORD-converter.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:32.447Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536492447-491",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "PDF-to-WORD-converter.exe",
+          "sizeBytes": 4512336,
+          "uploadedAt": "2026-10-09T09:01:32.447Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536492430-60611152-PDF-to-WORD-converter.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536491759-59",
+      "name": "PDF_WORS-setup.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 708005,
+      "createdAt": "2026-10-09T09:01:31.759Z",
+      "updatedAt": "2026-10-09T09:01:31.759Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536491755-193226516-PDF_WORS-setup.exe",
+      "contentSnippet": "Tài liệu tải lên: PDF_WORS-setup.exe. Kích thước: 0.68 MB.",
+      "rawContent": "Tài liệu: PDF_WORS-setup.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:31.759Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536491759-59",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "PDF_WORS-setup.exe",
+          "sizeBytes": 708005,
+          "uploadedAt": "2026-10-09T09:01:31.759Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536491755-193226516-PDF_WORS-setup.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536481093-652",
+      "name": "Microsoft.Services.Store.winmd",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "winmd",
+      "mimeType": "application/octet-stream",
+      "sizeBytes": 4608,
+      "createdAt": "2026-10-09T09:01:21.093Z",
+      "updatedAt": "2026-10-09T09:01:21.093Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "WINMD"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536481092-913969389-Microsoft.Services.Store.winmd",
+      "contentSnippet": "Tài liệu tải lên: Microsoft.Services.Store.winmd. Kích thước: 0.00 MB.",
+      "rawContent": "Tài liệu: Microsoft.Services.Store.winmd\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:21.093Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536481093-652",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Microsoft.Services.Store.winmd",
+          "sizeBytes": 4608,
+          "uploadedAt": "2026-10-09T09:01:21.093Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536481092-913969389-Microsoft.Services.Store.winmd"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536480972-353",
+      "name": "iVCam_x64_v6.2.5.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 18023480,
+      "createdAt": "2026-10-09T09:01:20.972Z",
+      "updatedAt": "2026-10-09T09:01:20.972Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536480886-364853000-iVCam_x64_v6.2.5.exe",
+      "contentSnippet": "Tài liệu tải lên: iVCam_x64_v6.2.5.exe. Kích thước: 17.19 MB.",
+      "rawContent": "Tài liệu: iVCam_x64_v6.2.5.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:20.972Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536480972-353",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "iVCam_x64_v6.2.5.exe",
+          "sizeBytes": 18023480,
+          "uploadedAt": "2026-10-09T09:01:20.972Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536480886-364853000-iVCam_x64_v6.2.5.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536479624-306",
+      "name": "ImageGlass-9-0-10-201-x64_Pháº§n má»m xem file áº£nh.msi",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "msi",
+      "mimeType": "application/octet-stream",
+      "sizeBytes": 29947904,
+      "createdAt": "2026-10-09T09:01:19.624Z",
+      "updatedAt": "2026-10-09T09:01:19.624Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "MSI"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536479447-846591141-ImageGlass-9-0-10-201-x64_Ph___n_m___m_xem_file____nh.msi",
+      "contentSnippet": "Tài liệu tải lên: ImageGlass-9-0-10-201-x64_Pháº§n má»m xem file áº£nh.msi. Kích thước: 28.56 MB.",
+      "rawContent": "Tài liệu: ImageGlass-9-0-10-201-x64_Pháº§n má»m xem file áº£nh.msi\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:19.624Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536479624-306",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "ImageGlass-9-0-10-201-x64_Pháº§n má»m xem file áº£nh.msi",
+          "sizeBytes": 29947904,
+          "uploadedAt": "2026-10-09T09:01:19.624Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536479447-846591141-ImageGlass-9-0-10-201-x64_Ph___n_m___m_xem_file____nh.msi"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536477514-536",
+      "name": "Google Chrome v9.0.570.rar",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "zip",
+      "extension": "rar",
+      "mimeType": "application/x-compressed",
+      "sizeBytes": 24596442,
+      "createdAt": "2026-10-09T09:01:17.514Z",
+      "updatedAt": "2026-10-09T09:01:17.514Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "RAR"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536477398-401573122-Google_Chrome_v9.0.570.rar",
+      "contentSnippet": "Tài liệu tải lên: Google Chrome v9.0.570.rar. Kích thước: 23.46 MB.",
+      "rawContent": "Tài liệu: Google Chrome v9.0.570.rar\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:17.514Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536477514-536",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Google Chrome v9.0.570.rar",
+          "sizeBytes": 24596442,
+          "uploadedAt": "2026-10-09T09:01:17.514Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536477398-401573122-Google_Chrome_v9.0.570.rar"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536473608-417",
+      "name": "free-mp3-cutter_21.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 1322221,
+      "createdAt": "2026-10-09T09:01:13.608Z",
+      "updatedAt": "2026-10-09T09:01:13.608Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536473600-548759376-free-mp3-cutter_21.exe",
+      "contentSnippet": "Tài liệu tải lên: free-mp3-cutter_21.exe. Kích thước: 1.26 MB.",
+      "rawContent": "Tài liệu: free-mp3-cutter_21.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:13.608Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536473608-417",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "free-mp3-cutter_21.exe",
+          "sizeBytes": 1322221,
+          "uploadedAt": "2026-10-09T09:01:13.608Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536473600-548759376-free-mp3-cutter_21.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536467053-745",
+      "name": "fixattrb-bkav_3001_Hien file an.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 314176,
+      "createdAt": "2026-10-09T09:01:07.053Z",
+      "updatedAt": "2026-10-09T09:01:07.053Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536467050-469964064-fixattrb-bkav_3001_Hien_file_an.exe",
+      "contentSnippet": "Tài liệu tải lên: fixattrb-bkav_3001_Hien file an.exe. Kích thước: 0.30 MB.",
+      "rawContent": "Tài liệu: fixattrb-bkav_3001_Hien file an.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:07.053Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536467053-745",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "fixattrb-bkav_3001_Hien file an.exe",
+          "sizeBytes": 314176,
+          "uploadedAt": "2026-10-09T09:01:07.053Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536467050-469964064-fixattrb-bkav_3001_Hien_file_an.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536466828-356",
+      "name": "Firefox_Installer.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 287560,
+      "createdAt": "2026-10-09T09:01:06.828Z",
+      "updatedAt": "2026-10-09T09:01:06.828Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536466826-433508984-Firefox_Installer.exe",
+      "contentSnippet": "Tài liệu tải lên: Firefox_Installer.exe. Kích thước: 0.27 MB.",
+      "rawContent": "Tài liệu: Firefox_Installer.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:06.828Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536466828-356",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Firefox_Installer.exe",
+          "sizeBytes": 287560,
+          "uploadedAt": "2026-10-09T09:01:06.828Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536466826-433508984-Firefox_Installer.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536466604-268",
+      "name": "Firefox Installer.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 398872,
+      "createdAt": "2026-10-09T09:01:06.604Z",
+      "updatedAt": "2026-10-09T09:01:06.604Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536466601-767767891-Firefox_Installer.exe",
+      "contentSnippet": "Tài liệu tải lên: Firefox Installer.exe. Kích thước: 0.38 MB.",
+      "rawContent": "Tài liệu: Firefox Installer.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:06.604Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536466604-268",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Firefox Installer.exe",
+          "sizeBytes": 398872,
+          "uploadedAt": "2026-10-09T09:01:06.604Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536466601-767767891-Firefox_Installer.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536466309-287",
+      "name": "Äá»ng há» Äáº¿m ngÆ°á»£c thá»i gian.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 2734912,
+      "createdAt": "2026-10-09T09:01:06.309Z",
+      "updatedAt": "2026-10-09T09:01:06.309Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536466298-426829154-_____ng_h_________m_ng_____c_th___i_gian.exe",
+      "contentSnippet": "Tài liệu tải lên: Äá»ng há» Äáº¿m ngÆ°á»£c thá»i gian.exe. Kích thước: 2.61 MB.",
+      "rawContent": "Tài liệu: Äá»ng há» Äáº¿m ngÆ°á»£c thá»i gian.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:06.309Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536466309-287",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Äá»ng há» Äáº¿m ngÆ°á»£c thá»i gian.exe",
+          "sizeBytes": 2734912,
+          "uploadedAt": "2026-10-09T09:01:06.309Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536466298-426829154-_____ng_h_________m_ng_____c_th___i_gian.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536465717-948",
+      "name": "Dong bang o cung.rar",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "zip",
+      "extension": "rar",
+      "mimeType": "application/x-compressed",
+      "sizeBytes": 4701452,
+      "createdAt": "2026-10-09T09:01:05.717Z",
+      "updatedAt": "2026-10-09T09:01:05.717Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "RAR"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536465696-917948608-Dong_bang_o_cung.rar",
+      "contentSnippet": "Tài liệu tải lên: Dong bang o cung.rar. Kích thước: 4.48 MB.",
+      "rawContent": "Tài liệu: Dong bang o cung.rar\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:05.717Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536465717-948",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Dong bang o cung.rar",
+          "sizeBytes": 4701452,
+          "uploadedAt": "2026-10-09T09:01:05.717Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536465696-917948608-Dong_bang_o_cung.rar"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536464989-476",
+      "name": "ÄÃ´i khi báº¡n cáº£m tháº¥y khÃ³ chá»u khi chiáº¿c mÃ¡y tÃ­nh cá»§a mÃ¬nh cháº¡y má»t cÃ¡ch cháº­m cháº¡p.doc",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "word",
+      "extension": "doc",
+      "mimeType": "application/msword",
+      "sizeBytes": 362496,
+      "createdAt": "2026-10-09T09:01:04.989Z",
+      "updatedAt": "2026-10-09T09:01:04.989Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "DOC"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536464987-597715478-____i_khi_b___n_c___m_th___y_kh___ch___u_khi_chi___c_m__y_t__nh_c___a_m__nh_ch___y_m___t_c__ch_ch___m_ch___p.doc",
+      "contentSnippet": "Tài liệu tải lên: ÄÃ´i khi báº¡n cáº£m tháº¥y khÃ³ chá»u khi chiáº¿c mÃ¡y tÃ­nh cá»§a mÃ¬nh cháº¡y má»t cÃ¡ch cháº­m cháº¡p.doc. Kích thước: 0.35 MB.",
+      "rawContent": "Tài liệu: ÄÃ´i khi báº¡n cáº£m tháº¥y khÃ³ chá»u khi chiáº¿c mÃ¡y tÃ­nh cá»§a mÃ¬nh cháº¡y má»t cÃ¡ch cháº­m cháº¡p.doc\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:04.989Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536464989-476",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "ÄÃ´i khi báº¡n cáº£m tháº¥y khÃ³ chá»u khi chiáº¿c mÃ¡y tÃ­nh cá»§a mÃ¬nh cháº¡y má»t cÃ¡ch cháº­m cháº¡p.doc",
+          "sizeBytes": 362496,
+          "uploadedAt": "2026-10-09T09:01:04.989Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536464987-597715478-____i_khi_b___n_c___m_th___y_kh___ch___u_khi_chi___c_m__y_t__nh_c___a_m__nh_ch___y_m___t_c__ch_ch___m_ch___p.doc"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536464689-652",
+      "name": "Convert-mp4-to-mp3.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 7272381,
+      "createdAt": "2026-10-09T09:01:04.689Z",
+      "updatedAt": "2026-10-09T09:01:04.689Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536464656-911960722-Convert-mp4-to-mp3.exe",
+      "contentSnippet": "Tài liệu tải lên: Convert-mp4-to-mp3.exe. Kích thước: 6.94 MB.",
+      "rawContent": "Tài liệu: Convert-mp4-to-mp3.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:04.689Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536464689-652",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Convert-mp4-to-mp3.exe",
+          "sizeBytes": 7272381,
+          "uploadedAt": "2026-10-09T09:01:04.689Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536464656-911960722-Convert-mp4-to-mp3.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536463831-104",
+      "name": "CocCocSetup.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 7436184,
+      "createdAt": "2026-10-09T09:01:03.831Z",
+      "updatedAt": "2026-10-09T09:01:03.831Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536463796-945940224-CocCocSetup.exe",
+      "contentSnippet": "Tài liệu tải lên: CocCocSetup.exe. Kích thước: 7.09 MB.",
+      "rawContent": "Tài liệu: CocCocSetup.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:03.831Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536463831-104",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "CocCocSetup.exe",
+          "sizeBytes": 7436184,
+          "uploadedAt": "2026-10-09T09:01:03.831Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536463796-945940224-CocCocSetup.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536462969-441",
+      "name": "Cleaner 2.03.rar",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "zip",
+      "extension": "rar",
+      "mimeType": "application/x-compressed",
+      "sizeBytes": 2694067,
+      "createdAt": "2026-10-09T09:01:02.969Z",
+      "updatedAt": "2026-10-09T09:01:02.969Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "RAR"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536462958-220761047-Cleaner_2.03.rar",
+      "contentSnippet": "Tài liệu tải lên: Cleaner 2.03.rar. Kích thước: 2.57 MB.",
+      "rawContent": "Tài liệu: Cleaner 2.03.rar\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:02.969Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536462969-441",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Cleaner 2.03.rar",
+          "sizeBytes": 2694067,
+          "uploadedAt": "2026-10-09T09:01:02.969Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536462958-220761047-Cleaner_2.03.rar"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536462376-467",
+      "name": "Chuyen mp3 sang mp4.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 15728768,
+      "createdAt": "2026-10-09T09:01:02.376Z",
+      "updatedAt": "2026-10-09T09:01:02.376Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536462300-672053797-Chuyen_mp3_sang_mp4.exe",
+      "contentSnippet": "Tài liệu tải lên: Chuyen mp3 sang mp4.exe. Kích thước: 15.00 MB.",
+      "rawContent": "Tài liệu: Chuyen mp3 sang mp4.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:02.376Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536462376-467",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Chuyen mp3 sang mp4.exe",
+          "sizeBytes": 15728768,
+          "uploadedAt": "2026-10-09T09:01:02.376Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536462300-672053797-Chuyen_mp3_sang_mp4.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536461055-935",
+      "name": "ChuyÃªn Äá»i vÄn báº£n sang file Ã¢m thanh tiáº¿ng Anh.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 4733102,
+      "createdAt": "2026-10-09T09:01:01.055Z",
+      "updatedAt": "2026-10-09T09:01:01.055Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536461035-598634610-Chuy__n______i_v__n_b___n_sang_file___m_thanh_ti___ng_Anh.exe",
+      "contentSnippet": "Tài liệu tải lên: ChuyÃªn Äá»i vÄn báº£n sang file Ã¢m thanh tiáº¿ng Anh.exe. Kích thước: 4.51 MB.",
+      "rawContent": "Tài liệu: ChuyÃªn Äá»i vÄn báº£n sang file Ã¢m thanh tiáº¿ng Anh.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:01:01.055Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536461055-935",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "ChuyÃªn Äá»i vÄn báº£n sang file Ã¢m thanh tiáº¿ng Anh.exe",
+          "sizeBytes": 4733102,
+          "uploadedAt": "2026-10-09T09:01:01.055Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536461035-598634610-Chuy__n______i_v__n_b___n_sang_file___m_thanh_ti___ng_Anh.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536455180-533",
+      "name": "ChromeSetup.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 1151544,
+      "createdAt": "2026-10-09T09:00:55.180Z",
+      "updatedAt": "2026-10-09T09:00:55.180Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536455176-20481621-ChromeSetup.exe",
+      "contentSnippet": "Tài liệu tải lên: ChromeSetup.exe. Kích thước: 1.10 MB.",
+      "rawContent": "Tài liệu: ChromeSetup.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:00:55.180Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536455180-533",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "ChromeSetup.exe",
+          "sizeBytes": 1151544,
+          "uploadedAt": "2026-10-09T09:00:55.180Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536455176-20481621-ChromeSetup.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536454758-147",
+      "name": "ccsetup_online_setup.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 1749176,
+      "createdAt": "2026-10-09T09:00:54.758Z",
+      "updatedAt": "2026-10-09T09:00:54.758Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536454751-420558076-ccsetup_online_setup.exe",
+      "contentSnippet": "Tài liệu tải lên: ccsetup_online_setup.exe. Kích thước: 1.67 MB.",
+      "rawContent": "Tài liệu: ccsetup_online_setup.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:00:54.758Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536454758-147",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "ccsetup_online_setup.exe",
+          "sizeBytes": 1749176,
+          "uploadedAt": "2026-10-09T09:00:54.758Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536454751-420558076-ccsetup_online_setup.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536454250-493",
+      "name": "CapCut_installer2.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 2875800,
+      "createdAt": "2026-10-09T09:00:54.250Z",
+      "updatedAt": "2026-10-09T09:00:54.250Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536454234-761778044-CapCut_installer2.exe",
+      "contentSnippet": "Tài liệu tải lên: CapCut_installer2.exe. Kích thước: 2.74 MB.",
+      "rawContent": "Tài liệu: CapCut_installer2.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:00:54.250Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536454250-493",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "CapCut_installer2.exe",
+          "sizeBytes": 2875800,
+          "uploadedAt": "2026-10-09T09:00:54.250Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536454234-761778044-CapCut_installer2.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536453661-391",
+      "name": "CapCut_installer.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 2313024,
+      "createdAt": "2026-10-09T09:00:53.661Z",
+      "updatedAt": "2026-10-09T09:00:53.661Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536453652-762989509-CapCut_installer.exe",
+      "contentSnippet": "Tài liệu tải lên: CapCut_installer.exe. Kích thước: 2.21 MB.",
+      "rawContent": "Tài liệu: CapCut_installer.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:00:53.661Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536453661-391",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "CapCut_installer.exe",
+          "sizeBytes": 2313024,
+          "uploadedAt": "2026-10-09T09:00:53.661Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536453652-762989509-CapCut_installer.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536444439-707",
+      "name": "Bo go.rar",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "zip",
+      "extension": "rar",
+      "mimeType": "application/x-compressed",
+      "sizeBytes": 1104591,
+      "createdAt": "2026-10-09T09:00:44.439Z",
+      "updatedAt": "2026-10-09T09:00:44.439Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "RAR"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536444431-565112523-Bo_go.rar",
+      "contentSnippet": "Tài liệu tải lên: Bo go.rar. Kích thước: 1.05 MB.",
+      "rawContent": "Tài liệu: Bo go.rar\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:00:44.439Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536444439-707",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Bo go.rar",
+          "sizeBytes": 1104591,
+          "uploadedAt": "2026-10-09T09:00:44.439Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536444431-565112523-Bo_go.rar"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536443997-193",
+      "name": "Bang go tat.doc",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "word",
+      "extension": "doc",
+      "mimeType": "application/msword",
+      "sizeBytes": 37888,
+      "createdAt": "2026-10-09T09:00:43.997Z",
+      "updatedAt": "2026-10-09T09:00:43.997Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "DOC"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536443996-809307088-Bang_go_tat.doc",
+      "contentSnippet": "Tài liệu tải lên: Bang go tat.doc. Kích thước: 0.04 MB.",
+      "rawContent": "Tài liệu: Bang go tat.doc\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:00:43.997Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536443997-193",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Bang go tat.doc",
+          "sizeBytes": 37888,
+          "uploadedAt": "2026-10-09T09:00:43.997Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536443996-809307088-Bang_go_tat.doc"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536443867-177",
+      "name": "Bandicut_315-build511_Cáº¯t nhac Video.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 13338872,
+      "createdAt": "2026-10-09T09:00:43.867Z",
+      "updatedAt": "2026-10-09T09:00:43.867Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536443768-32793730-Bandicut_315-build511_C___t_nhac_Video.exe",
+      "contentSnippet": "Tài liệu tải lên: Bandicut_315-build511_Cáº¯t nhac Video.exe. Kích thước: 12.72 MB.",
+      "rawContent": "Tài liệu: Bandicut_315-build511_Cáº¯t nhac Video.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:00:43.867Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536443867-177",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Bandicut_315-build511_Cáº¯t nhac Video.exe",
+          "sizeBytes": 13338872,
+          "uploadedAt": "2026-10-09T09:00:43.867Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536443768-32793730-Bandicut_315-build511_C___t_nhac_Video.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791536417370-796",
+      "name": "Audacity-win-3.3.3-x64_Loc tap am_Win10.exe",
+      "folderId": "f-1791536291428",
+      "folderName": "13. LƯU TRỮ CÀI ĐẶT",
+      "type": "other",
+      "extension": "exe",
+      "mimeType": "application/x-msdownload",
+      "sizeBytes": 15293896,
+      "createdAt": "2026-10-09T09:00:17.370Z",
+      "updatedAt": "2026-10-09T09:00:17.370Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 13. LƯU TRỮ CÀI ĐẶT",
+      "tags": [
+        "LƯU TRỮ CÀI ĐẶT",
+        "EXE"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/app/applet/uploads/1791536417264-490554576-Audacity-win-3.3.3-x64_Loc_tap_am_Win10.exe",
+      "contentSnippet": "Tài liệu tải lên: Audacity-win-3.3.3-x64_Loc tap am_Win10.exe. Kích thước: 14.59 MB.",
+      "rawContent": "Tài liệu: Audacity-win-3.3.3-x64_Loc tap am_Win10.exe\nThư mục: 13. LƯU TRỮ CÀI ĐẶT\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T09:00:17.370Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791536417370-796",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Audacity-win-3.3.3-x64_Loc tap am_Win10.exe",
+          "sizeBytes": 15293896,
+          "uploadedAt": "2026-10-09T09:00:17.370Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791536417264-490554576-Audacity-win-3.3.3-x64_Loc_tap_am_Win10.exe"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-1791535636934-596",
+      "name": "KHBD Thang 10 (Tuan  5 - 8).pdf",
+      "folderId": "f-11",
+      "folderName": "11. GIÁO ÁN",
+      "type": "pdf",
+      "extension": "pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 5501911,
+      "createdAt": "2026-10-09T08:47:16.934Z",
+      "updatedAt": "2026-10-09T08:47:16.934Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Tải lên bởi Từ Văn Gọn vào 11. GIÁO ÁN",
+      "tags": [
+        "GIÁO ÁN",
+        "PDF"
+      ],
+      "isFavorite": false,
+      "isDeleted": true,
+      "storagePath": "/app/applet/uploads/1791535636911-675615438-KHBD_Thang_10__Tuan__5_-_8_.pdf",
+      "contentSnippet": "Tài liệu tải lên: KHBD Thang 10 (Tuan  5 - 8).pdf. Kích thước: 5.25 MB.",
+      "rawContent": "Tài liệu: KHBD Thang 10 (Tuan  5 - 8).pdf\nThư mục: 11. GIÁO ÁN\nChủ sở hữu: Từ Văn Gọn\nNgày tải lên: 2026-10-09T08:47:16.934Z",
+      "versions": [
+        {
+          "id": "ver-1-file-1791535636934-596",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "KHBD Thang 10 (Tuan  5 - 8).pdf",
+          "sizeBytes": 5501911,
+          "uploadedAt": "2026-10-09T08:47:16.934Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Phiên bản ban đầu khi tải lên",
+          "storagePath": "/app/applet/uploads/1791535636911-675615438-KHBD_Thang_10__Tuan__5_-_8_.pdf"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      },
+      "deletedAt": "2026-10-09T08:57:21.876Z"
+    },
+    {
+      "id": "file-02",
+      "name": "Bài giảng điện tử Tiếng Việt.pptx",
+      "folderId": "f-10",
+      "folderName": "10. POWERPOINT",
+      "type": "powerpoint",
+      "extension": "pptx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "sizeBytes": 13107200,
+      "createdAt": "2026-09-27T10:00:00Z",
+      "updatedAt": "2026-09-27T15:20:00Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Slide trình chiếu bài học vần: am, ap, an, at cho học sinh lớp 1. Có âm thanh phát âm mẫu, tranh ảnh minh họa sống động.",
+      "tags": [
+        "Tiếng Việt 1",
+        "Slide",
+        "Bài giảng điện tử",
+        "Học vần"
+      ],
+      "isFavorite": true,
+      "isDeleted": false,
+      "storagePath": "/uploads/bai_giang_tieng_viet.pptx",
+      "contentSnippet": "Slide 1: Trường Tiểu học Phường An Xuyên - Tiếng Việt Lớp 1C - Bài 24: Vần an - at\nSlide 2: Khởi động cùng bài hát \"Bé ngoan\"\nSlide 3: Khám phá vần mới: con ngan, bãi cát, bàn tay, bát sen\nSlide 4: Hướng dẫn viết bảng con: an, at, lan can, hạt cát\nSlide 5: Đọc câu ứng dụng: \"Bé Nga ngoan ngoãn chăm chỉ\"\nSlide 6: Trò chơi hái hoa dân chủ - Thầy Từ Văn Gọn",
+      "rawContent": "SLIDE 1: TRƯỜNG TIỂU HỌC PHƯỜNG AN XUYÊN\nMÔN: TIẾNG VIỆT 1 - BỘ SÁCH KẾT NỐI TRI THỨC\nGiáo viên: Thầy Từ Văn Gọn\nChủ đề: Bé và gia đình - Bài: an, at\n\nSLIDE 2: KHÁM PHÁ VẦN MỚI\n- Vần 'an': gồm âm 'a' đứng trước, âm 'n' đứng sau. (a - n - an)\n- Từ khóa: BÀN HỌC, ĐÀN BƯỚM, HOA LAN\n- Vần 'at': gồm âm 'a' đứng trước, âm 't' đứng sau. (a - t - at)\n- Từ khóa: BÃI CÁT, HẠT THÓC, BÁT ĐĨA\n\nSLIDE 3: LUYỆN ĐỌC TỪ NGỮ ỨNG DỤNG\n- Con ngan, khăn rằn, cây bàng\n- Rửa bát, quạt mát, múa hát\n\nSLIDE 4: TẬP ĐỌC ĐOẠN VĂN\n\"Mẹ đưa bé Lan ra biển. Bãi cát vàng mịn màng. Đàn chim hải âu chao lượn...\"\n\nSLIDE 5: TRÒ CHƠI Ô CHỮ KỲ DIỆU\nThưởng sao chăm ngoan cho học sinh lớp 1C!",
+      "versions": [
+        {
+          "id": "ver-02-1",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Bài giảng điện tử Tiếng Việt.pptx",
+          "sizeBytes": 13107200,
+          "uploadedAt": "2026-09-27T10:00:00Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Bản trình chiếu chính thức có chèn âm thanh đọc mẫu chuẩn",
+          "storagePath": "/uploads/bai_giang_tieng_viet.pptx"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-03",
+      "name": "Thông tư 27.pdf",
+      "folderId": "f-08",
+      "folderName": "08. PDF",
+      "type": "pdf",
+      "extension": "pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 3984588,
+      "createdAt": "2026-09-26T09:00:00Z",
+      "updatedAt": "2026-09-26T09:00:00Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Thông tư số 27/2020/TT-BGDĐT ban hành Quy định đánh giá học sinh tiểu học. Áp dụng cho chương trình giáo dục phổ thông 2018.",
+      "tags": [
+        "Thông tư 27",
+        "Quy định",
+        "Đánh giá học sinh tiểu học",
+        "Bộ GD&ĐT"
+      ],
+      "isFavorite": true,
+      "isDeleted": false,
+      "storagePath": "/uploads/thong_tu_27.pdf",
+      "contentSnippet": "BỘ GIÁO DỤC VÀ ĐÀO TẠO\nSố: 27/2020/TT-BGDĐT\nCỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\nĐộc lập - Tự do - Hạnh phúc\nHà Nội, ngày 04 tháng 9 năm 2020\n\nTHÔNG TƯ BAN HÀNH QUY ĐỊNH ĐÁNH GIÁ HỌC SINH TIỂU HỌC\nChương I: NHỮNG QUY ĐỊNH CHUNG\nĐiều 1: Phạm vi điều chỉnh và đối tượng áp dụng\n1. Thông tư này ban hành Quy định đánh giá học sinh tiểu học, bao gồm: đánh giá quá trình học tập, sự tiến bộ và kết quả học tập của học sinh; đánh giá sự hình thành và phát triển phẩm chất, năng lực của học sinh; hồ sơ đánh giá và sử dụng kết quả đánh giá.\n2. Quy định này áp dụng đối với trường tiểu học, trường phổ thông có nhiều cấp học có cấp tiểu học...\n\nĐiều 5: Mục đích đánh giá\nCung cấp thông tin chính xác, kịp thời, xác định được thành tích học tập, rèn luyện theo mức độ đáp ứng yêu cầu cần đạt của chương trình giáo dục phổ thông cấp tiểu học và sự tiến bộ của học sinh để hướng dẫn hoạt động học tập, điều chỉnh các hoạt động dạy học nhằm nâng cao chất lượng giáo dục.",
+      "rawContent": "BỘ GIÁO DỤC VÀ ĐÀO TẠO\nSố: 27/2020/TT-BGDĐT\n\nQUY ĐỊNH ĐÁNH GIÁ HỌC SINH TIỂU HỌC\n\nCHƯƠNG I: NHỮNG QUY ĐỊNH CHUNG\n- Đánh giá học sinh tiểu học là quá trình thu thập, xử lý thông tin thông qua các hoạt động quan sát, theo dõi, trao đổi, kiểm tra, nhận xét quá trình học tập, rèn luyện của học sinh.\n- Đánh giá thường xuyên bằng nhận xét, đánh giá định kỳ bằng điểm số kết hợp với nhận xét.\n- Đánh giá vì sự tiến bộ của học sinh; coi trọng việc động viên, khuyến khích sự cố gắng trong học tập, rèn luyện.\n\nCHƯƠNG II: ĐÁNH GIÁ ĐỊNH KỲ VÀ THƯỜNG XUYÊN\n- Đánh giá nội dung học tập các môn học: Hoàn thành tốt (T), Hoàn thành (H), Chưa hoàn thành (C).\n- Đánh giá sự hình thành và phát triển từng phẩm chất chủ yếu: Yêu nước, nhân ái, chăm chỉ, trung thực, trách nhiệm.\n- Đánh giá sự hình thành và phát triển từng năng lực cốt lõi: Tự chủ và tự học, giao tiếp và hợp tác, giải quyết vấn đề và sáng tạo.",
+      "versions": [
+        {
+          "id": "ver-03-1",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Thông tư 27.pdf",
+          "sizeBytes": 3984588,
+          "uploadedAt": "2026-09-26T09:00:00Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "notes": "Văn bản gốc từ Cổng thông tin điện tử Bộ Giáo dục và Đào tạo",
+          "storagePath": "/uploads/thong_tu_27.pdf"
+        }
+      ],
+      "share": {
+        "isShared": true,
+        "shareType": "public_link",
+        "permission": "view",
+        "sharedWithEmails": [],
+        "shareLink": "https://ais-dev.cloud/share/thongtu27-bgd",
+        "expiresAt": "2027-01-01T00:00:00Z"
+      }
+    },
+    {
+      "id": "file-04",
+      "name": "Hình ảnh hoạt động lớp 1C.zip",
+      "folderId": "f-04",
+      "folderName": "04. HÌNH ẢNH",
+      "type": "zip",
+      "extension": "zip",
+      "mimeType": "application/zip",
+      "sizeBytes": 26843545,
+      "createdAt": "2026-09-25T11:20:00Z",
+      "updatedAt": "2026-09-25T11:20:00Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Kho hình ảnh ngày tựu trường, lễ khai giảng và các hoạt động vẽ tranh, trải nghiệm làm lồng đèn Trung thu năm 2026 của học sinh lớp 1C.",
+      "tags": [
+        "Lớp 1C",
+        "Hình ảnh",
+        "Khai giảng",
+        "Ngoại khóa"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/uploads/hoat_dong_lop_1c.zip",
+      "contentSnippet": "Nén 45 bức ảnh chất lượng cao (JPG, PNG) của lớp 1C Trường Tiểu học Phường An Xuyên:\n- KhaiGiang_1C_01.jpg đến KhaiGiang_1C_15.jpg\n- TrungThu_LamLongDen_01.jpg đến TrungThu_LamLongDen_20.jpg\n- SinhHoatLop_DocSach_01.jpg đến 10.jpg",
+      "rawContent": "DANH SÁCH TỆP TRONG FILE NÉN HÌNH ẢNH LỚP 1C:\n1. KhaiGiang_1C_ChupTapThe.jpg (4.2 MB)\n2. ThietBiDayHoc_CoTro.jpg (3.8 MB)\n3. HoatDong_VuiTrungThu_2026.jpg (5.1 MB)\n4. BuoiDocSach_ThuVienXanh.jpg (3.9 MB)\n5. TraoThuong_HoaDiemMuoi.jpg (4.4 MB)",
+      "versions": [
+        {
+          "id": "ver-04-1",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Hình ảnh hoạt động lớp 1C.zip",
+          "sizeBytes": 26843545,
+          "uploadedAt": "2026-09-25T11:20:00Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "storagePath": "/uploads/hoat_dong_lop_1c.zip"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-05",
+      "name": "Danh sách học sinh lớp 1C.xlsx",
+      "folderId": "f-02",
+      "folderName": "02. LỚP 1C",
+      "type": "excel",
+      "extension": "xlsx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 1258291,
+      "createdAt": "2026-09-24T14:45:00Z",
+      "updatedAt": "2026-09-24T14:45:00Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Bảng theo dõi thông tin nhân khẩu, học bạ, số điện thoại phụ huynh và tình trạng tiêm chủng của 32 học sinh lớp 1C niên khóa 2026-2027.",
+      "tags": [
+        "Danh sách học sinh",
+        "Lớp 1C",
+        "Chủ nhiệm",
+        "Hồ sơ lớp"
+      ],
+      "isFavorite": true,
+      "isDeleted": false,
+      "storagePath": "/uploads/danh_sach_hoc_sinh_1c.xlsx",
+      "contentSnippet": "DANH SÁCH HỌC SINH LỚP 1C - TRƯỜNG TIỂU HỌC PHƯỜNG AN XUYÊN - TP CÀ MAU\nGiáo viên chủ nhiệm: Từ Văn Gọn\nTổng số học sinh: 32 em (Nam: 17, Nữ: 15)\n1. Nguyễn Hoàng An - 12/03/2020 - Nam - Khóm 3, Phường An Xuyên\n2. Trần Bảo Anh - 05/06/2020 - Nữ - Ấp Tân Hiệp, Xã An Xuyên\n3. Lê Minh Cường - 22/01/2020 - Nam - Khóm 1, Phường An Xuyên\n4. Phạm Quỳnh Chi - 14/09/2020 - Nữ - Phường An Xuyên, TP Cà Mau\n5. Đỗ Gia Huy - 30/11/2020 - Nam - Phường Tân Thành, Cà Mau",
+      "rawContent": "BẢNG TÍNH EXCEL: DANH SÁCH VÀ THÔNG TIN PHỤ HUYNH LỚP 1C (32 HỌC SINH)\nSTT | Mã HS | Họ và tên | Ngày sinh | Giới tính | Họ tên cha/mẹ | Số điện thoại | Địa chỉ cư trú\n1 | HS01 | Nguyễn Hoàng An | 12/03/2020 | Nam | Nguyễn Văn Hùng | 0913.882.123 | Khóm 3, P. An Xuyên\n2 | HS02 | Trần Bảo Anh | 05/06/2020 | Nữ | Trần Văn Tuấn | 0944.221.789 | Ấp Tân Hiệp, P. An Xuyên\n3 | HS03 | Lê Minh Cường | 22/01/2020 | Nam | Lê Thành Đạt | 0907.551.442 | Khóm 1, P. An Xuyên\n4 | HS04 | Phạm Quỳnh Chi | 14/09/2020 | Nữ | Phạm Văn Long | 0989.112.334 | Khóm 2, P. An Xuyên\n5 | HS05 | Đỗ Gia Huy | 30/11/2020 | Nam | Đỗ Minh Trí | 0918.447.889 | P. Tân Thành, TP Cà Mau\n6 | HS06 | Huỳnh Ngọc Mai | 18/07/2020 | Nữ | Huỳnh Văn Phát | 0939.667.120 | Khóm 4, P. An Xuyên\n7 | HS07 | Võ Minh Khôi | 09/04/2020 | Nam | Võ Văn Bình | 0948.334.556 | Ấp Cây Trâm, P. An Xuyên\n8 | HS08 | Nguyễn Thảo Vy | 25/10/2020 | Nữ | Nguyễn Văn Nam | 0919.223.887 | Khóm 3, P. An Xuyên",
+      "versions": [
+        {
+          "id": "ver-05-1",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Danh sách học sinh lớp 1C.xlsx",
+          "sizeBytes": 1258291,
+          "uploadedAt": "2026-09-24T14:45:00Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "storagePath": "/uploads/danh_sach_hoc_sinh_1c.xlsx"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-06",
+      "name": "Ma trận đề kiểm tra Toán 1.xlsx",
+      "folderId": "f-07",
+      "folderName": "07. EXCEL",
+      "type": "excel",
+      "extension": "xlsx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 1258291,
+      "createdAt": "2026-09-10T09:20:00Z",
+      "updatedAt": "2026-09-10T09:20:00Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Bảng ma trận và bản đặc tả đề kiểm tra định kỳ môn Toán lớp 1 theo 3 mức độ nhận thức (Mức 1, Mức 2, Mức 3) theo Thông tư 27.",
+      "tags": [
+        "Ma trận đề",
+        "Toán 1",
+        "Kiểm tra",
+        "Đề thi"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/uploads/ma_tran_de_toan_1.xlsx",
+      "contentSnippet": "MA TRẬN ĐỀ KIỂM TRA ĐỊNH KỲ MÔN TOÁN LỚP 1\nTheo Thông tư số 27/2020/TT-BGDĐT\nMạch kiến thức: Số và phép tính (chiếm 70%), Hình học và đo lường (20%), Một số yếu tố thống kê và xác suất (10%)\nMức 1 (Nhận biết): 50% (5 điểm)\nMức 2 (Thông hiểu): 30% (3 điểm)\nMức 3 (Vận dụng): 20% (2 điểm)",
+      "rawContent": "MA TRẬN ĐỀ THI MÔN TOÁN 1:\n- Mức 1: Đếm số, so sánh hai số bé hơn 10 (TN: 4 câu, TL: 1 câu)\n- Mức 2: Thực hiện phép cộng không nhớ trong phạm vi 10, đo độ dài bằng gang tay (TN: 2 câu, TL: 2 câu)\n- Mức 3: Giải bài toán có lời văn một bước tính dạng gộp thêm đồ vật (TL: 1 câu)",
+      "versions": [
+        {
+          "id": "ver-06-1",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Ma trận đề kiểm tra Toán 1.xlsx",
+          "sizeBytes": 1258291,
+          "uploadedAt": "2026-09-10T09:20:00Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "storagePath": "/uploads/ma_tran_de_toan_1.xlsx"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-08",
+      "name": "Mẫu nhận xét học sinh lớp 1.docx",
+      "folderId": "f-02",
+      "folderName": "02. LỚP 1C",
+      "type": "word",
+      "extension": "docx",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "sizeBytes": 1572864,
+      "createdAt": "2026-09-18T15:30:00Z",
+      "updatedAt": "2026-09-18T15:30:00Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Bộ sưu tập 100+ câu nhận xét đánh giá thường xuyên và định kỳ cho học sinh lớp 1 theo từng mức độ Hoàn thành tốt, Hoàn thành và Chưa hoàn thành.",
+      "tags": [
+        "Mẫu nhận xét",
+        "Lớp 1",
+        "Học bạ",
+        "Nhận xét môn học"
+      ],
+      "isFavorite": true,
+      "isDeleted": false,
+      "storagePath": "/uploads/mau_nhan_xet_lop1.docx",
+      "contentSnippet": "TỔNG HỢP MẪU NHẬN XÉT HỌC BẠ VÀ SỔ THEO DÕI ĐÁNH GIÁ LỚP 1\nThầy giáo: Từ Văn Gọn biên soạn\n\n1. Môn Tiếng Việt:\n- Mức T (Hoàn thành tốt): Đọc to, rõ ràng, lưu loát; phát âm chuẩn các âm vần khó; viết chữ đúng độ cao và đều nét; có vốn từ phong phú.\n- Mức H (Hoàn thành): Đọc được các âm vần và câu văn ngắn; viết đúng mẫu chữ; cần rèn thêm tốc độ đọc.\n- Mức C: Còn nhầm lẫn âm dấu thanh, cần thầy cô và phụ huynh kiên nhẫn hướng dẫn thêm.\n\n2. Môn Toán:\n- Mức T: Nắm chắc các số đến 10; tính nhẩm nhanh và chính xác; thích thú giải bài toán vui.\n- Mức H: Đếm số và so sánh thành thạo; thực hiện được phép tính cộng trừ đơn giản.",
+      "rawContent": "MẪU NHẬN XÉT PHẨM CHẤT VÀ NĂNG LỰC:\n- Chăm chỉ: Đi học chuyên cần, tích cực giơ tay phát biểu, giữ gìn sách vở cẩn thận.\n- Nhân ái: Hòa đồng, biết yêu thương giúp đỡ bạn bè, vâng lời thầy cô.\n- Trung thực: Thật thà, dũng cảm nhận lỗi khi làm rơi đồ dùng của bạn.\n- Trách nhiệm: Thực hiện tốt nội quy lớp học, hoàn thành việc trực nhật bàn ghế sạch sẽ.",
+      "versions": [
+        {
+          "id": "ver-08-1",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Mẫu nhận xét học sinh lớp 1.docx",
+          "sizeBytes": 1572864,
+          "uploadedAt": "2026-09-18T15:30:00Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "storagePath": "/uploads/mau_nhan_xet_lop1.docx"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-09",
+      "name": "Kế hoạch đánh giá học sinh lớp 1.pdf",
+      "folderId": "f-08",
+      "folderName": "08. PDF",
+      "type": "pdf",
+      "extension": "pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 2411724,
+      "createdAt": "2026-09-14T08:30:00Z",
+      "updatedAt": "2026-09-14T08:30:00Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Kế hoạch tổ chức đánh giá học sinh lớp 1 học kỳ I năm học 2026-2027 của Trường Tiểu học Phường An Xuyên.",
+      "tags": [
+        "Kế hoạch",
+        "Kiểm tra định kỳ",
+        "Tiểu học An Xuyên"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/uploads/ke_hoach_danh_gia_lop1.pdf",
+      "contentSnippet": "ỦY BAN NHÂN DÂN THÀNH PHỐ CÀ MAU\nTRƯỜNG TIỂU HỌC PHƯỜNG AN XUYÊN\nKẾ HOẠCH ĐÁNH GIÁ ĐỊNH KỲ HỌC SINH LỚP 1 NĂM HỌC 2026 - 2027\n\n1. Thời gian kiểm tra cuối học kỳ I: Từ ngày 28/12/2026 đến 31/12/2026.\n2. Môn thi: Toán (thời gian làm bài 40 phút), Tiếng Việt (Đọc thành tiếng, Đọc hiểu và Viết - 50 phút).\n3. Phân công ra đề và coi thi chéo giữa các lớp 1A, 1B, 1C.",
+      "rawContent": "KẾ HOẠCH CHI TIẾT TỔNG KẾT ĐÁNH GIÁ:\n- Báo cáo kết quả về Ban giám hiệu trước ngày 05/01/2027.\n- Họp phụ huynh thông báo kết quả và tư vấn hỗ trợ học sinh tại gia đình.",
+      "versions": [
+        {
+          "id": "ver-09-1",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Kế hoạch đánh giá học sinh lớp 1.pdf",
+          "sizeBytes": 2411724,
+          "uploadedAt": "2026-09-14T08:30:00Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "storagePath": "/uploads/ke_hoach_danh_gia_lop1.pdf"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-10",
+      "name": "Ứng dụng AI trong soạn giáo án tiểu học.pdf",
+      "folderId": "f-03",
+      "folderName": "03. AI",
+      "type": "pdf",
+      "extension": "pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 4299161,
+      "createdAt": "2026-09-26T11:00:00Z",
+      "updatedAt": "2026-09-26T11:00:00Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Chuyên đề nghiên cứu sư phạm: Khai thác Trí tuệ nhân tạo (Gemini AI) trong việc tạo trò chơi học tập và hình ảnh trực quan cho học sinh lớp 1.",
+      "tags": [
+        "AI",
+        "Sư phạm số",
+        "Gemini AI",
+        "Giáo án điện tử",
+        "Thầy Gọn"
+      ],
+      "isFavorite": true,
+      "isDeleted": false,
+      "storagePath": "/uploads/ai_trong_day_hoc.pdf",
+      "contentSnippet": "BÁO CÁO KINH NGHIỆM SƯ PHẠM\nỨNG DỤNG TRÍ TUỆ NHÂN TẠO TRONG XÂY DỰNG HỌC LIỆU SỐ BẬC TIỂU HỌC\nTác giả: Thầy giáo Từ Văn Gọn - Trường Tiểu học Phường An Xuyên, TP Cà Mau\n\n1. Đặt vấn đề: Học sinh tiểu học cần trực quan sinh động. Việc tạo tranh ảnh, câu đố và bài tập phân hóa tốn nhiều thời gian của giáo viên.\n2. Giải pháp: Sử dụng mô hình ngôn ngữ lớn (Gemini) để:\n- Thiết kế kịch bản trò chơi khởi động tiết học.\n- Tạo đề toán có cốt truyện gần gũi với vùng sông nước miền Tây Cà Mau (rừng đước, con tôm, chiếc xuồng).\n- Soạn lời nhận xét học sinh cá nhân hóa, ân cần và giàu cảm xúc.",
+      "rawContent": "NỘI DUNG CHUYÊN ĐỀ:\n- Cách viết câu lệnh (prompt) hiệu quả cho giáo viên tiểu học.\n- Kết hợp công cụ AI với sách giáo khoa hiện hành.\n- Đảm bảo tính sư phạm và an toàn thông tin của học sinh.",
+      "versions": [
+        {
+          "id": "ver-10-1",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Ứng dụng AI trong soạn giáo án tiểu học.pdf",
+          "sizeBytes": 4299161,
+          "uploadedAt": "2026-09-26T11:00:00Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "storagePath": "/uploads/ai_trong_day_hoc.pdf"
+        }
+      ],
+      "share": {
+        "isShared": true,
+        "shareType": "public_link",
+        "permission": "view",
+        "sharedWithEmails": [],
+        "shareLink": "https://ais-dev.cloud/share/ai-tieu-hoc-thay-gon"
+      }
+    },
+    {
+      "id": "file-11",
+      "name": "Video tiết dạy mẫu môn Tiếng Việt 1.mp4",
+      "folderId": "f-05",
+      "folderName": "05. VIDEO",
+      "type": "video",
+      "extension": "mp4",
+      "mimeType": "video/mp4",
+      "sizeBytes": 471859200,
+      "createdAt": "2026-09-24T15:00:00Z",
+      "updatedAt": "2026-09-24T15:00:00Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Video ghi lại toàn bộ tiết dạy thao giảng môn Tiếng Việt lớp 1C - Bài học vần. Đạt giải Nhất giáo viên dạy giỏi cấp trường.",
+      "tags": [
+        "Video",
+        "Tiết dạy mẫu",
+        "Thao giảng",
+        "Giáo viên dạy giỏi"
+      ],
+      "isFavorite": true,
+      "isDeleted": false,
+      "storagePath": "/uploads/video_tiet_day_lop1.mp4",
+      "contentSnippet": "Ghi hình độ phân giải 1080p, thời lượng 35 phút. Tiết dạy minh họa phương pháp dạy học lấy học sinh làm trung tâm, kết hợp màn hình tương tác và đồ dùng dạy học tự làm.",
+      "rawContent": "THÔNG TIN VIDEO THAO GIẢNG:\n- Thời lượng: 35 phút 20 giây\n- Giáo viên thực hiện: Từ Văn Gọn\n- Lớp thực hiện: 1C, Trường Tiểu học Phường An Xuyên\n- Đánh giá của Ban giám khảo: Tiết dạy sáng tạo, học sinh hoạt động sôi nổi, nắm chắc bài học.",
+      "versions": [
+        {
+          "id": "ver-11-1",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Video tiết dạy mẫu môn Tiếng Việt 1.mp4",
+          "sizeBytes": 471859200,
+          "uploadedAt": "2026-09-24T15:00:00Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "storagePath": "/uploads/video_tiet_day_lop1.mp4"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    },
+    {
+      "id": "file-12",
+      "name": "Báo cáo công tác tháng 8.pdf",
+      "folderId": "f-08",
+      "folderName": "08. PDF",
+      "type": "pdf",
+      "extension": "pdf",
+      "mimeType": "application/pdf",
+      "sizeBytes": 1887436,
+      "createdAt": "2026-08-30T10:00:00Z",
+      "updatedAt": "2026-08-30T10:00:00Z",
+      "owner": "Từ Văn Gọn",
+      "description": "Báo cáo tổng kết công tác chuẩn bị năm học mới và tập huấn sách giáo khoa lớp 1 tháng 8 năm 2026.",
+      "tags": [
+        "Báo cáo",
+        "Tháng 8",
+        "Tập huấn"
+      ],
+      "isFavorite": false,
+      "isDeleted": false,
+      "storagePath": "/uploads/bao_cao_thang_8.pdf",
+      "contentSnippet": "BÁO CÁO CÔNG TÁC THÁNG 8 NĂM 2026\nTổ chuyên môn Khối 1 - Trường Tiểu học Phường An Xuyên\n1. Tham gia đầy đủ các lớp tập huấn SGK mới do Sở GD&ĐT Cà Mau tổ chức.\n2. Vệ sinh trường lớp, trang trí phòng học thân thiện cho học sinh lớp 1C.\n3. Hoàn tất việc rà soát danh sách học sinh vào lớp 1 trên địa bàn Phường An Xuyên.",
+      "rawContent": "KẾT QUẢ THÁNG 8:\n- 100% giáo viên khối 1 hoàn thành bài thu hoạch tập huấn.\n- Phòng học lớp 1C khang trang, đầy đủ bảng từ, bàn ghế đúng quy cách.",
+      "versions": [
+        {
+          "id": "ver-12-1",
+          "versionNumber": 1,
+          "versionLabel": "v1",
+          "fileName": "Báo cáo công tác tháng 8.pdf",
+          "sizeBytes": 1887436,
+          "uploadedAt": "2026-08-30T10:00:00Z",
+          "uploadedBy": "Từ Văn Gọn",
+          "storagePath": "/uploads/bao_cao_thang_8.pdf"
+        }
+      ],
+      "share": {
+        "isShared": false,
+        "shareType": "private",
+        "permission": "view",
+        "sharedWithEmails": []
+      }
+    }
+  ],
+  "folders": [
+    {
+      "id": "f-01",
+      "code": "01",
+      "name": "01. GIÁO DỤC",
+      "createdAt": "2026-09-01T08:00:00Z",
+      "updatedAt": "2026-09-28T14:30:00Z",
+      "description": "Chủ trương, thông tư, quyết định của Bộ GD&ĐT và Sở GD&ĐT Cà Mau",
+      "color": "#0866E8"
+    },
+    {
+      "id": "f-02",
+      "code": "02",
+      "name": "02. LỚP 1C",
+      "createdAt": "2026-09-02T09:15:00Z",
+      "updatedAt": "2026-09-27T16:20:00Z",
+      "description": "Hồ sơ chủ nhiệm lớp 1C, danh sách học sinh, ban đại diện phụ huynh",
+      "color": "#16B875"
+    },
+    {
+      "id": "f-03",
+      "code": "03",
+      "name": "03. AI",
+      "createdAt": "2026-09-03T10:00:00Z",
+      "updatedAt": "2026-09-26T11:45:00Z",
+      "description": "Tài liệu nghiên cứu và ứng dụng Trí tuệ Nhân tạo trong dạy học tiểu học",
+      "color": "#8257E5"
+    },
+    {
+      "id": "f-04",
+      "code": "04",
+      "name": "04. HÌNH ẢNH",
+      "createdAt": "2026-09-04T07:30:00Z",
+      "updatedAt": "2026-09-25T17:10:00Z",
+      "description": "Hình ảnh hoạt động trải nghiệm, hội thi, sinh hoạt chuyên môn",
+      "color": "#FF9F1C"
+    },
+    {
+      "id": "f-05",
+      "code": "05",
+      "name": "05. VIDEO",
+      "createdAt": "2026-09-05T08:45:00Z",
+      "updatedAt": "2026-09-24T15:00:00Z",
+      "description": "Video tiết dạy mẫu, bài giảng minh họa, tư liệu dạy học",
+      "color": "#F04444"
+    },
+    {
+      "id": "f-06",
+      "code": "06",
+      "name": "06. WORD",
+      "createdAt": "2026-09-06T13:00:00Z",
+      "updatedAt": "2026-09-23T09:30:00Z",
+      "description": "Tất cả giáo án, biên bản, kế hoạch dạy học định dạng Word (.docx)",
+      "color": "#0866E8"
+    },
+    {
+      "id": "f-07",
+      "code": "07",
+      "name": "07. EXCEL",
+      "createdAt": "2026-09-07T14:15:00Z",
+      "updatedAt": "2026-09-22T10:20:00Z",
+      "description": "Bảng theo dõi điểm số, đánh giá học sinh, thống kê chuyên cần",
+      "color": "#16B875"
+    },
+    {
+      "id": "f-08",
+      "code": "08",
+      "name": "08. PDF",
+      "createdAt": "2026-09-08T08:20:00Z",
+      "updatedAt": "2026-09-21T16:50:00Z",
+      "description": "Văn bản quy phạm pháp luật, tài liệu tập huấn đã chuẩn hóa định dạng PDF",
+      "color": "#F04444"
+    },
+    {
+      "id": "f-09",
+      "code": "09",
+      "name": "09. CÁ NHÂN",
+      "createdAt": "2026-09-09T10:30:00Z",
+      "updatedAt": "2026-09-20T11:10:00Z",
+      "description": "Hồ sơ lý lịch, văn bằng chứng chỉ, giải thưởng thi đua cá nhân Thầy Gọn",
+      "color": "#8257E5"
+    },
+    {
+      "id": "f-10",
+      "code": "10",
+      "name": "10. POWERPOINT",
+      "createdAt": "2026-09-10T11:00:00Z",
+      "updatedAt": "2026-09-19T14:00:00Z",
+      "description": "Bài giảng trình chiếu điện tử tương tác các môn học",
+      "color": "#FF9F1C"
+    },
+    {
+      "id": "f-11",
+      "code": "11",
+      "name": "11. GIÁO ÁN",
+      "createdAt": "2026-09-11T13:40:00Z",
+      "updatedAt": "2026-09-28T09:00:00Z",
+      "description": "Kế hoạch bài dạy (Giáo án) môn Toán, Tiếng Việt, Đạo đức, Tự nhiên Xã hội",
+      "color": "#0866E8"
+    },
+    {
+      "id": "f-12",
+      "code": "12",
+      "name": "12. TÀI LIỆU KHÁC",
+      "createdAt": "2026-09-12T15:00:00Z",
+      "updatedAt": "2026-09-18T16:30:00Z",
+      "description": "Phần mềm tiện ích, font chữ tiểu học, tài liệu tham khảo phong phú",
+      "color": "#64748B"
+    },
+    {
+      "id": "f-1791536291428",
+      "code": "13",
+      "name": "13. LƯU TRỮ CÀI ĐẶT",
+      "description": "",
+      "color": "#0866E8",
+      "createdAt": "2026-10-09T08:58:11.428Z",
+      "updatedAt": "2026-10-09T08:59:20.397Z"
+    }
+  ],
+  "user": {
+    "id": "user-tuvangon",
+    "fullName": "Từ Văn Gọn",
+    "title": "Giáo viên tiểu học",
+    "school": "Trường Tiểu học Phường An Xuyên",
+    "district": "Thành phố Cà Mau",
+    "province": "Tỉnh Cà Mau",
+    "email": "tuvangon@gmail.com",
+    "avatarUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&q=80&w=256",
+    "phone": "0919271854",
+    "storagePlan": "Gói Giáo Viên Đám Mây VIP",
+    "storageLimitGB": 100,
+    "twoFactorEnabled": true,
+    "language": "vi",
+    "theme": "light"
+  },
+  "activityLogs": [
+    {
+      "id": "log-1791537355232",
+      "action": "Tải lên tài liệu lớn",
+      "detail": "Đã tải lên \"Test_Audacity_Software.exe\" (15.0 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:15:55.232Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536993197",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"test58.exe\" (58.0 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:09:53.197Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536984870",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"test.txt\" (0.0 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:09:44.869Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536969870",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Any_Video_Converter.exe\" (58.0 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:09:29.870Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536508027",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"unikey_42rc4-140823-64bit.exe\" (0.5 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:48.027Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536507704",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"UltraViewer_setup_6.2_vi_Äiá»u khiá»n tá»« xa.exe\" (2.6 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:47.704Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536506991",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"TikTok Installer.exe\" (1.2 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:46.991Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536506507",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"TeamViewer_Setup.exe\" (25.1 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:46.507Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536499352",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"SF-Helper_Tiá»n Ã­ch táº£i Video.exe\" (4.1 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:39.352Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536498663",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"setup.exe\" (0.2 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:38.663Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536498447",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"RevoUninProSetup_Gá»¡ bá» pháº§n má»m.exe\" (15.2 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:38.447Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536497207",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Quay mÃ n hÃ¬nh mÃ¡y tÃ­nh.exe\" (17.9 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:37.207Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536493229",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Phá»¥c há»i dá»¯ liá»u.exe\" (5.2 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:33.229Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536492447",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"PDF-to-WORD-converter.exe\" (4.3 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:32.447Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536491759",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"PDF_WORS-setup.exe\" (0.7 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:31.759Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536481093",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Microsoft.Services.Store.winmd\" (0.0 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:21.093Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536480972",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"iVCam_x64_v6.2.5.exe\" (17.2 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:20.972Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536479624",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"ImageGlass-9-0-10-201-x64_Pháº§n má»m xem file áº£nh.msi\" (28.6 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:19.624Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536477514",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Google Chrome v9.0.570.rar\" (23.5 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:17.514Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536473608",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"free-mp3-cutter_21.exe\" (1.3 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:13.608Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536467053",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"fixattrb-bkav_3001_Hien file an.exe\" (0.3 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:07.053Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536466828",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Firefox_Installer.exe\" (0.3 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:06.828Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536466604",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Firefox Installer.exe\" (0.4 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:06.604Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536466309",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Äá»ng há» Äáº¿m ngÆ°á»£c thá»i gian.exe\" (2.6 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:06.309Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536465717",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Dong bang o cung.rar\" (4.5 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:05.717Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536464989",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"ÄÃ´i khi báº¡n cáº£m tháº¥y khÃ³ chá»u khi chiáº¿c mÃ¡y tÃ­nh cá»§a mÃ¬nh cháº¡y má»t cÃ¡ch cháº­m cháº¡p.doc\" (0.3 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:04.989Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536464689",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Convert-mp4-to-mp3.exe\" (6.9 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:04.689Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536463831",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"CocCocSetup.exe\" (7.1 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:03.831Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536462969",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Cleaner 2.03.rar\" (2.6 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:02.969Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536462376",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Chuyen mp3 sang mp4.exe\" (15.0 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:02.376Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536461055",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"ChuyÃªn Äá»i vÄn báº£n sang file Ã¢m thanh tiáº¿ng Anh.exe\" (4.5 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:01:01.055Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536455180",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"ChromeSetup.exe\" (1.1 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:00:55.180Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536454758",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"ccsetup_online_setup.exe\" (1.7 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:00:54.758Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536454250",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"CapCut_installer2.exe\" (2.7 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:00:54.250Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536453661",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"CapCut_installer.exe\" (2.2 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:00:53.661Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536444439",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Bo go.rar\" (1.1 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:00:44.439Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536443997",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Bang go tat.doc\" (0.0 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:00:43.997Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536443867",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Bandicut_315-build511_Cáº¯t nhac Video.exe\" (12.7 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:00:43.867Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536417370",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"Audacity-win-3.3.3-x64_Loc tap am_Win10.exe\" (14.6 MB) vào thư mục 13. LƯU TRỮ CÀI ĐẶT",
+      "timestamp": "2026-10-09T09:00:17.370Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791536241876",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"KHBD Thang 10 (Tuan  5 - 8).pdf\" vào thùng rác",
+      "timestamp": "2026-10-09T08:57:21.876Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791535782188",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"KHBD Thang 9 (Tuan 1 - 4).pdf\" vào thùng rác",
+      "timestamp": "2026-10-09T08:49:42.188Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791535636934",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"KHBD Thang 10 (Tuan  5 - 8).pdf\" (5.2 MB) vào thư mục 11. GIÁO ÁN",
+      "timestamp": "2026-10-09T08:47:16.934Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791535636248",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"KHBD Thang 9 (Tuan 1 - 4).pdf\" (4.9 MB) vào thư mục 11. GIÁO ÁN",
+      "timestamp": "2026-10-09T08:47:16.248Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791535582785",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"KHBD ThÃ¡ng 9 (Tuáº§n 1 - 4).pdf\" vào thùng rác",
+      "timestamp": "2026-10-09T08:46:22.785Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791535581165",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"KHBD ThÃ¡ng 10 (Tuáº§n  5 - 8).pdf\" vào thùng rác",
+      "timestamp": "2026-10-09T08:46:21.165Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791535568951",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"KHBD ThÃ¡ng 10 (Tuáº§n  5 - 8).pdf\" (5.2 MB) vào thư mục 11. GIÁO ÁN",
+      "timestamp": "2026-10-09T08:46:08.951Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791535568213",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"KHBD ThÃ¡ng 9 (Tuáº§n 1 - 4).pdf\" (4.9 MB) vào thư mục 11. GIÁO ÁN",
+      "timestamp": "2026-10-09T08:46:08.213Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1791535555855",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"Giáo án Toán lớp 1 - Tuần 5.docx\" vào thùng rác",
+      "timestamp": "2026-10-09T08:45:55.855Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791535536386",
+      "action": "Chuyển vào thùng rác",
+      "detail": "Đã chuyển tài liệu \"KHBD ThÃ¡ng 10 (Tuáº§n  5 - 8).pdf\" vào thùng rác",
+      "timestamp": "2026-10-09T08:45:36.386Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "delete"
+    },
+    {
+      "id": "log-1791535213172",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên \"KHBD ThÃ¡ng 10 (Tuáº§n  5 - 8).pdf\" (5.2 MB) vào thư mục 01. GIÁO DỤC",
+      "timestamp": "2026-10-09T08:40:13.172Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-1",
+      "action": "Cập nhật phiên bản",
+      "detail": "Đã tải lên v4 cho Giáo án Toán lớp 1 - Tuần 5.docx",
+      "timestamp": "2026-09-28T14:30:00Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-2",
+      "action": "Tải lên tài liệu",
+      "detail": "Đã tải lên Bài giảng điện tử Tiếng Việt.pptx (12.5 MB)",
+      "timestamp": "2026-09-27T10:00:00Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "upload"
+    },
+    {
+      "id": "log-3",
+      "action": "Chia sẻ liên kết",
+      "detail": "Đã tạo liên kết chia sẻ công khai cho Thông tư 27.pdf",
+      "timestamp": "2026-09-26T09:15:00Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "share"
+    },
+    {
+      "id": "log-4",
+      "action": "Đăng nhập an toàn",
+      "detail": "Đăng nhập thành công từ Chrome trên Windows 11 (Xác thực 2 bước 2FA hợp lệ)",
+      "timestamp": "2026-09-28T07:45:00Z",
+      "ipAddress": "113.185.42.10 (Cà Mau, VN)",
+      "iconType": "login"
+    }
+  ]
+}

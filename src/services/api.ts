@@ -68,13 +68,93 @@ export const api = {
             reject(new Error('Lỗi phân tích phản hồi'));
           }
         } else {
-          reject(new Error(`Tải lên thất bại: ${xhr.statusText}`));
+          try {
+            const errRes = JSON.parse(xhr.responseText);
+            reject(new Error(errRes.message || `Tải lên thất bại: ${xhr.statusText}`));
+          } catch {
+            reject(new Error(`Tải lên thất bại: ${xhr.statusText} (${xhr.status})`));
+          }
         }
       };
 
       xhr.onerror = () => reject(new Error('Mất kết nối mạng khi tải tệp'));
       xhr.send(formData);
     });
+  },
+
+  // Upload single file with automatic chunking (6MB chunks) to seamlessly support files > 30MB through Cloud Run proxies
+  async uploadSingleFile(
+    file: File,
+    folderId: string,
+    onProgress?: (percent: number) => void
+  ): Promise<FileItem> {
+    const CHUNK_SIZE = 6 * 1024 * 1024; // 6 MB safe chunk size
+    if (file.size <= CHUNK_SIZE) {
+      const res = await this.uploadFiles([file], folderId, onProgress);
+      return res[0];
+    }
+
+    const totalChunks = Math.ceil(file.size / CHUNK_SIZE);
+    const uploadId = 'chunk-' + Date.now() + '-' + Math.random().toString(36).substring(2, 9);
+    let finalFileItem: FileItem | null = null;
+
+    for (let chunkIndex = 0; chunkIndex < totalChunks; chunkIndex++) {
+      const start = chunkIndex * CHUNK_SIZE;
+      const end = Math.min(start + CHUNK_SIZE, file.size);
+      const chunkBlob = file.slice(start, end);
+
+      const formData = new FormData();
+      formData.append('chunk', chunkBlob, file.name);
+      formData.append('uploadId', uploadId);
+      formData.append('chunkIndex', chunkIndex.toString());
+      formData.append('totalChunks', totalChunks.toString());
+      formData.append('fileName', file.name);
+      formData.append('folderId', folderId);
+      formData.append('totalSizeBytes', file.size.toString());
+
+      let attempts = 0;
+      let success = false;
+      let lastErrMessage = '';
+
+      while (!success && attempts < 3) {
+        attempts++;
+        try {
+          const res = await fetch('/api/files/upload/chunk', {
+            method: 'POST',
+            body: formData,
+          });
+
+          if (!res.ok) {
+            const errJson = await res.json().catch(() => ({}));
+            throw new Error(errJson.message || `Lỗi tải phân đoạn ${chunkIndex + 1}/${totalChunks} (HTTP ${res.status})`);
+          }
+
+          const data = await res.json();
+          if (data.completed && data.file) {
+            finalFileItem = data.file;
+          }
+          success = true;
+        } catch (err: any) {
+          lastErrMessage = err?.message || 'Lỗi mạng khi tải phân đoạn';
+          if (attempts >= 3) {
+            throw new Error(lastErrMessage);
+          }
+          await new Promise((r) => setTimeout(r, 800));
+        }
+      }
+
+      if (onProgress) {
+        const percent = Math.min(99, Math.round(((chunkIndex + 1) / totalChunks) * 100));
+        onProgress(percent);
+      }
+    }
+
+    if (!finalFileItem) {
+      throw new Error('Không thể hoàn tất ghép nối tệp sau khi tải lên');
+    }
+
+    if (onProgress) onProgress(100);
+    return finalFileItem;
   },
 
   // Upload new version for a file
@@ -129,6 +209,30 @@ export const api = {
   async deletePermanently(id: string): Promise<void> {
     const res = await fetch(`/api/files/${id}`, { method: 'DELETE' });
     if (!res.ok) throw new Error('Không thể xóa vĩnh viễn tài liệu');
+  },
+
+  // Batch permanent delete
+  async batchDeletePermanently(ids: string[]): Promise<number> {
+    const res = await fetch('/api/files/trash/batch-delete', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ids }),
+    });
+    if (!res.ok) throw new Error('Không thể xóa các tài liệu đã chọn');
+    const data = await res.json();
+    return data.count;
+  },
+
+  // Batch restore from trash
+  async batchRestoreFromTrash(ids: string[]): Promise<number> {
+    const res = await fetch('/api/files/trash/batch-restore', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ids }),
+    });
+    if (!res.ok) throw new Error('Không thể khôi phục các tài liệu đã chọn');
+    const data = await res.json();
+    return data.count;
   },
 
   // Empty trash

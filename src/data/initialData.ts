@@ -399,44 +399,6 @@ export const initialFiles: FileItem[] = [
     }
   },
   {
-    id: 'file-07',
-    name: 'Hướng dẫn đánh giá học sinh tiểu học.docx',
-    folderId: 'f-01',
-    folderName: '01. GIÁO DỤC',
-    type: 'word',
-    extension: 'docx',
-    mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-    sizeBytes: 2202009, // 2.1 MB
-    createdAt: '2026-09-22T08:00:00Z',
-    updatedAt: '2026-09-22T08:00:00Z',
-    owner: 'Từ Văn Gọn',
-    description: 'Tài liệu hướng dẫn cụ thể cách ghi nhận xét học bạ, nhận xét vở học sinh lớp 1 theo Thông tư 27 không gây áp lực cho phụ huynh và học sinh.',
-    tags: ['Hướng dẫn', 'Thông tư 27', 'Đánh giá học sinh'],
-    isFavorite: false,
-    isDeleted: false,
-    storagePath: '/uploads/huong_dan_danh_gia.docx',
-    contentSnippet: `HƯỚNG DẪN THỰC HIỆN ĐÁNH GIÁ HỌC SINH TIỂU HỌC\nTrường Tiểu học Phường An Xuyên - Tổ chuyên môn Khối 1\n1. Đánh giá thường xuyên môn Tiếng Việt và Toán:\n- Không cho điểm số hàng ngày, sử dụng lời nhận xét mang tính khích lệ, chỉ ra biện pháp khắc phục cụ thể.\n- Ví dụ nhận xét chữ viết: "Chữ viết đúng độ cao con chữ, em chú ý khoảng cách giữa các chữ khoảng một con chữ o."\n- Ví dụ nhận xét Toán: "Em tính toán nhanh và chính xác phép cộng, cần viết số 8 cẩn thận hơn."`,
-    rawContent: `HƯỚNG DẪN VIẾT NHẬN XÉT HỌC SINH LỚP 1:\n- Lời nhận xét cần chân thành, cụ thể, không rập khuôn.\n- Nêu rõ điểm mạnh trước, sau đó nêu điểm cần cố gắng.\n- Tránh nhận xét chung chung như "Cần cố gắng" mà phải viết: "Cần rèn thêm kỹ năng cộng nhẩm nhanh hơn".`,
-    versions: [
-      {
-        id: 'ver-07-1',
-        versionNumber: 1,
-        versionLabel: 'v1',
-        fileName: 'Hướng dẫn đánh giá học sinh tiểu học.docx',
-        sizeBytes: 2202009,
-        uploadedAt: '2026-09-22T08:00:00Z',
-        uploadedBy: 'Từ Văn Gọn',
-        storagePath: '/uploads/huong_dan_danh_gia.docx'
-      }
-    ],
-    share: {
-      isShared: true,
-      shareType: 'restricted',
-      permission: 'view',
-      sharedWithEmails: ['phamthicam@gmail.com', 'nguyenvantung@gmail.com']
-    }
-  },
-  {
     id: 'file-08',
     name: 'Mẫu nhận xét học sinh lớp 1.docx',
     folderId: 'f-02',

@@ -14,6 +14,8 @@ import { VersionHistoryModal } from './components/VersionHistoryModal';
 import { ShareModal } from './components/ShareModal';
 import { UploadModal } from './components/UploadModal';
 import { MobileDevicePreviewModal } from './components/MobileDevicePreviewModal';
+import { ConfirmModal } from './components/ConfirmModal';
+import { CheckCircle2, AlertCircle, Info, X } from 'lucide-react';
 import { api } from './services/api';
 import { FileItem, FolderItem, StorageStats, UserProfile, ActivityLog } from './types';
 import { initialFiles, initialFolders, initialUser } from './data/initialData';
@@ -27,6 +29,7 @@ export default function App() {
   const [user, setUser] = useState<UserProfile>(initialUser);
   const [folders, setFolders] = useState<FolderItem[]>(initialFolders);
   const [files, setFiles] = useState<FileItem[]>(initialFiles);
+  const [trashFiles, setTrashFiles] = useState<FileItem[]>([]);
   const [activityLogs, setActivityLogs] = useState<ActivityLog[]>([]);
   const [stats, setStats] = useState<StorageStats>({
     usedBytes: 38.6 * 1024 * 1024 * 1024,
@@ -46,12 +49,43 @@ export default function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
   const [uploadTargetFolderId, setUploadTargetFolderId] = useState<string | undefined>(undefined);
 
+  // Toast notification state (replaces window.alert)
+  const [toast, setToast] = useState<{ message: string; type: 'success' | 'error' | 'info' } | null>(null);
+  const showToast = (message: string, type: 'success' | 'error' | 'info' = 'success') => {
+    setToast({ message, type });
+    setTimeout(() => {
+      setToast((current) => (current?.message === message ? null : current));
+    }, 4000);
+  };
+
+  // Confirmation Modal state (replaces window.confirm)
+  const [confirmConfig, setConfirmConfig] = useState<{
+    isOpen: boolean;
+    title: string;
+    message: string;
+    itemName?: string;
+    confirmLabel?: string;
+    cancelLabel?: string;
+    isDestructive?: boolean;
+    onConfirm: () => void;
+  }>({
+    isOpen: false,
+    title: '',
+    message: '',
+    onConfirm: () => {},
+  });
+
+  const closeConfirm = () => {
+    setConfirmConfig((prev) => ({ ...prev, isOpen: false }));
+  };
+
   // Fetch data on load
   const loadData = async () => {
     try {
-      const [statsRes, filesRes, foldersRes, logsRes] = await Promise.all([
+      const [statsRes, filesRes, trashRes, foldersRes, logsRes] = await Promise.all([
         api.getStats().catch(() => null),
         api.getFiles({ isDeleted: false }).catch(() => null),
+        api.getFiles({ isDeleted: true }).catch(() => null),
         api.getFolders().catch(() => null),
         api.getActivityLogs().catch(() => []),
       ]);
@@ -60,10 +94,13 @@ export default function App() {
         setStats(statsRes.stats);
         if (statsRes.user) setUser(statsRes.user);
       }
-      if (filesRes && filesRes.length > 0) {
+      if (Array.isArray(filesRes)) {
         setFiles(filesRes);
       }
-      if (foldersRes && foldersRes.length > 0) {
+      if (Array.isArray(trashRes)) {
+        setTrashFiles(trashRes);
+      }
+      if (Array.isArray(foldersRes)) {
         setFolders(foldersRes);
       }
       if (logsRes) {
@@ -88,7 +125,7 @@ export default function App() {
     if (target) {
       setSelectedFileForPreview(target);
     } else {
-      alert('Tài liệu đã được mở hoặc chuyển vị trí.');
+      showToast('Tài liệu đã được mở hoặc chuyển vị trí.', 'info');
     }
   };
 
@@ -119,59 +156,143 @@ export default function App() {
     }
   };
 
-  const handleMoveToTrash = async (file: FileItem) => {
-    if (confirm(`Thầy có chắc chắn muốn chuyển "${file.name}" vào thùng rác không?`)) {
-      try {
-        await api.moveToTrash(file.id);
-        setFiles((prev) => prev.filter((f) => f.id !== file.id));
-        loadData();
-      } catch (err: any) {
-        alert(err.message || 'Lỗi chuyển thùng rác');
-      }
-    }
+  const handleMoveToTrash = (file: FileItem) => {
+    setConfirmConfig({
+      isOpen: true,
+      title: 'Chuyển vào thùng rác',
+      message: 'Tài liệu sẽ được chuyển vào Thùng rác. Thầy có thể khôi phục lại bất kỳ lúc nào.',
+      itemName: file.name,
+      confirmLabel: 'Chuyển vào thùng rác',
+      cancelLabel: 'Giữ lại',
+      isDestructive: true,
+      onConfirm: async () => {
+        closeConfirm();
+        try {
+          await api.moveToTrash(file.id);
+          setFiles((prev) => prev.filter((f) => f.id !== file.id));
+          setTrashFiles((prev) => [{ ...file, isDeleted: true, deletedAt: new Date().toISOString() }, ...prev]);
+          await loadData();
+          showToast(`Đã chuyển "${file.name}" vào thùng rác thành công.`, 'success');
+        } catch (err: any) {
+          showToast(err.message || 'Lỗi chuyển thùng rác', 'error');
+        }
+      },
+    });
   };
 
   const handleRestoreFromTrash = async (file: FileItem) => {
     try {
       const restored = await api.restoreFromTrash(file.id);
-      setFiles((prev) => [...prev, restored]);
-      loadData();
-      alert(`Đã khôi phục tài liệu "${file.name}" về thư mục ${file.folderName}`);
+      setTrashFiles((prev) => prev.filter((f) => f.id !== file.id));
+      setFiles((prev) => [restored, ...prev]);
+      await loadData();
+      showToast(`Đã khôi phục tài liệu "${file.name}" về thư mục ${file.folderName}`, 'success');
     } catch (err: any) {
-      alert(err.message || 'Lỗi khôi phục');
+      showToast(err.message || 'Lỗi khôi phục tài liệu', 'error');
     }
   };
 
-  const handleDeletePermanently = async (file: FileItem) => {
-    if (confirm(`CẢNH BÁO: Thao tác này sẽ xóa vĩnh viễn tệp "${file.name}". Không thể khôi phục!`)) {
-      try {
-        await api.deletePermanently(file.id);
-        loadData();
-      } catch (err: any) {
-        alert(err.message || 'Lỗi xóa vĩnh viễn');
-      }
-    }
+  const handleDeletePermanently = (file: FileItem) => {
+    setConfirmConfig({
+      isOpen: true,
+      title: 'Xóa vĩnh viễn tài liệu',
+      message: 'CẢNH BÁO: Thao tác này sẽ xóa vĩnh viễn tài liệu khỏi hệ thống và không thể khôi phục lại!',
+      itemName: file.name,
+      confirmLabel: 'Xóa vĩnh viễn',
+      cancelLabel: 'Hủy bỏ',
+      isDestructive: true,
+      onConfirm: async () => {
+        closeConfirm();
+        try {
+          await api.deletePermanently(file.id);
+          setTrashFiles((prev) => prev.filter((f) => f.id !== file.id));
+          await loadData();
+          showToast(`Đã xóa vĩnh viễn tài liệu "${file.name}".`, 'success');
+        } catch (err: any) {
+          showToast(err.message || 'Lỗi xóa vĩnh viễn', 'error');
+        }
+      },
+    });
   };
 
-  const handleEmptyTrash = async () => {
-    if (confirm('Thầy có chắc chắn muốn dọn sạch toàn bộ thùng rác không?')) {
-      try {
-        await api.emptyTrash();
-        loadData();
-        alert('Đã dọn sạch thùng rác thành công.');
-      } catch (err: any) {
-        alert(err.message || 'Lỗi làm trống thùng rác');
-      }
-    }
+  const handleEmptyTrash = () => {
+    setConfirmConfig({
+      isOpen: true,
+      title: 'Dọn sạch thùng rác',
+      message: 'CẢNH BÁO: Toàn bộ tài liệu trong thùng rác sẽ bị xóa vĩnh viễn. Thầy có chắc chắn muốn làm trống thùng rác?',
+      confirmLabel: 'Dọn sạch thùng rác',
+      cancelLabel: 'Hủy bỏ',
+      isDestructive: true,
+      onConfirm: async () => {
+        closeConfirm();
+        try {
+          await api.emptyTrash();
+          setTrashFiles([]);
+          await loadData();
+          showToast('Đã dọn sạch thùng rác thành công.', 'success');
+        } catch (err: any) {
+          showToast(err.message || 'Lỗi làm trống thùng rác', 'error');
+        }
+      },
+    });
+  };
+
+  const handleBatchRestore = (selectedFiles: FileItem[]) => {
+    setConfirmConfig({
+      isOpen: true,
+      title: 'Khôi phục tài liệu đã chọn',
+      message: `Thầy có chắc chắn muốn khôi phục ${selectedFiles.length} tài liệu về các thư mục gốc không?`,
+      confirmLabel: 'Khôi phục ngay',
+      cancelLabel: 'Hủy bỏ',
+      isDestructive: false,
+      onConfirm: async () => {
+        closeConfirm();
+        try {
+          const ids = selectedFiles.map((f) => f.id);
+          await api.batchRestoreFromTrash(ids);
+          setTrashFiles((prev) => prev.filter((f) => !ids.includes(f.id)));
+          setFiles((prev) => [...selectedFiles.map((f) => ({ ...f, isDeleted: false, deletedAt: undefined })), ...prev]);
+          await loadData();
+          showToast(`Đã khôi phục thành công ${selectedFiles.length} tài liệu.`, 'success');
+        } catch (err: any) {
+          showToast(err.message || 'Lỗi khôi phục tài liệu', 'error');
+        }
+      },
+    });
+  };
+
+  const handleBatchDeletePermanently = (selectedFiles: FileItem[]) => {
+    setConfirmConfig({
+      isOpen: true,
+      title: 'Xóa vĩnh viễn các tài liệu đã chọn',
+      message: `CẢNH BÁO: Thao tác này sẽ xóa vĩnh viễn ${selectedFiles.length} tài liệu đã chọn khỏi thùng rác và không thể khôi phục!`,
+      itemName: `${selectedFiles.length} tài liệu được chọn`,
+      confirmLabel: 'Xóa vĩnh viễn',
+      cancelLabel: 'Hủy bỏ',
+      isDestructive: true,
+      onConfirm: async () => {
+        closeConfirm();
+        try {
+          const ids = selectedFiles.map((f) => f.id);
+          await api.batchDeletePermanently(ids);
+          setTrashFiles((prev) => prev.filter((f) => !ids.includes(f.id)));
+          await loadData();
+          showToast(`Đã xóa vĩnh viễn ${selectedFiles.length} tài liệu khỏi thùng rác.`, 'success');
+        } catch (err: any) {
+          showToast(err.message || 'Lỗi xóa tài liệu', 'error');
+        }
+      },
+    });
   };
 
   const handleCreateFolder = async (name: string, description?: string, color?: string) => {
     try {
       const newFolder = await api.createFolder(name, description, color);
       setFolders((prev) => [...prev, newFolder]);
-      loadData();
+      await loadData();
+      showToast(`Đã tạo thư mục "${newFolder.name}" thành công.`, 'success');
     } catch (err: any) {
-      alert(err.message || 'Lỗi tạo thư mục');
+      showToast(err.message || 'Lỗi tạo thư mục', 'error');
     }
   };
 
@@ -179,22 +300,35 @@ export default function App() {
     try {
       const updated = await api.updateFolder(id, { name });
       setFolders((prev) => prev.map((f) => (f.id === id ? updated : f)));
-      loadData();
+      await loadData();
+      showToast(`Đã cập nhật thư mục "${updated.name}" thành công.`, 'success');
     } catch (err: any) {
-      alert(err.message || 'Lỗi cập nhật thư mục');
+      showToast(err.message || 'Lỗi cập nhật thư mục', 'error');
     }
   };
 
-  const handleDeleteFolder = async (id: string) => {
-    if (confirm('Xóa thư mục này? Các tài liệu bên trong sẽ được tự động chuyển sang thư mục an toàn.')) {
-      try {
-        await api.deleteFolder(id);
-        setFolders((prev) => prev.filter((f) => f.id !== id));
-        loadData();
-      } catch (err: any) {
-        alert(err.message || 'Lỗi xóa thư mục');
-      }
-    }
+  const handleDeleteFolder = (id: string) => {
+    const targetFolder = folders.find((f) => f.id === id);
+    setConfirmConfig({
+      isOpen: true,
+      title: 'Xóa thư mục',
+      message: 'Các tài liệu bên trong thư mục này sẽ được tự động chuyển sang thư mục an toàn.',
+      itemName: targetFolder?.name,
+      confirmLabel: 'Xóa thư mục',
+      cancelLabel: 'Hủy bỏ',
+      isDestructive: true,
+      onConfirm: async () => {
+        closeConfirm();
+        try {
+          await api.deleteFolder(id);
+          setFolders((prev) => prev.filter((f) => f.id !== id));
+          await loadData();
+          showToast(`Đã xóa thư mục "${targetFolder?.name || ''}".`, 'success');
+        } catch (err: any) {
+          showToast(err.message || 'Lỗi xóa thư mục', 'error');
+        }
+      },
+    });
   };
 
   const handleUploadSuccess = (newUploaded: FileItem[]) => {
@@ -327,17 +461,17 @@ export default function App() {
           />
         );
 
-      case 'trash': {
-        const trashItems = files.filter((f) => f.isDeleted);
+      case 'trash':
         return (
           <TrashView
-            trashFiles={trashItems}
+            trashFiles={trashFiles}
             onRestore={handleRestoreFromTrash}
             onDeletePermanently={handleDeletePermanently}
+            onBatchRestore={handleBatchRestore}
+            onBatchDeletePermanently={handleBatchDeletePermanently}
             onEmptyTrash={handleEmptyTrash}
           />
         );
-      }
 
       case 'settings':
         return (
@@ -386,6 +520,7 @@ export default function App() {
           }}
           isOpen={isSidebarOpen}
           onCloseMobile={() => setIsSidebarOpen(false)}
+          trashCount={trashFiles.length}
         />
 
         {/* Main Content Viewport */}
@@ -406,6 +541,7 @@ export default function App() {
         onShare={handleShareFile}
         onOpenVersions={handleOpenVersions}
         onToggleFavorite={handleToggleFavorite}
+        onDelete={handleMoveToTrash}
       />
 
       {/* Screen 5: Quản lý phiên bản Modal */}
@@ -455,6 +591,51 @@ export default function App() {
           setIsUploadOpen(true);
         }}
       />
+
+      {/* Confirmation Modal (Iframe-safe custom dialog) */}
+      <ConfirmModal
+        isOpen={confirmConfig.isOpen}
+        title={confirmConfig.title}
+        message={confirmConfig.message}
+        itemName={confirmConfig.itemName}
+        confirmLabel={confirmConfig.confirmLabel}
+        cancelLabel={confirmConfig.cancelLabel}
+        isDestructive={confirmConfig.isDestructive}
+        onConfirm={confirmConfig.onConfirm}
+        onCancel={closeConfirm}
+      />
+
+      {/* Floating Toast Notification */}
+      {toast && (
+        <div className="fixed bottom-5 right-5 z-50 max-w-sm animate-in slide-in-from-bottom-5 fade-in duration-200">
+          <div className={`p-4 rounded-2xl shadow-2xl border flex items-start gap-3 ${
+            toast.type === 'success'
+              ? 'bg-slate-900 text-white border-slate-800'
+              : toast.type === 'error'
+              ? 'bg-red-600 text-white border-red-500'
+              : 'bg-blue-600 text-white border-blue-500'
+          }`}>
+            <div className="shrink-0 mt-0.5">
+              {toast.type === 'success' ? (
+                <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+              ) : toast.type === 'error' ? (
+                <AlertCircle className="w-5 h-5 text-red-200" />
+              ) : (
+                <Info className="w-5 h-5 text-blue-200" />
+              )}
+            </div>
+            <div className="flex-1 text-xs font-semibold leading-relaxed">
+              {toast.message}
+            </div>
+            <button
+              onClick={() => setToast(null)}
+              className="text-white/60 hover:text-white transition p-0.5"
+            >
+              <X className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
