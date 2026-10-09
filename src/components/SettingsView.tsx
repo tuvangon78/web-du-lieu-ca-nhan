@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   User,
   ShieldCheck,
@@ -13,10 +13,19 @@ import {
   Clock,
   Activity,
   Save,
-  School
+  School,
+  Database,
+  RefreshCw,
+  Copy,
+  Check,
+  ExternalLink,
+  Table,
+  Layers,
+  AlertCircle
 } from 'lucide-react';
 import { UserProfile, ActivityLog } from '../types';
-import { formatDateTime } from '../services/api';
+import { formatDateTime, api } from '../services/api';
+import { SUPABASE_SQL_SCHEMA } from '../lib/supabase';
 
 interface SettingsViewProps {
   user: UserProfile;
@@ -37,6 +46,73 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
   const [language, setLanguage] = useState(user.language);
   const [theme, setTheme] = useState<'light' | 'dark'>(user.theme || 'light');
   const [savedSuccess, setSavedSuccess] = useState(false);
+
+  // Supabase states
+  const [supabaseLoading, setSupabaseLoading] = useState(false);
+  const [supabaseSyncing, setSupabaseSyncing] = useState(false);
+  const [copiedSql, setCopiedSql] = useState(false);
+  const [syncFeedback, setSyncFeedback] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  const [showSqlModal, setShowSqlModal] = useState(false);
+  const [supabaseStatus, setSupabaseStatus] = useState<{
+    connected: boolean;
+    projectUrl: string;
+    hasTables: {
+      files: boolean;
+      folders: boolean;
+      activity_logs: boolean;
+      user_profile: boolean;
+    };
+    details: string;
+  }>({
+    connected: true,
+    projectUrl: 'https://pirmwzflxvlxvjqlhbhw.supabase.co',
+    hasTables: {
+      files: false,
+      folders: false,
+      activity_logs: false,
+      user_profile: false,
+    },
+    details: 'Đang kết nối tới máy chủ Supabase...',
+  });
+
+  const checkStatus = async () => {
+    setSupabaseLoading(true);
+    try {
+      const res = await api.getSupabaseStatus();
+      setSupabaseStatus(res);
+    } catch (err: any) {
+      console.warn('Supabase status error:', err);
+    } finally {
+      setSupabaseLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    checkStatus();
+  }, []);
+
+  const handleCopySql = () => {
+    navigator.clipboard.writeText(SUPABASE_SQL_SCHEMA);
+    setCopiedSql(true);
+    setTimeout(() => setCopiedSql(false), 2500);
+  };
+
+  const handleSyncToSupabase = async () => {
+    setSupabaseSyncing(true);
+    setSyncFeedback(null);
+    try {
+      const res = await api.syncToSupabase();
+      setSyncFeedback({ type: 'success', message: res.message });
+      await checkStatus();
+    } catch (err: any) {
+      setSyncFeedback({
+        type: 'error',
+        message: err.message || 'Chưa thể đồng bộ. Vui lòng chạy mã SQL trên Supabase trước.',
+      });
+    } finally {
+      setSupabaseSyncing(false);
+    }
+  };
 
   const handleSaveProfile = (e: React.FormEvent) => {
     e.preventDefault();
@@ -313,6 +389,198 @@ export const SettingsView: React.FC<SettingsViewProps> = ({
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Supabase Cloud Database Section */}
+      <div className="bg-white p-6 rounded-2xl shadow-xs border border-emerald-100 space-y-5">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-emerald-600 flex items-center justify-center text-white shadow-md shadow-emerald-500/20">
+              <Database className="w-5 h-5 text-white" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2">
+                <h3 className="text-base sm:text-lg font-bold text-slate-900">
+                  Cơ sở dữ liệu Supabase Cloud
+                </h3>
+                <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                  PostgreSQL
+                </span>
+              </div>
+              <p className="text-xs text-slate-500">
+                Lưu trữ đám mây phân tán, đồng bộ trực tiếp tài liệu và phân quyền an toàn cho Thầy Gọn
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <button
+              onClick={checkStatus}
+              disabled={supabaseLoading}
+              className="px-3 py-2 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-semibold flex items-center gap-1.5 transition disabled:opacity-50"
+              title="Kiểm tra lại trạng thái kết nối"
+            >
+              <RefreshCw className={`w-3.5 h-3.5 text-slate-500 ${supabaseLoading ? 'animate-spin' : ''}`} />
+              <span>Kiểm tra</span>
+            </button>
+            <a
+              href="https://supabase.com/dashboard/project/pirmwzflxvlxvjqlhbhw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold flex items-center gap-1.5 transition shadow-xs"
+            >
+              <span>Supabase Dashboard</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
+
+        {/* Connection status box */}
+        <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 space-y-3">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span className="text-xs font-bold text-slate-800">
+                Dự án Supabase: <span className="font-mono text-emerald-700 font-semibold">{supabaseStatus.projectUrl}</span>
+              </span>
+            </div>
+            <span className="text-[11px] font-semibold text-slate-500">
+              Khóa API: <span className="font-mono bg-white px-2 py-0.5 rounded border border-slate-200">sb_publishable_...</span>
+            </span>
+          </div>
+
+          {/* Table readiness indicators */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 border-t border-slate-200/60">
+            <div className="p-2.5 rounded-lg bg-white border border-slate-200 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Table className="w-4 h-4 text-blue-600" />
+                <span className="text-xs font-semibold text-slate-700">folders</span>
+              </div>
+              {supabaseStatus.hasTables.folders ? (
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-700">Sẵn sàng</span>
+              ) : (
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-700">Chưa tạo</span>
+              )}
+            </div>
+
+            <div className="p-2.5 rounded-lg bg-white border border-slate-200 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Table className="w-4 h-4 text-indigo-600" />
+                <span className="text-xs font-semibold text-slate-700">files</span>
+              </div>
+              {supabaseStatus.hasTables.files ? (
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-700">Sẵn sàng</span>
+              ) : (
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-700">Chưa tạo</span>
+              )}
+            </div>
+
+            <div className="p-2.5 rounded-lg bg-white border border-slate-200 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Table className="w-4 h-4 text-purple-600" />
+                <span className="text-xs font-semibold text-slate-700">activity_logs</span>
+              </div>
+              {supabaseStatus.hasTables.activity_logs ? (
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-700">Sẵn sàng</span>
+              ) : (
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-700">Chưa tạo</span>
+              )}
+            </div>
+
+            <div className="p-2.5 rounded-lg bg-white border border-slate-200 flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Table className="w-4 h-4 text-teal-600" />
+                <span className="text-xs font-semibold text-slate-700">user_profile</span>
+              </div>
+              {supabaseStatus.hasTables.user_profile ? (
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-700">Sẵn sàng</span>
+              ) : (
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-700">Chưa tạo</span>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Feedback Alert */}
+        {syncFeedback && (
+          <div
+            className={`p-3.5 rounded-xl text-xs font-semibold flex items-center justify-between gap-2 animate-in fade-in ${
+              syncFeedback.type === 'success'
+                ? 'bg-emerald-50 border border-emerald-200 text-emerald-800'
+                : 'bg-amber-50 border border-amber-200 text-amber-800'
+            }`}
+          >
+            <div className="flex items-center gap-2">
+              {syncFeedback.type === 'success' ? (
+                <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+              ) : (
+                <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
+              )}
+              <span>{syncFeedback.message}</span>
+            </div>
+            <button
+              onClick={() => setSyncFeedback(null)}
+              className="text-slate-400 hover:text-slate-600 text-xs px-1"
+            >
+              ✕
+            </button>
+          </div>
+        )}
+
+        {/* SQL Script Guide Box */}
+        <div className="p-4 rounded-xl border border-blue-100 bg-blue-50/40 space-y-3">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <h4 className="text-xs sm:text-sm font-bold text-slate-800 flex items-center gap-2">
+                <Layers className="w-4 h-4 text-blue-600" />
+                Mã lệnh SQL tạo bảng trên Supabase (Khởi tạo 1 lần)
+              </h4>
+              <p className="text-[11px] text-slate-500 mt-0.5">
+                Vào <strong>Supabase Dashboard → SQL Editor → New query</strong>, dán mã bên dưới rồi nhấn <strong>RUN</strong>.
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={handleCopySql}
+                className="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold flex items-center gap-1.5 shadow-xs transition"
+              >
+                {copiedSql ? <Check className="w-4 h-4 text-white" /> : <Copy className="w-4 h-4" />}
+                <span>{copiedSql ? 'Đã sao chép SQL!' : 'Sao chép mã SQL'}</span>
+              </button>
+
+              <button
+                onClick={() => setShowSqlModal(!showSqlModal)}
+                className="px-3 py-2 rounded-xl border border-slate-300 hover:bg-white text-slate-700 text-xs font-semibold transition"
+              >
+                {showSqlModal ? 'Thu gọn' : 'Xem mã SQL'}
+              </button>
+            </div>
+          </div>
+
+          {showSqlModal && (
+            <div className="mt-3 relative">
+              <pre className="p-3.5 rounded-xl bg-slate-900 text-slate-100 font-mono text-[11px] overflow-x-auto max-h-64 leading-relaxed border border-slate-800">
+                {SUPABASE_SQL_SCHEMA}
+              </pre>
+            </div>
+          )}
+
+          {/* Sync Actions */}
+          <div className="pt-3 border-t border-blue-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <span className="text-[11px] text-slate-600">
+              Sau khi đã chạy mã SQL trên Supabase, bấm nút dưới đây để đẩy toàn bộ 12 thư mục sư phạm và tài liệu lên đám mây:
+            </span>
+            <button
+              onClick={handleSyncToSupabase}
+              disabled={supabaseSyncing}
+              className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition disabled:opacity-50 whitespace-nowrap"
+            >
+              <RefreshCw className={`w-4 h-4 ${supabaseSyncing ? 'animate-spin' : ''}`} />
+              <span>{supabaseSyncing ? 'Đang đồng bộ...' : 'Đồng bộ dữ liệu lên Supabase'}</span>
+            </button>
           </div>
         </div>
       </div>

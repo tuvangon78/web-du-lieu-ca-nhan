@@ -10,7 +10,8 @@ import {
   Smartphone,
   Menu,
   X,
-  Sparkles
+  Sparkles,
+  Database
 } from 'lucide-react';
 import { UserProfile } from '../types';
 
@@ -57,6 +58,9 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center gap-2">
           <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
           <span>Đám mây lưu trữ an toàn • Trường Tiểu học Phường An Xuyên, TP Cà Mau</span>
+          <span className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 font-medium">
+            ⚡ Supabase Cloud
+          </span>
         </div>
         <div className="hidden md:flex items-center gap-4 text-amber-200 font-medium">
           <span className="flex items-center gap-1.5">
@@ -222,6 +226,13 @@ export const Header: React.FC<HeaderProps> = ({
                   >
                     <User className="w-4 h-4 text-blue-600" />
                     Hồ sơ cá nhân & Bảo mật
+                  </button>
+                  <button
+                    onClick={() => { onNavigate('settings'); setShowUserDropdown(false); }}
+                    className="w-full px-4 py-2 text-left hover:bg-emerald-50 flex items-center gap-2 text-emerald-700 font-semibold"
+                  >
+                    <Database className="w-4 h-4 text-emerald-600" />
+                    Cơ sở dữ liệu Supabase
                   </button>
                   <button
                     onClick={() => { onOpenMobilePreview(); setShowUserDropdown(false); }}

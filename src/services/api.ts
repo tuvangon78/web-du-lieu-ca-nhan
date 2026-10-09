@@ -229,6 +229,38 @@ export const api = {
     const data = await res.json();
     return data.user;
   },
+
+  // Get Supabase Status
+  async getSupabaseStatus(): Promise<{
+    connected: boolean;
+    projectUrl: string;
+    hasTables: {
+      files: boolean;
+      folders: boolean;
+      activity_logs: boolean;
+      user_profile: boolean;
+    };
+    details: string;
+    sqlScript?: string;
+  }> {
+    const res = await fetch('/api/supabase/status');
+    if (!res.ok) throw new Error('Không thể kiểm tra kết nối Supabase');
+    return res.json();
+  },
+
+  // Sync / Seed data to Supabase
+  async syncToSupabase(): Promise<{
+    success: boolean;
+    message: string;
+    counts?: { folders: number; files: number };
+  }> {
+    const res = await fetch('/api/supabase/sync', { method: 'POST' });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      throw new Error(err.message || 'Không thể đồng bộ dữ liệu lên Supabase');
+    }
+    return res.json();
+  },
 };
 
 export function formatBytes(bytes: number, decimals = 1): string {

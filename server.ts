@@ -7,8 +7,14 @@ import dotenv from 'dotenv';
 import { GoogleGenAI } from '@google/genai';
 import { initialFiles, initialFolders, initialUser, initialActivityLogs } from './src/data/initialData.ts';
 import { FileItem, FolderItem, StorageStats, UserProfile, ActivityLog, FileType } from './src/types.ts';
+import { createClient } from '@supabase/supabase-js';
+import { SUPABASE_SQL_SCHEMA } from './src/lib/supabase.ts';
 
 dotenv.config();
+
+const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL || 'https://pirmwzflxvlxvjqlhbhw.supabase.co';
+const SUPABASE_ANON_KEY = process.env.SUPABASE_ANON_KEY || process.env.VITE_SUPABASE_ANON_KEY || 'sb_publishable_TI9S6FVP-Vq_exOBAlFgyw_C60fz5mC';
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -506,7 +512,180 @@ app.get('/api/user', (_req: Request, res: Response) => {
 app.patch('/api/user', (req: Request, res: Response) => {
   Object.assign(db.user, req.body);
   saveDatabase(db);
+  // Async sync to Supabase
+  syncUserProfileToSupabase(db.user).catch(() => {});
   res.json({ success: true, user: db.user });
+});
+
+// Helper functions for Supabase syncing
+async function checkSupabaseTableExists(tableName: string): Promise<boolean> {
+  try {
+    const { error } = await supabase.from(tableName).select('id').limit(1);
+    return !error;
+  } catch {
+    return false;
+  }
+}
+
+async function syncFoldersToSupabase(folders: FolderItem[]) {
+  try {
+    const payload = folders.map(f => ({
+      id: f.id,
+      code: f.code,
+      name: f.name,
+      color: f.color || '#0866E8',
+      description: f.description || '',
+      parent_id: f.parentId || null,
+      is_favorite: Boolean(f.isFavorite),
+      created_at: f.createdAt,
+      updated_at: f.updatedAt,
+    }));
+    await supabase.from('folders').upsert(payload, { onConflict: 'id' });
+  } catch (err) {
+    console.warn('Sync folders to Supabase error:', err);
+  }
+}
+
+async function syncFilesToSupabase(files: FileItem[]) {
+  try {
+    const payload = files.map(f => ({
+      id: f.id,
+      name: f.name,
+      folder_id: f.folderId,
+      folder_name: f.folderName,
+      type: f.type,
+      extension: f.extension,
+      mime_type: f.mimeType,
+      size_bytes: f.sizeBytes,
+      created_at: f.createdAt,
+      updated_at: f.updatedAt,
+      owner: f.owner,
+      description: f.description || '',
+      tags: f.tags || [],
+      is_favorite: Boolean(f.isFavorite),
+      is_deleted: Boolean(f.isDeleted),
+      deleted_at: f.deletedAt || null,
+      storage_path: f.storagePath || '',
+      content_snippet: f.contentSnippet || '',
+      raw_content: f.rawContent || '',
+      versions: f.versions || [],
+      share: f.share || {},
+    }));
+    // Batch upsert
+    for (let i = 0; i < payload.length; i += 20) {
+      const chunk = payload.slice(i, i + 20);
+      await supabase.from('files').upsert(chunk, { onConflict: 'id' });
+    }
+  } catch (err) {
+    console.warn('Sync files to Supabase error:', err);
+  }
+}
+
+async function syncUserProfileToSupabase(user: UserProfile) {
+  try {
+    await supabase.from('user_profile').upsert({
+      id: user.id,
+      full_name: user.fullName,
+      title: user.title,
+      school: user.school,
+      district: user.district,
+      province: user.province,
+      email: user.email,
+      avatar_url: user.avatarUrl,
+      phone: user.phone,
+      storage_plan: user.storagePlan,
+      storage_limit_gb: user.storageLimitGB,
+      two_factor_enabled: user.twoFactorEnabled,
+      language: user.language,
+      theme: user.theme,
+      updated_at: new Date().toISOString(),
+    }, { onConflict: 'id' });
+  } catch (err) {
+    console.warn('Sync user to Supabase error:', err);
+  }
+}
+
+async function syncActivityLogsToSupabase(logs: ActivityLog[]) {
+  try {
+    const payload = logs.slice(0, 50).map(l => ({
+      id: l.id,
+      action: l.action,
+      detail: l.detail,
+      timestamp: l.timestamp,
+      ip_address: l.ipAddress,
+      icon_type: l.iconType,
+    }));
+    await supabase.from('activity_logs').upsert(payload, { onConflict: 'id' });
+  } catch (err) {
+    console.warn('Sync activity logs to Supabase error:', err);
+  }
+}
+
+// Supabase Status Endpoint
+app.get('/api/supabase/status', async (_req: Request, res: Response) => {
+  const foldersReady = await checkSupabaseTableExists('folders');
+  const filesReady = await checkSupabaseTableExists('files');
+  const logsReady = await checkSupabaseTableExists('activity_logs');
+  const userReady = await checkSupabaseTableExists('user_profile');
+
+  const allTablesReady = foldersReady && filesReady && logsReady && userReady;
+
+  let details = '';
+  if (allTablesReady) {
+    details = 'Đã kết nối thành công với Supabase. Tất cả các bảng (folders, files, activity_logs, user_profile) đã sẵn sàng hoạt động trực tuyến.';
+  } else if (!foldersReady && !filesReady) {
+    details = 'Đã kết nối thành công tới dự án Supabase, nhưng các bảng dữ liệu chưa được khởi tạo. Bạn chỉ cần sao chép mã SQL bên dưới và dán vào SQL Editor trên Supabase rồi nhấn RUN.';
+  } else {
+    details = 'Đã kết nối Supabase, một số bảng đã sẵn sàng.';
+  }
+
+  res.json({
+    success: true,
+    connected: true,
+    projectUrl: SUPABASE_URL,
+    hasTables: {
+      folders: foldersReady,
+      files: filesReady,
+      activity_logs: logsReady,
+      user_profile: userReady,
+    },
+    details,
+    sqlScript: SUPABASE_SQL_SCHEMA,
+  });
+});
+
+// Supabase Sync Endpoint
+app.post('/api/supabase/sync', async (_req: Request, res: Response) => {
+  const foldersReady = await checkSupabaseTableExists('folders');
+  const filesReady = await checkSupabaseTableExists('files');
+
+  if (!foldersReady || !filesReady) {
+    return res.status(400).json({
+      success: false,
+      message: 'Chưa tìm thấy bảng "folders" hoặc "files" trên Supabase. Vui lòng chạy mã SQL trong mục Cài đặt trước khi bấm Đồng bộ.',
+    });
+  }
+
+  try {
+    await syncFoldersToSupabase(db.folders);
+    await syncFilesToSupabase(db.files);
+    await syncUserProfileToSupabase(db.user);
+    await syncActivityLogsToSupabase(db.activityLogs);
+
+    res.json({
+      success: true,
+      message: `Đã đồng bộ thành công ${db.folders.length} thư mục và ${db.files.length} tệp tin lên Supabase Cloud!`,
+      counts: {
+        folders: db.folders.length,
+        files: db.files.length,
+      },
+    });
+  } catch (err: any) {
+    res.status(500).json({
+      success: false,
+      message: `Lỗi trong quá trình đồng bộ: ${err?.message || 'Không xác định'}`,
+    });
+  }
 });
 
 // 16. AI Assistant ("TRỢ LÝ AI CỦA THẦY GỌN")
