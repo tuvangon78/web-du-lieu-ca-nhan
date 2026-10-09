@@ -1,0 +1,6 @@
+{
+  "name": "Kho Dữ Liệu Cá Nhân – Thầy Gọn",
+  "description": "Hệ thống lưu trữ đám mây, quản lý tài liệu và trợ lý AI thông minh dành riêng cho Thầy giáo Từ Văn Gọn - Trường Tiểu học Phường An Xuyên, Cà Mau.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
